@@ -12,3 +12,9 @@ Az oldal megnyitásakor a funkciók megtekinthetőek, de használatukhoz kötele
 Egy gyors regisztráció után, már ki is próbálhatóak a funkciók, adott mennyiségű pénzösszeg feltöltése után pedig kiváltható az egyenleg.
 Minden fogadás/játék után a felhasználó kap egy úgynevezett "X-Coin"-t (arányosan), amivel különböző nyereményeket, további funkciókat lehet kiváltani.
 Célunk minél több szórakoztató játékmód megvalósítása.
+
+### Jelenlegi üzleti folyamatok
+
+![Jelenlegi üzleti folyamatok](/Pictures/jelenlegi-uzleti-folyamatok.png)
+
+A legnépszerűbb fogadási/szerencsejáték oldalak nem kínálnak kezdő egyenleget, amivel ki lehet próbálni az oldalon lévő elérhető funkciókat, valamint személyes adatokat kell megadni. A legtöbb oldalon a nagy mennyiségű reklám nagyban rontja a játékélményt. Adott játékokban a körök megadott időnként indulnak, ezzel megnő a várakozás ideje, emiatt a felhasználó nem tudja szabályozni a játék indítását.
