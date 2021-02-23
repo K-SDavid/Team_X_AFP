@@ -6,7 +6,7 @@ A szerencsejáték a mai világ szerves részét képezi. A vírushelyzetre val�
 
 ### A rendszer céljai
 
-A rendszer célja egy olyan online weboldal létrehozása, ahol a részvételhez nem szükséges bankkártya adat megadása. Minden felhasználó kap egy kezdő összeget, amivel próbára teheti szerencséjét kis összegekkel, ha nagyobb összeggel szeretne játszani, akkor azt csak egy bizonyos összeg feletti pénzfeltöltéssel lehetséges. A nyeremények kivételéhez elengedhetetlen bankkártya hozzáadása és egy bizonyos összeg feletti egyenleg.
+A rendszer célja egy olyan online weboldal létrehozása, ahol a részvételhez nem szükséges bankkártya adat megadása. Minden felhasználó kap egy kezdő összeget, amivel próbára teheti szerencséjét kis összegekkel, ha nagyobb összeggel szeretne játszani, akkor azt csak egy bizonyos összeg feletti pénzfeltöltéssel lehetséges. Az egyenleg kivételéhez elengedhetetlen bankkártya hozzáadása. Egy másodlagos fizetőeszköz segítségével(X-Coin) nyeremények válthatóak ki.
 
 Alapvető követelménynek tekinthető a hibamentes, gyors működés. Szeretnénk azonnali és megbízható be- és kifizetést biztosítani felhasználóink számára.
 
@@ -19,10 +19,10 @@ A legnépszerűbb fogadási/szerencsejáték oldalak nem kínálnak kezdő egyen
 ### Vágyálom rendszer
 
 Projektünk célja egy olyan szerencsejáték oldal létrehozása, ahol minden újonnan regisztrált felhasználó kipróbálhatja a weboldalon lévő funkciókat.  
-Az oldal megnyitásakor a funkciók megtekinthetőek, de használatukhoz közelező a regisztráció.
+Az oldal megnyitásakor a funkciók megtekinthetőek, de használatukhoz kötelező a regisztráció.
 
-Egy gyors regisztráció után, már ki is próbálhatóak a funkciók, adott mennyiség fogadása után pedig kiváltható az egyenleg.
-Minden fogadás után a felhasználó kap egy úgynevezett "X-Coin"-t (arányosan), amivel különböző nyereményeket, további funkciókat lehet kiváltani.
+Egy gyors regisztráció után, már ki is próbálhatóak a funkciók, adott mennyiségű pénzösszeg feltöltése után pedig kiváltható az egyenleg.
+Minden fogadás/játék után a felhasználó kap egy úgynevezett "X-Coin"-t (arányosan), amivel különböző nyereményeket, további funkciókat lehet kiváltani.
 Célunk minél több szórakoztató játékmód megvalósítása.
 
 ### Jelenlegi üzleti folyamatok
@@ -35,7 +35,7 @@ A legnépszerűbb fogadási/szerencsejáték oldalak nem kínálnak kezdő egyen
 
 ![Igényelt üzleti folyamat](/Pictures/igenyelt-uzleti-folyamat.png)
 
-Az emberek egy gyors regisztráció után(akár bankkártya adatok megadása nélkül), már ki is próbálhatják a funkciókat, egy adott mennyiség fogadása után pedig kiválthatják az egyenlegüket.
+Az emberek egy gyors regisztráció után(akár bankkártya adatok megadása nélkül), már ki is próbálhatják a funkciókat, egy adott mennyiségű pénzösszeg feltöltése után pedig kiválthatják az egyenlegüket.
 
 ### Követelménylista
 
