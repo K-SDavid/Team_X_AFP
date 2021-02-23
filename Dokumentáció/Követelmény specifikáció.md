@@ -24,3 +24,9 @@ A legnépszerűbb fogadási/szerencsejáték oldalak nem kínálnak kezdő egyen
 ![Igényelt üzleti folyamat](/Pictures/igenyelt-uzleti-folyamat.png)
 
 Az emberek egy gyors regisztráció után(akár bankkártya adatok megadása nélkül), már ki is próbálhatják a funkciókat, egy adott mennyiségű pénzösszeg feltöltése után pedig kiválthatják az egyenlegüket.
+
+### Fogalomszótár
+
+X-Coin: A weboldalon használt képzeletbeli valuta.
+
+Kiváltható nyeremény: X-Coinnal kiváltható funkciók, tárgyak.
