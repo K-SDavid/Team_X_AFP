@@ -48,3 +48,8 @@ Az emberek egy gyors regisztráció után(akár bankkártya adatok megadása né
 A felhasználó regisztráció nélkül megtekintheti az oldalon működő funkciókat, illetve elolvashatja a felhasználási feltételeket és adatvédelmi szabályzatot.
 A felhasználó regisztrálhat bankkártya megadása nélkül, ebben az esetben limitált tétekkel játszhat az oldalon. Egyenlegét nem tudja kivenni, csak pénz feltöltés után, a nyereményeket bármikor kitudja váltani. Bankkártya hozzáadására mindig van lehetőség, abban az esetben, hogyha a felhasználó a regisztáció során adja meg, akkor a kezdetektől fogva teljes megengedett limittel játszhatja a játékokat.
 A nyereményeket X-coin-nal lehet kiváltani, amit bármelyik bejelentkezett felhasználó megtehet.
+
+### Látványterv
+
+![Látványterv](/Pictures/latvanyterv.png)
+
