@@ -25,6 +25,10 @@ A legnépszerűbb fogadási/szerencsejáték oldalak nem kínálnak kezdő egyen
 
 Az emberek egy gyors regisztráció után(akár bankkártya adatok megadása nélkül), már ki is próbálhatják a funkciókat, egy adott mennyiségű pénzösszeg feltöltése után pedig kiválthatják az egyenlegüket.
 
+### Követelménylista
+
+![Követelménylista](/Pictures/kovetelmeny-lista.png)
+
 ### Fogalomszótár
 
 X-Coin: A weboldalon használt képzeletbeli valuta.
