@@ -53,3 +53,7 @@ A nyereményeket X-coin-nal lehet kiváltani, amit bármelyik bejelentkezett fel
 
 ![Látványterv](/Pictures/latvanyterv.png)
 
+### Fogalomszótár
+
+X-Coin: A weboldalon használt képzeletbeli valuta.
+Kiváltható nyeremény: X-Coinnal kiváltható funkciók, tárgyak.
