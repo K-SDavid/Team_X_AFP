@@ -4,3 +4,15 @@
 
 Rendszerünk célja, hogy a Követelmény és Funkcionális specifikációban meghatározott folyamatok megvalósuljanak. A cél egy olyan online kaszinó megvalósítása, ahol a felhasználó sokféle szerencsejátékot kipróbálhat, akár pénzfeltöltés nélkül.
 Minden felhasználó kap egy kezdő összeget, amivel próbára teheti szerencséjét kis összegekkel, ha nagyobb összeggel szeretne játszani, akkor azt csak egy bizonyos összeg feletti pénzfeltöltéssel lehetséges. Az egyenleg kivételéhez elengedhetetlen bankkártya hozzáadása. Egy másodlagos fizetőeszköz segítségével(X-Coin) nyeremények válthatóak ki.
+
+### Jelenlegi üzleti folyamatok
+
+![Jelenlegi üzleti folyamatok](/Pictures/jelenlegi-uzleti-folyamatok.png)
+
+A legnépszerűbb fogadási/szerencsejáték oldalak nem kínálnak kezdő egyenleget, amivel ki lehet próbálni az oldalon lévő elérhető funkciókat, valamint személyes adatokat kell megadni. A legtöbb oldalon a nagy mennyiségű reklám nagyban rontja a játékélményt. Adott játékokban a körök megadott időnként indulnak, ezzel megnő a várakozás ideje, emiatt a felhasználó nem tudja szabályozni a játék indítását.
+
+### Igényelt üzleti folyamat
+
+![Igényelt üzleti folyamat](/Pictures/igenyelt-uzleti-folyamat.png)
+
+Az emberek egy gyors regisztráció után(akár bankkártya adatok megadása nélkül), már ki is próbálhatják a funkciókat, egy adott mennyiségű pénzösszeg feltöltése után pedig kiválthatják az egyenlegüket.
