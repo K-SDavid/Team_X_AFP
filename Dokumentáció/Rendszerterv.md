@@ -22,6 +22,13 @@ Az emberek egy gyors regisztráció után(akár bankkártya adatok megadása né
 
 ![Követelménylista](/Pictures/rendszerterv-kovetelmenylista.png)
 
+### Funkcionális terv
+Leírja a felhasználói szerepköröket, és hogy milyen feladatokat
+tudnak csinálni.
+Példa:
+-admin
+-diák
+
 ## Implementációs terv
 
 A weboldal felületét és a mögötte lévő programkódot php, css és javascript segítségével fogjuk megvalósítani. Az oldalt könnyen kezelhetőre, egyértelműre, effektívre és letisztultra tervezzük. A weboldal mögött egy MySQL adatbázis működik.
