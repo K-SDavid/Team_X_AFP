@@ -25,9 +25,18 @@ Az emberek egy gyors regisztráció után(akár bankkártya adatok megadása né
 ### Funkcionális terv
 Leírja a felhasználói szerepköröket, és hogy milyen feladatokat
 tudnak csinálni.
-* Példa:
+* Rendszerszereplők:
   * Adminisztrátor
   * Felhasználó
+
+Rendszerhasználati esetek és lefutásaik:
+* ADMIN:
+  * Teljes hozzáférése van a rendszerhez
+  * Felhasznói adatokat látják, változtathatják
+  * Felhasználó hozzáadására, törlésére van lehetőségük
+  * Felhasználói adatok módosítása
+  * Tesztek létrehozása, törlése, módosítása
+  * Fogadások létrehozása, törlése, módosítása
 
 ## Implementációs terv
 
