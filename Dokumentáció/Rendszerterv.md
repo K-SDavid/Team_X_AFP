@@ -30,13 +30,35 @@ tudnak csinálni.
   * Felhasználó
 
 Rendszerhasználati esetek és lefutásaik:
-* ADMIN:
+* Adminisztrátor:
   * Teljes hozzáférése van a rendszerhez
   * Felhasznói adatokat látják, változtathatják
   * Felhasználó hozzáadására, törlésére van lehetőségük
   * Felhasználói adatok módosítása
   * Tesztek létrehozása, törlése, módosítása
   * Fogadások létrehozása, törlése, módosítása
+* Felhasználó:
+  * Weboldal megtekintése
+  * Regisztrálás, belépés engedélyezve
+  * Egyenleg pénzfeltöltéssel
+  * Részvétel fogadásokon
+* Vendég:
+  * Weboldal megtekintése
+  * Regisztrálás, bejelentkezés
+
+Menü architektúra:
+  * Felhasználói funkciók:
+    * Bejelentkezés
+    * Kijelentkezés
+    * Regisztráció
+    * Help
+  * Fő menü:
+    * Fogadások
+    * Fogadás létrehozása(Adminisztrátoroknak)
+    * Fogadás részvétel(Felhasználóknak)
+    * Toplista
+    * Profil
+
 
 ## Implementációs terv
 
