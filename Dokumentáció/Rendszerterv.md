@@ -25,9 +25,9 @@ Az emberek egy gyors regisztráció után(akár bankkártya adatok megadása né
 ### Funkcionális terv
 Leírja a felhasználói szerepköröket, és hogy milyen feladatokat
 tudnak csinálni.
-Példa:
--admin
--diák
+* Példa:
+  * Adminisztrátor
+  * Felhasználó
 
 ## Implementációs terv
 
