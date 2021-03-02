@@ -3,6 +3,8 @@
 ### Bevezetés
 
 A szerencsejáték a mai világ szerves részét képezi. A vírushelyzetre való tekintettel az emberek nem tudják meglátogatni a kaszinókat, ezért online szerencsejáték oldalakat keresnek fel. A legtöbb ilyen oldalon csak bankkártya adatok megadásával lehet játszani, ezért sokan nem regisztrálnak ilyen oldalakra, mivel féltik kiadni személyes adataikat.
+### Jelenlegi helyzet
+A legnépszerűbb fogadási/szerencsejáték oldalak nem kínálnak kezdő egyenleget, amivel ki lehet próbálni az oldalon lévő elérhető funkciókat. A legtöbb oldalon a nagy mennyiségű reklám nagyban rontja a játékélményt. Adott játékokban a körök megadott időnként indulnak, ezzel megnő a várakozás ideje, emiatt a felhasználó nem tudja szabályozni a játék indítását.
 
 ### Vágyálom rendszer
 
