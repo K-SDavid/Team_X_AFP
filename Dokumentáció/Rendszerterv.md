@@ -86,6 +86,35 @@ Az emberek egy gyors regisztráció után(akár bankkártya adatok megadása né
 | pk_id | creditcards | id | | | |
 | fk_creditcard | creditcards | userid | users | id | |
 
+#### games tábla: 
+
+| Mező név | Tipus/hossz | Kötelező | Érték/validáció | Kulcs | Megj. |
+|----------|-------------|----------|-----------------|-------|-------|
+| id | INT | Igen | Auto-increment | PK| |
+| name | VARCHAR(250) | Igen | | | |
+| min | DOUBLE | Igen | | |
+| max | DOUBLE | Igen | | |
+
+#### games megszorítások: 
+
+| Azonosító | Tábla 1 | Mező 1 | Tábla 2 | Mező 2 | Megj. |
+|-----------|---------|--------|---------|--------|-------|
+| pk_id | games | id | | | |
+
+#### prize tábla: 
+
+| Mező név | Tipus/hossz | Kötelező | Érték/validáció | Kulcs | Megj. |
+|----------|-------------|----------|-----------------|-------|-------|
+| id | INT | Igen | Auto-increment | PK| |
+| name | VARCHAR(250) | Igen | | | |
+| price | INT | Igen | | |
+
+#### prize megszorítások: 
+
+| Azonosító | Tábla 1 | Mező 1 | Tábla 2 | Mező 2 | Megj. |
+|-----------|---------|--------|---------|--------|-------|
+| pk_id | prizes | id | | | |
+
 ### Funkcionális terv
 Leírja a felhasználói szerepköröket, és hogy milyen feladatokat
 tudnak csinálni.
