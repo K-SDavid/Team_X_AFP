@@ -51,6 +51,24 @@ Az emberek egy gyors regisztráció után(akár bankkártya adatok megadása né
 
 ![Adatbázis terv](/Pictures/adatbazis-terv.png)
 
+#### users tábla:
+
+| Mező név | Tipus/hossz | Kötelező | Érték/validáció | Kulcs | Megj. |
+|----------|-------------|----------|-----------------|-------|-------|
+| id | INT | Igen | Auto-increment | PK| |
+| username | VARCHAR(250) | Igen | | |
+| password | VARCHAR(250) | Igen| | |
+| email | VARCHAR(250) | Igen| | |
+| permission | INT(1) | | 1 | |
+| balance | DOUBLE | | 2 | |
+| xcoin | INT | |0 | |
+
+#### users megszorítások:
+
+| Azonosító | Tábla 1 | Mező 1 | Tábla 2 | Mező 2 | Megj. |
+|-----------|---------|--------|---------|--------|-------|
+| pk_id | users | id | | | |
+
 ### Funkcionális terv
 Leírja a felhasználói szerepköröket, és hogy milyen feladatokat
 tudnak csinálni.
