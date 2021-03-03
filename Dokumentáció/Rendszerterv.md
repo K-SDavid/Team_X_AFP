@@ -95,3 +95,8 @@ A weboldal felületét és a mögötte lévő programkódot php, css és javascr
   * Az alpha tesztet követően a felhasználók elvégzik a béta tesztet, melynek során a programban maradt súlyosabb hibák felderítésre kerülnek, majd a fejlesztők javítják őket.
   * A teszt során a stabilitás, letisztultság növelése a cél.
   * (A tesztekről naplót kell készíteni, amely alapján esetleges hibáknál kitölthető a hibajelentő.)
+
+### Karbantartási terv
+A szoftveren a későbbiekben nem kell nagyobb karbantartásokat elvégezni. Az esetleges karbantartások a következőből állhatnak:
+  * Tesztelés frissebb verzió használatával. Hiba észlelése esetén azok javítása.
+  * Igény esetén új funkciók hozzáadása.
