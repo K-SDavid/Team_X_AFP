@@ -47,6 +47,10 @@ Az emberek egy gyors regisztráció után(akár bankkártya adatok megadása né
 
 ![Architekturális terv](/Pictures/architekturalis-terv.png)
 
+### Adatbázis terv
+
+![Adatbázis terv](/Pictures/adatbazis-terv.png)
+
 ### Funkcionális terv
 Leírja a felhasználói szerepköröket, és hogy milyen feladatokat
 tudnak csinálni.
