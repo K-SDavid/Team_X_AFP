@@ -153,6 +153,9 @@ Menü architektúra:
     * Toplista
     * Profil
 
+### Fizikai környezet
+
+![Architekturális terv](/Pictures/architekturalis-terv.png)
 
 ### Implementációs terv
 
