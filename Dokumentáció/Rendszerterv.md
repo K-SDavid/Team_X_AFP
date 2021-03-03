@@ -81,6 +81,17 @@ Menü architektúra:
     * Profil
 
 
-## Implementációs terv
+### Implementációs terv
 
 A weboldal felületét és a mögötte lévő programkódot php, css és javascript segítségével fogjuk megvalósítani. Az oldalt könnyen kezelhetőre, egyértelműre, effektívre és letisztultra tervezzük. A weboldal mögött egy MySQL adatbázis működik.
+
+### Teszt terv
+
+* Alpha teszt:
+  * Az alpha tesztet a fejlesztők végzik, amelyben a rendszer összeomlását próbálják elérni remélhetőleg sikertelenül. Amennyiben felderítenek egy hibát jelentést írnak róla, majd javítják.
+  * Az alpha teszt során külön tesztelni kell a fontosabb funkciókat, mintpedig: Az oldalon működő fogadásokat/játékokat.
+
+* Beta teszt:
+  * Az alpha tesztet követően a felhasználók elvégzik a béta tesztet, melynek során a programban maradt súlyosabb hibák felderítésre kerülnek, majd a fejlesztők javítják őket.
+  * A teszt során a stabilitás, letisztultság növelése a cél.
+  * (A tesztekről naplót kell készíteni, amely alapján esetleges hibáknál kitölthető a hibajelentő.)
