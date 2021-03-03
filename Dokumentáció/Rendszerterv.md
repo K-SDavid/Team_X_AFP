@@ -69,6 +69,23 @@ Az emberek egy gyors regisztráció után(akár bankkártya adatok megadása né
 |-----------|---------|--------|---------|--------|-------|
 | pk_id | users | id | | | |
 
+#### creditcards tábla: 
+
+| Mező név | Tipus/hossz | Kötelező | Érték/validáció | Kulcs | Megj. |
+|----------|-------------|----------|-----------------|-------|-------|
+| id | INT | Igen | Auto-increment | PK| |
+| userid | INT | Igen | | FK | |
+| number | INT(16) | Igen | | |
+| expiration | INT(4) | Igen | | |
+| security_code | INT(3) | Igen |  | |
+
+#### creditcards megszorítások:
+
+| Azonosító | Tábla 1 | Mező 1 | Tábla 2 | Mező 2 | Megj. |
+|-----------|---------|--------|---------|--------|-------|
+| pk_id | creditcards | id | | | |
+| fk_creditcard | creditcards | userid | users | id | |
+
 ### Funkcionális terv
 Leírja a felhasználói szerepköröket, és hogy milyen feladatokat
 tudnak csinálni.
