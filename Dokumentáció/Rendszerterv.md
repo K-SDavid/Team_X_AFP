@@ -15,6 +15,17 @@ A projekt menedzseléséért felelős csapat:
 
 ![Projektterv afp4](/Pictures/projektterv-02.png)
 
+Ütemterv:
+
+|  Dátum | Tevékenység  |  
+|-----------------------|--------------------------|
+|    2021.02.16-03.03   | Dokumentációk elkészítése és véglegesítése | 
+|         2021.03.03-         |Fejlesztés megkezdése|
+|         2021.03.03-         |Unit tesztek| 
+|                |Alpha teszt|
+|                |Béta teszt|
+|         2021.05.11         |Projekt átadása|
+
 ### Jelenlegi üzleti folyamatok
 
 ![Jelenlegi üzleti folyamatok](/Pictures/jelenlegi-uzleti-folyamatok.png)
