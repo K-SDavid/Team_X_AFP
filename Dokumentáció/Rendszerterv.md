@@ -92,6 +92,7 @@ tudnak csinálni.
 * Rendszerszereplők:
   * Adminisztrátor
   * Felhasználó
+  * Vendég
 
 Rendszerhasználati esetek és lefutásaik:
 * Adminisztrátor:
