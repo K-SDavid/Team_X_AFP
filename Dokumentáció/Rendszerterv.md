@@ -43,6 +43,10 @@ Az emberek egy gyors regisztráció után(akár bankkártya adatok megadása né
 
 ![Követelménylista](/Pictures/rendszerterv-kovetelmenylista.png)
 
+### Architekturális terv
+
+![Architekturális terv](/Pictures/architekturalis-terv.png)
+
 ### Funkcionális terv
 Leírja a felhasználói szerepköröket, és hogy milyen feladatokat
 tudnak csinálni.
