@@ -1,0 +1,1 @@
+<center>&copy; Afp2</center>
