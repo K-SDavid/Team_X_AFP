@@ -1,1 +1,1 @@
-<center>&copy; Afp2</center>
+<center>&copy; Team-X</center>
