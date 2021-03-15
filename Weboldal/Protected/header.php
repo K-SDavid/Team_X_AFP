@@ -1,3 +1,7 @@
+<div class="register">
+	<a href="index.php?P=register">Regisztráció</a>
+</div>
+
 <div class="details">
     <div class="money"><input type="text" name="money" value="€" readonly="true"></div>
     <div class="xcoin"><input type="text" name="xcoin" value="X" readonly="true"></div>
