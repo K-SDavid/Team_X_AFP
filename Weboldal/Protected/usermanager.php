@@ -43,4 +43,8 @@ function UserLogin($username, $password) {
 	}
 	return false;
 }
+
+function CheckLogin() {
+	return $_SESSION  != null && array_key_exists('uid', $_SESSION) && is_numeric($_SESSION['uid']);
+}
 ?>
