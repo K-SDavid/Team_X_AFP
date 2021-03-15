@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1:3306
--- Létrehozás ideje: 2021. Már 14. 16:31
+-- Létrehozás ideje: 2021. Már 15. 19:32
 -- Kiszolgáló verziója: 10.4.10-MariaDB
 -- PHP verzió: 7.3.12
 
@@ -79,6 +79,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(250) CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
   `password` varchar(250) CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
+  `age` int(11) NOT NULL,
   `email` varchar(250) CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
   `permission` int(1) NOT NULL DEFAULT 1,
   `balance` double NOT NULL DEFAULT 2,
