@@ -1,5 +1,6 @@
 <?php require_once 'protected/config.php'; ?>
-
+<?php session_start();?>
+<?php require_once USER_MANAGER;?>
 <!DOCTYPE html>
 <html>
 <head>
