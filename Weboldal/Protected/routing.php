@@ -7,6 +7,8 @@ switch ($_GET['P']) {
 
 	case 'register': require_once PROTECTED_DIR.'user/register.php'; break;
 
+	case 'logout': UserLogout(); break;
+
 	default: require_once PROTECTED_DIR.'normal/404.php'; break;
 }
 ?>
