@@ -12,5 +12,16 @@
   session_start();
   require(database.php);
 
-   $strSQL = "SELECT username, email FROM users WHERE user_id = '".$_SESSION['user_id']."'";
+   $strSQL = "SELECT username, email FROM users WHERE id = '".$_SESSION['id']."'";
+
+   $rs = mysqli_query($myConnection, $strSQL);
+   while($row = mysqli_fetch_array($rs)) {
+
+    
+    echo $row['username'] . "<br />";
+    echo $row['email'] . "<br />";
+  }
+  mysqli_close($myConnection);
+
+  }
  ?>
