@@ -8,3 +8,9 @@
 
   </body>
 </html>
+<?php
+  session_start();
+  require(database.php);
+
+   $strSQL = "SELECT username, email FROM users WHERE user_id = '".$_SESSION['user_id']."'";
+ ?>
