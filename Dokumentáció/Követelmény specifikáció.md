@@ -2,7 +2,7 @@
 
 ### Bevezetés
 
-A szerencsejáték a mai világ szerves részét képezi. A vírushelyzetre való tekintettel az emberek nem tudják meglátogatni a kaszinókat, ezért online szerencsejáték oldalakat keresnek fel. A legtöbb ilyen oldalon csak bankkártya adatok megadásával lehet játszani, ezért sokan nem regisztrálnak ilyen oldalakra, mivel féltik kiadni személyes adataikat.
+ A szerencsejáték a mai világ szerves részét képezi. A vírushelyzetre való tekintettel az emberek nem tudják meglátogatni a kaszinókat, ezért online szerencsejáték oldalakat keresnek fel. A legtöbb ilyen oldalon csak bankkártya adatok megadásával lehet játszani, ezért sokan nem regisztrálnak ilyen oldalakra, mivel féltik kiadni személyes adataikat. Az oldal biztonságos a felhasználó adatai titkosítva vannak , így külső személy nem tudja látni azokat, ez főleg biztonsági szempontból fontos. Mivel a mai világban mindenki gyors internettel rendelkezik , ezért tökéletes választás az online kaszinó . Ami egyrészt vírusmentes és biztonságos, így a felhasználó zavartalanul élvezheti a fogadás örömeit online térben.
 ### Jelenlegi helyzet
 A legnépszerűbb fogadási/szerencsejáték oldalak nem kínálnak kezdő egyenleget, amivel ki lehet próbálni az oldalon lévő elérhető funkciókat. A legtöbb oldalon a nagy mennyiségű reklám nagyban rontja a játékélményt. Adott játékokban a körök megadott időnként indulnak, ezzel megnő a várakozás ideje, emiatt a felhasználó nem tudja szabályozni a játék indítását.
 
