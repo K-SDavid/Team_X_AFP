@@ -16,6 +16,9 @@ Továbbá cél az, hogy a weboldal letisztult, könnyen áttekinthető és egyé
 
 A legnépszerűbb fogadási/szerencsejáték oldalak nem kínálnak kezdő egyenleget, amivel ki lehet próbálni az oldalon lévő elérhető funkciókat. A legtöbb oldalon a nagy mennyiségű reklám nagyban rontja a játékélményt. Adott játékokban a körök megadott időnként indulnak, ezzel megnő a várakozás ideje, emiatt a felhasználó nem tudja szabályozni a játék indítását.
 
+Célunk egy olyan weboldal létrehozása, mely letudja kötni a felhaszálót és közben jól tudja magát érezni. A több féle játékmód lehetőséget biztosít, hogy a játék ne legyen monoton és akár órákat eltudjon tölteni nálunk.
+Mivel tétre mennek a  játékaink ezért az első vásárláshoz adunk 20% kedvezményt ezáltal ösztönözve a felhasználót, hogy az első megrendelése nagyobb legyen.
+
 ### Vágyálom rendszer
 
 Projektünk célja egy olyan szerencsejáték oldal létrehozása, ahol minden újonnan regisztrált felhasználó kipróbálhatja a weboldalon lévő funkciókat.  
