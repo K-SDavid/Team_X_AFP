@@ -98,3 +98,41 @@
 .overlay>body>nav{
 	z-index: 1000;
 }
+
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+::-webkit-scrollbar-track{
+	background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb{
+	background: #bbbbbb;
+	border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+	.overlay>body>header{
+		filter: blur(0px);
+	}
+	.sidebar{
+		top: 80px;
+	}
+	.sidebar a {
+		line-height: 100px;
+	}
+	.logo{
+		transform: translateX(-10px);
+		transition: 0.7s;
+	}
+	.sidebar.active{
+		width: 100%;
+	}
+	.sidebar.active .logo{
+		transform: translateX(0);
+	}
+	.toggle.active{
+		left: 0;
+	}
+}
