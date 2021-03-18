@@ -59,5 +59,34 @@ function Deposit($id, $amount){
 	else echo "Nincs bankkártya csatolva a fiókhoz!";
 }
 
+function Withdraw($id, $amount){
+	if(CheckCard($id))
+	{
+		$query="SELECT balance FROM users WHERE id = :id";
+		$params = [ ':id' => $id ];
+		$balance = getField($query,$params);
+
+		$query="SELECT withdraw FROM users WHERE id = :id";
+		$withdraw = getField($query,$params);
+
+		if($balance >= $amount)
+		{
+			$balance -= $amount;			
+			$withdraw += $amount;
+			$query = "UPDATE users SET balance = :balance, withdraw = :withdraw WHERE id = :id";
+			$params = [ ':id' => $id,
+						':balance' => $balance,
+						':withdraw' => $withdraw ];	
+			if(executeDML($query, $params))
+			{
+				echo "Sikeres kifizetés!";
+			}	
+			else echo "Sikertelen kifizetés!";
+		}
+		else echo "Az egyenleg kevesebb mint a kivenni kívánt összeg!";
+	}
+	else echo "Nincs bankkártya csatolva a fiókhoz!";
+}
+
 
 ?>
