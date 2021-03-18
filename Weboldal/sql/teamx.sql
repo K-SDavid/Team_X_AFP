@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `creditcards` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `userid` int(11) NOT NULL,
   `name` varchar(250) CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
-  `number` int(16) NOT NULL,
+  `cardnumber` int(16) NOT NULL,
   `expiration` int(4) NOT NULL,
   `security_code` int(3) NOT NULL,
   PRIMARY KEY (`id`),
