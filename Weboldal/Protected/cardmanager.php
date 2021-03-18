@@ -45,6 +45,8 @@ function Deposit($id, $amount){
 	{
 		$query="SELECT balance FROM users WHERE id = :id";
 		$params = [ ':id' => $id ];
+		require_once DATABASE_CONTROLLER;
+
 		$balance = getField($query,$params)+$amount;
 
 		$query="SELECT deposit FROM users WHERE id = :id";
@@ -54,7 +56,7 @@ function Deposit($id, $amount){
 		$params = [ ':id' => $id,
 					':balance' => $balance,
 					':deposit' => $deposit ];
-		require_once DATABASE_CONTROLLER;
+		
 		if(executeDML($query, $params)){
 			echo "Sikeres feltöltés!";
 		}
@@ -68,6 +70,8 @@ function Withdraw($id, $amount){
 	{
 		$query="SELECT balance FROM users WHERE id = :id";
 		$params = [ ':id' => $id ];
+		require_once DATABASE_CONTROLLER;
+
 		$balance = getField($query,$params);
 
 		$query="SELECT withdraw FROM users WHERE id = :id";
