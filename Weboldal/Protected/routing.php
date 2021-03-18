@@ -13,6 +13,8 @@ switch ($_GET['P']) {
 
 	case 'addcard': require_once PROTECTED_DIR.'creditcard/addcard.php'; break;
 
+	case 'listcard': require_once PROTECTED_DIR.'creditcard/listcard.php'; break;
+
 
 	case 'logout': UserLogout(); break;
 	
