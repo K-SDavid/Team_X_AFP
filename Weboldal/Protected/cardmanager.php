@@ -28,8 +28,15 @@ function DeleteCard($id){
 		{
 			header('Location: index.php?P=profile');
 		}
+	else echo "A törlendő kártya nem létezik!";
 }
 
-
+function CheckCard($id){
+	$query = "SELECT id FROM creditcards WHERE 'userid' = ':id'";
+		$params = [ ':id' => $id ];
+		require_once DATABASE_CONTROLLER;
+	$record = getRecord($query, $params);
+	return !empty($record);
+}
 
 ?>
