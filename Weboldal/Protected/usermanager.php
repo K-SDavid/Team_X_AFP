@@ -53,4 +53,14 @@ function UserLogout() {
 	session_destroy();
 	header('Location: index.php');
 }
+
+function CheckDeposit($id)
+{
+	$query = "SELECT deposit FROM users WHERE id = :id";
+	$params = [	':id' => $id ]; 
+
+	require_once DATABASE_CONTROLLER;
+	$deposit = getField($query, $params);
+	return $deposit >=10;
+}
 ?>
