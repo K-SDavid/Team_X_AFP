@@ -45,18 +45,18 @@
 		<input type="text" name="cardname" placeholder="Név" value="<?=isset($postData) ? $postData['cardname'] : "";?>">
 		<input type="text" name="cardnumber" placeholder="Kártyaszám" maxlength="16" value="<?=isset($postData) ? $postData['cardnumber'] : "";?>">
 		<select name="expirationM">
-			<option value="1" <?=$postData['expirationM'] == 1 ? 'selected' : '' ?> >01</option>
-			<option value="2" <?=$postData['expirationM'] == 2 ? 'selected' : '' ?> >02</option>
-			<option value="3" <?=$postData['expirationM'] == 3 ? 'selected' : '' ?> >03</option>
-		    <option value="4" <?=$postData['expirationM'] == 4 ? 'selected' : '' ?> >04</option>
-		    <option value="5" <?=$postData['expirationM'] == 5 ? 'selected' : '' ?> >05</option>
-		    <option value="6" <?=$postData['expirationM'] == 6 ? 'selected' : '' ?> >06</option>
-		    <option value="7" <?=$postData['expirationM'] == 7 ? 'selected' : '' ?> >07</option>
-		    <option value="8" <?=$postData['expirationM'] == 8 ? 'selected' : '' ?> >08</option>
-		    <option value="9" <?=$postData['expirationM'] == 9 ? 'selected' : '' ?> >09</option>
-		    <option value="10" <?=$postData['expirationM'] == 10 ? 'selected' : '' ?> >10</option>
-		    <option value="11" <?=$postData['expirationM'] == 11 ? 'selected' : '' ?> >11</option>
-		    <option value="12" <?=$postData['expirationM'] == 12 ? 'selected' : '' ?> >12</option>
+			<option value="1" <?=isset($postData) ? ($postData['expirationM'] == 1 ? 'selected' : '') : '';?> >01</option>
+			<option value="2" <?=isset($postData) ? ($postData['expirationM'] == 2 ? 'selected' : '') : '';?> >02</option>
+			<option value="3" <?=isset($postData) ? ($postData['expirationM'] == 3 ? 'selected' : '') : '';?> >03</option>
+		    <option value="4" <?=isset($postData) ? ($postData['expirationM'] == 4 ? 'selected' : '') : '';?> >04</option>
+		    <option value="5" <?=isset($postData) ? ($postData['expirationM'] == 5 ? 'selected' : '') : '';?> >05</option>
+		    <option value="6" <?=isset($postData) ? ($postData['expirationM'] == 6 ? 'selected' : '') : '';?> >06</option>
+		    <option value="7" <?=isset($postData) ? ($postData['expirationM'] == 7 ? 'selected' : '') : '';?> >07</option>
+		    <option value="8" <?=isset($postData) ? ($postData['expirationM'] == 8 ? 'selected' : '') : '';?> >08</option>
+		    <option value="9" <?=isset($postData) ? ($postData['expirationM'] == 9 ? 'selected' : '') : '';?> >09</option>
+		    <option value="10" <?=isset($postData) ? ($postData['expirationM'] == 10 ? 'selected' : '') : '';?> >10</option>
+		    <option value="11" <?=isset($postData) ? ($postData['expirationM'] == 11 ? 'selected' : '') : '';?> >11</option>
+		    <option value="12" <?=isset($postData) ? ($postData['expirationM'] == 12 ? 'selected' : '') : '';?> >12</option>
 		</select>
 		/
 		<input type="text" name="expirationY" placeholder="Lejárati év" maxlength="2" value="<?=isset($postData) ? $postData['expirationY'] : "";?>">
