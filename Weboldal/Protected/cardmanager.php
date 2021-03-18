@@ -1,22 +1,24 @@
 <?php 
-function AddCard($userid,$name, $number, $expiration, $security) {
-	$query = "SELECT id FROM creditcards WHERE 'number' = ':number'";
-	$params = [ ':name' => $name,
-				':number' => $number,
-				':expiration' => $expiration,
-				':security' => $security,
-				':userid' => $userid];
-	require_once DATABASE_CONTROLLER;
-	$record = getRecord($query, $params);
-	if(empty($record)) {
-		$query = "INSERT INTO creditcards (userid, name, 'number', expiration, security) VALUES (:userid, :name, ':number', :expiration, :security)";		
-
-		if(executeDML($query, $params))
-		{
-			header('Location: index.php?P=profile');
-		}
-	} 
-	return false;
+function AddCard($userid, $name, $number, $expiration, $security) {
+    $query = "SELECT id FROM creditcards WHERE cardnumber = :cardnumber";
+    $params = [':cardnumber' => $number];
+    require_once DATABASE_CONTROLLER;
+    $record = getRecord($query, $params);
+    if(empty($record)) {
+        $query = "INSERT INTO creditcards (userid, name, cardnumber, expiration, security_code) VALUES (:userid, :name, :cardnumber, :expiration, :security)";
+        $params = [ 
+                ':userid' => $userid,
+                ':name' => $name,
+                ':cardnumber' => $number,
+                ':expiration' => $expiration,
+                ':security' => $security
+                ];
+        if(executeDML($query, $params))
+        {
+            header('Location: index.php?P=profile');
+        }
+    } 
+    return false;
 }
 
 function DeleteCard($id){
@@ -29,7 +31,7 @@ function DeleteCard($id){
 		{
 			header('Location: index.php?P=profile');
 		}
-	else echo "A törlendő kártya nem létezik!";
+	return false;
 }
 
 function CheckCard($id){
@@ -57,12 +59,12 @@ function Deposit($id, $amount){
 					':balance' => $balance,
 					':deposit' => $deposit ];
 		
-		if(executeDML($query, $params)){
-			echo "Sikeres feltöltés!";
+		if(executeDML($query, $params))
+		{
+			header('Location: index.php?P=profile');
 		}
-		else echo "Sikertelen feltöltés!";
 	}
-	else echo "Nincs bankkártya csatolva a fiókhoz!";
+	return false;
 }
 
 function Withdraw($id, $amount){
@@ -87,14 +89,10 @@ function Withdraw($id, $amount){
 						':withdraw' => $withdraw ];	
 			if(executeDML($query, $params))
 			{
-				echo "Sikeres kifizetés!";
-			}	
-			else echo "Sikertelen kifizetés!";
+				header('Location: index.php?P=profile');
+			}
 		}
-		else echo "Az egyenleg kevesebb mint a kivenni kívánt összeg!";
 	}
-	else echo "Nincs bankkártya csatolva a fiókhoz!";
+	return false;		
 }
-
-
 ?>
