@@ -1,6 +1,6 @@
 <?php 
 function AddCard($name, $number, $expiration, $security) {
-	$query = "SELECT id FROM  WHERE 'number' = ':number'";
+	$query = "SELECT id FROM creditcards WHERE 'number' = ':number'";
 	$params = [ ':name' => $name,
 				':number' => $number,
 				':expiration' => $expiration,
@@ -29,5 +29,7 @@ function DeleteCard($id){
 			header('Location: index.php?P=profile');
 		}
 }
+
+
 
 ?>
