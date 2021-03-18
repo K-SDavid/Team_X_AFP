@@ -1,2 +1,2 @@
 <hr>
-<center>&copy; Team-X</center>
+<span><center>&copy; Team-X</center></span>

@@ -17,4 +17,5 @@ footer .hr{
 footer span {
 	user-select: none;
 	position: relative;
+	top: 10px;
 }
