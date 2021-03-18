@@ -47,9 +47,13 @@ function Deposit($id, $amount){
 		$params = [ ':id' => $id ];
 		$balance = getField($query,$params)+$amount;
 
-		$query="UPDATE users SET balance = :balance WHERE id=:id"
+		$query="SELECT deposit FROM users WHERE id = :id";
+		$deposit = getField($query,$params) + $amount;
+
+		$query="UPDATE users SET balance = :balance, deposit = :deposit WHERE id=:id";
 		$params = [ ':id' => $id,
-					':balance' => $balance ];
+					':balance' => $balance,
+					':deposit' => $deposit ];
 		require_once DATABASE_CONTROLLER;
 		if(executeDML($query, $params)){
 			echo "Sikeres feltöltés!";
