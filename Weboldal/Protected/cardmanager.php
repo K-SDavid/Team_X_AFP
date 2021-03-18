@@ -17,3 +17,17 @@ function AddCard($name, $number, $expiration, $security) {
 	} 
 	return false;
 }
+
+function DeleteCard($id){
+
+	$query = "DELETE FROM creditcards WHERE 'id' = ':id'";
+		$params = [ ':id' => $id ];
+		require_once DATABASE_CONTROLLER;
+
+    if(executeDML($query, $params))
+		{
+			header('Location: index.php?P=profile');
+		}
+}
+
+?>
