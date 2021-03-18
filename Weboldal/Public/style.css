@@ -1,0 +1,26 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html, body{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	font-family: "Roboto", sans-serif;
+	background-image: url(Pictures/hatter.png);
+	background-size: 100%;
+	scroll-behavior: smooth;
+}
+
+content {
+	display: flex;
+	justify-content: center;
+	text-align: justify;
+	align-items: center;
+	color: #fff;
+	width: 90vw;
+	margin: 0 auto;
+	padding: 100px 150px 100px 50px;
+	min-height: calc(100vh - 137px - 58px);
+}
