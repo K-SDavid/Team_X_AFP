@@ -19,11 +19,14 @@
 				<?php $i = 0; ?>
 				<?php foreach ($cards as $c) : ?>
 					<?php $i++; ?>
+					<?php $f=16 - strlen($c['cardnumber']); ?>
 					<tr>
 						<th><?=$i?></th>
 						<td><?=$c['name'] ?></td>
-						<td><?=$c['cardnumber'] ?></td>
-						<td><?=$c['expiration'] ?></td>
+						<td><?php for ($j=0; $j < $f; $j++) {
+							echo "0";
+						} echo $c['cardnumber']; ?></td>
+						<td><?=strlen($c['expiration']) == 3 ? '0'.substr($c['expiration'],0,1).'/'.substr($c['expiration'],1,2) : substr($c['expiration'],0,2).'/'.substr($c['expiration'],2,2) ?></td>
 					</tr>
 				<?php endforeach;?>
 			</tbody>
