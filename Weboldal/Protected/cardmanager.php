@@ -40,4 +40,24 @@ function CheckCard($id){
 	return !empty($record);
 }
 
+function Deposit($id, $amount){
+	if(CheckCard($id))
+	{
+		$query="SELECT balance FROM users WHERE id = :id";
+		$params = [ ':id' => $id ];
+		$balance = getField($query,$params)+$amount;
+
+		$query="UPDATE users SET balance = :balance WHERE id=:id"
+		$params = [ ':id' => $id,
+					':balance' => $balance ];
+		require_once DATABASE_CONTROLLER;
+		if(executeDML($query, $params)){
+			echo "Sikeres feltöltés!";
+		}
+		else echo "Sikertelen feltöltés!";
+	}
+	else echo "Nincs bankkártya csatolva a fiókhoz!";
+}
+
+
 ?>
