@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="<?=PUBLIC_DIR.'style.css?'?>">
 	<link rel="stylesheet" type="text/css" href="<?=PUBLIC_DIR.'footerstyle.css?'?>">
 	<link rel="stylesheet" type="text/css" href="<?=PUBLIC_DIR.'navstyle.css?'?>">
+	<link rel="stylesheet" type="text/css" href="<?=PUBLIC_DIR.'headerstyle.css?'?>">
 
 	<script type="text/javascript" src="<?=PUBLIC_DIR.'script/togglenav.js'?>"></script>
 
