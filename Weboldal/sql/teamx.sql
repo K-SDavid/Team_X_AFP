@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1:3306
--- Létrehozás ideje: 2021. Már 15. 19:32
+-- Létrehozás ideje: 2021. Már 18. 17:40
 -- Kiszolgáló verziója: 10.4.10-MariaDB
 -- PHP verzió: 7.3.12
 
@@ -32,6 +32,7 @@ DROP TABLE IF EXISTS `creditcards`;
 CREATE TABLE IF NOT EXISTS `creditcards` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `userid` int(11) NOT NULL,
+  `name` varchar(250) CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
   `number` int(16) NOT NULL,
   `expiration` int(4) NOT NULL,
   `security_code` int(3) NOT NULL,
@@ -84,9 +85,19 @@ CREATE TABLE IF NOT EXISTS `users` (
   `permission` int(1) NOT NULL DEFAULT 1,
   `balance` double NOT NULL DEFAULT 2,
   `xcoin` int(11) NOT NULL DEFAULT 0,
+  `deposit` int(11) NOT NULL DEFAULT 0,
+  `withdraw` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- A tábla adatainak kiíratása `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `age`, `email`, `permission`, `balance`, `xcoin`, `deposit`, `withdraw`) VALUES
+(1, 'asdasd', '00ea1da4192a2030f9ae023de3b3143ed647bbab', 188, 'asdsa@asd.vom', 1, 2, 0, 0, 0),
+(3, 'asd', '00ea1da4192a2030f9ae023de3b3143ed647bbab', 44, 'teszt@elek.hu', 1, 2, 0, 0, 0);
 
 --
 -- Megkötések a kiírt táblákhoz
