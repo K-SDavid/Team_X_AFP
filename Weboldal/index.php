@@ -11,7 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="<?=PUBLIC_DIR.'footerstyle.css?'?>">
 	<link rel="stylesheet" type="text/css" href="<?=PUBLIC_DIR.'navstyle.css?'?>">
 
-	<script type="text/javascript" src="script/togglenav.js"></script>
+	<script type="text/javascript" src="<?=PUBLIC_DIR.'script/togglenav.js'?>"></script>
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
