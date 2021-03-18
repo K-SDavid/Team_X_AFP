@@ -1,0 +1,75 @@
+.bar1, .bar2, .bar3 {
+  width: 50px;
+  height: 8px;
+  background-color: #fff;
+  margin: 5px 12px;
+  transition: 0.5s;
+  filter: blur(0px);
+}
+
+.active .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-10px, 11px);
+  transform: rotate(-45deg) translate(-10px, 11px);
+}
+
+.active .bar2 {opacity: 0;}
+
+.active .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -9px);
+  transform: rotate(45deg) translate(-6px, -9px);
+}
+
+.sidebar{
+	background: #161C32;
+	position: fixed;
+	left: 0;
+	width: 0;
+	height: 100%;
+	transition: 0.5s;
+	z-index: 101;
+}
+
+.sidebar a{
+	color: #fff;
+	display: block;
+	width: 100%;
+	line-height: 60px;
+	text-decoration: none;
+	text-align: center;
+	box-sizing: border-box;
+	transition: 0.5s;
+	transition-property: background;
+	overflow: hidden;
+}
+
+.sidebar a:hover{
+	color: #fff;
+	text-shadow: 0 0 5px #fff,
+				0 0 25px #fff,
+				0 0 50px #fff,
+				0 0 200px #fff;
+	background: #2560A6;
+}
+
+.toggle {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 80px;
+	height: 80px;
+	background: #161C32;
+	display: inline-block;
+  	cursor: pointer;
+	transition: 0.5s;
+	z-index: 101;
+}
+
+.toggle:before{
+	position: relative;
+	display: flex;
+	content: "";
+	color: #fff;
+	text-align: center;
+	justify-content: center;
+	padding-top: 25%;
+}
