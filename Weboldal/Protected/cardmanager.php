@@ -15,28 +15,26 @@ function AddCard($userid, $name, $number, $expiration, $security) {
                 ];
         if(executeDML($query, $params))
         {
-            header('Location: index.php?P=profile');
+            header('Location: index.php?P=listcard');
         }
     } 
     return false;
 }
 
 function ListCard($userid){
-	$query = "SELECT name, cardnumber, expiration FROM creditcards WHERE userid = :userid";
+	$query = "SELECT id, name, cardnumber, expiration FROM creditcards WHERE userid = :userid";
 	$params = [':userid' => $userid];
 	require_once DATABASE_CONTROLLER;
 	return getList($query, $params);
 }
 
 function DeleteCard($id){
-
-	$query = "DELETE FROM creditcards WHERE 'id' = ':id'";
-		$params = [ ':id' => $id ];
-		require_once DATABASE_CONTROLLER;
-
+	$query = "DELETE FROM creditcards WHERE id = :id";
+	$params = [ ':id' => $id ];
+	require_once DATABASE_CONTROLLER;
     if(executeDML($query, $params))
 		{
-			header('Location: index.php?P=profile');
+			header('Location: index.php?P=listcard');
 		}
 	return false;
 }
