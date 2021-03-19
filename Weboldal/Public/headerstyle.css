@@ -11,6 +11,7 @@ header hr{
 	position: fixed;
 	width: 100%;
 	top: 85px;
+	z-index: -1;
 }
 
 .details{
@@ -60,13 +61,8 @@ header hr{
 	background: #2F323A;
 	border-radius: 10px;
 	outline: none;
-	overflow: hidden;
 	border: none;
 	cursor: pointer;
-}
-
-.profile a{
-	text-decoration: none;
 }
 
 .profile .fa{
@@ -139,4 +135,40 @@ header hr{
 	text-decoration: none;
 	text-align: center;
 	box-sizing: border-box;
+}
+
+.profile .drop{
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	width: 130px;
+	height: 130px;
+	top: 70px;
+	right: -300px;
+	transition: 0.5s;
+	background: #2F323A;
+	color: #fff;
+	border-radius: 2px;
+}
+.profile .drop a{
+	color: #fff;
+	display: block;
+	width: 100%;
+	line-height: 25px;
+	text-decoration: none;
+	text-align: center;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.profile:hover .drop{
+	right: -10px;
+}
+.profile .drop a:hover{
+	color: #fff;
+	text-shadow: 0 0 5px #fff,
+				0 0 25px #fff,
+				0 0 50px #fff,
+				0 0 200px #fff;
 }
