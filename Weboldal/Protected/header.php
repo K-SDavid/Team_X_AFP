@@ -14,11 +14,18 @@
 	$postData['password'] = "";
 }
 	if(CheckLogin()): ?>
-		<div class="details">
-    <div class="money"><input type="text" name="money" value="<?=$_SESSION['balance']?>" readonly="true"></div>
-    <div class="xcoin"><input type="text" name="xcoin" value="<?=$_SESSION['xcoin']?>" readonly="true"></div>
-    <a href="index.php?P=profile"><div class="profile"><i class="fa fa-user"></i></div></a>
-</div>
+	<div class="details">
+    	<div class="money"><input type="text" name="money" value="<?=$_SESSION['balance']?>" readonly="true"></div>
+    	<div class="xcoin"><input type="text" name="xcoin" value="<?=$_SESSION['xcoin']?>" readonly="true"></div>
+    	<div class="profile"><i class="fa fa-user"></i>
+    		<div class="drop">
+    			<a href="index.php?P=profile">Profil</a>
+    			<a href="index.php?P=deposit">Befizetés</a>
+       			<a href="index.php?P=withdraw">Kifizetés</a>
+    			<a href="index.php?P=logout">Kijelentkezés</a>
+    		</div>
+    	</div>
+	</div>
 
 <?php else : ?>
 	<div class="register">
