@@ -4,6 +4,10 @@
 		header("Location: index.php?P=denied");
 	else:
 		require_once CARD_MANAGER;
+		if(array_key_exists('d',$_GET) && !empty($_GET['d']))
+		{
+			DeleteCard($_GET['d']);
+		}
 		$cards = ListCard($_SESSION['uid']);
 		if(count($cards) > 0): ?>
 			<table>
@@ -13,6 +17,7 @@
 					<th>Név</th>
 					<th>Kártyaszám</th>
 					<th>Lejárati dátum</th>
+					<th>Eltávolítás</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -27,6 +32,7 @@
 							echo "0";
 						} echo $c['cardnumber']; ?></td>
 						<td><?=strlen($c['expiration']) == 3 ? '0'.substr($c['expiration'],0,1).'/'.substr($c['expiration'],1,2) : substr($c['expiration'],0,2).'/'.substr($c['expiration'],2,2) ?></td>
+						<td><a href="?P=listcard&d=<?=$c['id']?>">X</a></td>
 					</tr>
 				<?php endforeach;?>
 			</tbody>
