@@ -63,4 +63,15 @@ function CheckDeposit($id)
 	$deposit = getField($query, $params);
 	return $deposit >=10;
 }
+
+function UpdateBalance($id){
+	$query="SELECT balance FROM users WHERE id = :id";
+	$params = [ ':id' => $id ];
+	require_once DATABASE_CONTROLLER;
+	$_SESSION['balance'] = getField($query, $params);
+	
+	$query="SELECT xcoin FROM users WHERE id = :id";
+	$params = [ ':id' => $id ];
+	$_SESSION['xcoin'] = getField($query, $params);
+}
 ?>
