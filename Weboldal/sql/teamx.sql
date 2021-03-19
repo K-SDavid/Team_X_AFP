@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1:3306
--- Létrehozás ideje: 2021. Már 18. 17:40
+-- Létrehozás ideje: 2021. Már 19. 13:07
 -- Kiszolgáló verziója: 10.4.10-MariaDB
 -- PHP verzió: 7.3.12
 
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `creditcards` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `userid` int(11) NOT NULL,
   `name` varchar(250) CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
-  `cardnumber` int(16) NOT NULL,
+  `cardnumber` bigint(16) NOT NULL,
   `expiration` int(4) NOT NULL,
   `security_code` int(3) NOT NULL,
   PRIMARY KEY (`id`),
