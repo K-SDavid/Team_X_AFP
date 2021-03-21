@@ -15,12 +15,69 @@ html, body{
 
 content {
 	display: flex;
+	flex-direction: column-reverse;
 	justify-content: center;
 	text-align: justify;
 	align-items: center;
 	color: #fff;
 	width: 90vw;
 	margin: 0 auto;
-	padding: 100px 150px 100px 50px;
+	padding: 100px 50px 100px 50px;
 	min-height: calc(100vh - 137px - 58px);
+}
+
+content input{
+	background: #2F323A;
+	color: #fff;
+	width: 150px;
+	border-radius: 5px;
+	padding: 5px;
+	outline: none;
+	border: none;
+	text-align: center;
+	cursor: pointer;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+content select{
+	background: #2F323A;
+	color: #fff;
+	border-radius: 5px;
+	padding: 5px;
+	outline: none;
+	border: none;
+	text-align: center;
+	cursor: pointer;
+}
+content button{
+	background: #2F323A;
+	color: #fff;
+	border-radius: 5px;
+	padding: 5px;
+	outline: none;
+	border: none;
+	text-align: center;
+	cursor: pointer;
+}
+content table{
+	width: 80%;
+	text-align: center;
+}
+content table a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.registerform{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.registerform input{
+	width: 200px;
+	border-radius: 50px;
+}
+.registerform input[type=submit]{
+	width: 100px;
 }
