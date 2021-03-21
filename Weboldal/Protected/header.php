@@ -1,3 +1,4 @@
+<div class="loginerror">
 <?php 
 	if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
     $postData = [
@@ -12,10 +13,13 @@
 	}
 
 	$postData['password'] = "";
-}
-	if(CheckLogin()): ?>
+}?>
+</div>
+<?php	if(CheckLogin()): ?>
 	<div class="details">
+    	<div class="moneybefore"><input type="text" name="moneybefore" value="€" readonly="true"></div>
     	<div class="money"><input type="text" name="money" value="<?=$_SESSION['balance']?>" readonly="true"></div>
+    	<div class="xcoinbefore"><input type="text" name="xcoinbefore" value="X" readonly="true"></div>
     	<div class="xcoin"><input type="text" name="xcoin" value="<?=$_SESSION['xcoin']?>" readonly="true"></div>
     	<div class="profile"><i class="fa fa-user"></i>
     		<div class="drop">
