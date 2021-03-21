@@ -27,10 +27,25 @@ header hr{
 	position: absolute;
 	background: #2F323A;
 	color: #fff;
-	width: 200px;
+	width: 150px;
+	left: 60px;
+	top: 20px;
+	border-radius: 0 5px 5px 0;
+	text-align: right;
+	outline: none;
+	padding-right: 10px;
+	border: none;
+	user-select: none;
+}
+
+.details .moneybefore input{
+	position: absolute;
+	background: #2F323A;
+	color: #fff;
+	width: 50px;
 	left: 10px;
 	top: 20px;
-	border-radius: 5px;
+	border-radius: 5px 0 0 5px;
 	outline: none;
 	padding-left: 10px;
 	border: none;
@@ -40,10 +55,24 @@ header hr{
 	position: absolute;
 	background: #2F323A;
 	color: #fff;
-	width: 200px;
+	width: 150px;
+	left: 60px;
+	top: 45px;
+	border-radius: 0 5px 5px 0;
+	text-align: right;
+	outline: none;
+	padding-right: 10px;
+	border: none;
+}
+
+.details .xcoinbefore input{
+	position: absolute;
+	background: #2F323A;
+	color: #fff;
+	width: 50px;
 	left: 10px;
 	top: 45px;
-	border-radius: 5px;
+	border-radius: 5px 0 0 5px;
 	outline: none;
 	padding-left: 10px;
 	border: none;
@@ -162,6 +191,7 @@ header hr{
 	box-sizing: border-box;
 	overflow: hidden;
 }
+
 .profile:hover .drop{
 	right: -10px;
 }
@@ -171,4 +201,11 @@ header hr{
 				0 0 25px #fff,
 				0 0 50px #fff,
 				0 0 200px #fff;
+}
+.loginerror{
+	position: absolute;
+	width: 250px;
+	top: 65px;
+	right: 100px;
+	color: #fff;
 }
