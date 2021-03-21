@@ -28,14 +28,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
 }
 ?>
 
-<form method="POST">
+<form method="POST" class="registerform">
 	<input type="text" name="username" placeholder="Felhasználónév">
 	<input type="text" name="email" placeholder="Email">
-	<br>
 	<input type="text" name="age" placeholder="Életkor">
-	<br>
 	<input type="password" name="password" placeholder="Jelszó">
 	<input type="password" name="password1" placeholder="Jelszó megerősítő">
-	<br>
 	<input type="submit" name="submit" value="Regisztráció">
 </form>
