@@ -81,3 +81,28 @@ content table a{
 .registerform input[type=submit]{
 	width: 100px;
 }
+
+.dwform{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.dwform select{
+	margin-top: 10px;
+}
+
+.depositradio{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.amount-buttons input[type=radio]{
+	width: 10px;
+	-webkit-transform: scale(1.5);
+}
+
+.amount-buttons label{
+	padding-right: 25px;
+}
