@@ -12,6 +12,8 @@ switch ($_GET['P']) {
 
 	case 'deposit': require_once PROTECTED_DIR.'user/deposit.php'; break;
 
+	case 'withdraw': require_once PROTECTED_DIR.'user/withdraw.php'; break;
+
 
 	case 'addcard': require_once PROTECTED_DIR.'creditcard/addcard.php'; break;
 
