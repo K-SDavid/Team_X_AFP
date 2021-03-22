@@ -16,12 +16,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
 }
 $cards = ListCard($_SESSION['uid']);
 if(	!CheckCard($_SESSION['uid'])):
-	echo "Nincs kártya hozzáadva!";
+	echo "<h1>Nincs kártya hozzáadva!</h1>";
 else:
 
 ?>
 
-<div class="withdrawform">
+<div class="dwform">
 	Válassza ki melyik kártyára szeretné kiváltani az alább megadott összeget:	
 	<select name="cardnumbers">
 		<?php foreach($cards as $c): ?>
@@ -29,11 +29,10 @@ else:
 		<?php endforeach; ?>
 	</select>
 	<br>
-	<form method="POST"> 
+	<form method="POST" class="depositradio"> 
 		<div class = "amount-text">
 			<input type="text" name="amount" placeholder="Kiváltandó összeg">
-		</div>	
-		<br>
+		</div>
 		<input type="submit" name="submit" value="Kivétel">
 	</form>
 </div>
