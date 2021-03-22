@@ -47,7 +47,7 @@ function CheckCard($id){
 	return !empty($record);
 }
 
-function Deposit($id, $amount){
+function Deposit($id, $amount){	
 	if(CheckCard($id))
 	{
 		$query="SELECT balance FROM users WHERE id = :id";
@@ -66,6 +66,8 @@ function Deposit($id, $amount){
 		
 		if(executeDML($query, $params))
 		{
+			require_once USER_MANAGER;
+			UpdateBalance($id);
 			header('Location: index.php?P=profile');
 		}
 	}
@@ -93,7 +95,9 @@ function Withdraw($id, $amount){
 						':balance' => $balance,
 						':withdraw' => $withdraw ];	
 			if(executeDML($query, $params))
-			{
+			{	
+				require_once USER_MANAGER;
+				UpdateBalance($id);
 				header('Location: index.php?P=profile');
 			}
 		}
