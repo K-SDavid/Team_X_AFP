@@ -40,7 +40,7 @@ function DeleteCard($id){
 }
 
 function CheckCard($id){
-	$query = "SELECT id FROM creditcards WHERE 'userid' = ':id'";
+	$query = "SELECT id FROM creditcards WHERE userid = :id";
 		$params = [ ':id' => $id ];
 		require_once DATABASE_CONTROLLER;
 	$record = getRecord($query, $params);
