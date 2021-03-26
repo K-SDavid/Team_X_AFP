@@ -10,16 +10,24 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
 
 	if(empty($postData['username']) ||  empty($postData['email']) || empty($postData['age']) || empty($postData['password']) || empty($postData['password1'])) {
 		echo "Hiányzó adat(ok)!";
+	} else if(strlen($postData['username']) < 5) {
+		echo "A felhasználónév túl rövid! Legalább 5 karakter hosszúnak kell lennie!";
+	} else if(1 === preg_match('~[ ]~', $postData['username'])) {
+		echo "A név nem tartalmazhat szóközt!";
 	} else if(!filter_var($postData['email'], FILTER_VALIDATE_EMAIL)) {
 		echo "Hibás email formátum!";
-	} else if ($postData['password'] != $postData['password1']) {
-		echo "A jelszavak nem egyeznek!";			  
-	}  else if(!is_numeric($postData['age'])) {
+	} else if(!is_numeric($postData['age'])) {
 		echo "Az életkort számként kell megadni!";
 	} else if($postData['age'] < 18) {
 		echo "18 év alatt nem használhatja az oldalt!";
+	} else if($postData['age'] > 100) {
+		echo "Érvénytelen életkor!";
 	} else if(strlen($postData['password']) < 6) {
 		echo "A jelszó túl rövid! Legalább 6 karakter hosszúnak kell lennie!";
+	} else if(1 === preg_match('~[ ]~', $postData['password'])) {
+		echo "A jelszó nem tartalmazhat szóközt!";
+	} else if ($postData['password'] != $postData['password1']) {
+		echo "A jelszavak nem egyeznek!";			  
 	} else if(!UserRegister($postData['username'], $postData['password'], $postData['age'], $postData['email'])) {
 		echo "Sikertelen regisztráció!";
 	}
