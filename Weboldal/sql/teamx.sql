@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1:3306
--- Létrehozás ideje: 2021. Már 19. 13:07
+-- Létrehozás ideje: 2021. Már 26. 17:32
 -- Kiszolgáló verziója: 10.4.10-MariaDB
 -- PHP verzió: 7.3.12
 
@@ -37,8 +37,18 @@ CREATE TABLE IF NOT EXISTS `creditcards` (
   `expiration` int(4) NOT NULL,
   `security_code` int(3) NOT NULL,
   PRIMARY KEY (`id`),
+  UNIQUE KEY `cardnumber` (`cardnumber`),
   KEY `userid` (`userid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- A tábla adatainak kiíratása `creditcards`
+--
+
+INSERT INTO `creditcards` (`id`, `userid`, `name`, `cardnumber`, `expiration`, `security_code`) VALUES
+(3, 1, 'asdasdasd', 3726891746128374, 122, 221),
+(5, 1, 'asdadasdasda', 2314135624526346, 122, 214),
+(6, 1, 'dasdaés', 1231241241241241, 122, 222);
 
 -- --------------------------------------------------------
 
@@ -88,6 +98,8 @@ CREATE TABLE IF NOT EXISTS `users` (
   `deposit` int(11) NOT NULL DEFAULT 0,
   `withdraw` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`),
+  UNIQUE KEY `email` (`email`),
   KEY `id` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
@@ -96,7 +108,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `age`, `email`, `permission`, `balance`, `xcoin`, `deposit`, `withdraw`) VALUES
-(1, 'asdasd', '00ea1da4192a2030f9ae023de3b3143ed647bbab', 188, 'asdsa@asd.vom', 1, 2, 0, 0, 0),
+(1, 'asdasd', '00ea1da4192a2030f9ae023de3b3143ed647bbab', 188, 'asdsa@asd.vom', 1, 19984.13, 0, 26585, 6602),
 (3, 'asd', '00ea1da4192a2030f9ae023de3b3143ed647bbab', 44, 'teszt@elek.hu', 1, 2, 0, 0, 0);
 
 --
