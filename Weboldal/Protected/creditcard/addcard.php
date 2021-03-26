@@ -15,6 +15,8 @@
 			echo "Hiányzó adat(ok)!";
 		} else if(strlen($postData['cardname']) < 6) {
 			echo "A név túl rövid!";
+		} else if(preg_match('/\s\s+/', $postData['cardname'])) {
+			echo "A név nem tartalmazhat kettő vagy több szóközt egymás mellett!";
 		} else if(1 === preg_match('~[0-9]~', $postData['cardname'])) {
 			echo "A név nem tartalmazhat számot!";
 		} else if(strlen($postData['cardnumber']) != 16) {
