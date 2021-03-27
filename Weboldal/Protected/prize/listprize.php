@@ -4,6 +4,11 @@
 		header("Location: index.php?P=denied");
 	else:
 		require_once PRIZE_MANAGER;
+		if(array_key_exists('r',$_GET) && !empty($_GET['r']))
+		{
+			RedeemPrize($_SESSION['uid'],$_GET['r']);
+			header("Location: index.php?P=prizes");			
+		}
 		$prizes = ListPrize();
 		if(count($prizes) > 0): ?>
 			<table>
@@ -12,6 +17,7 @@
 					<th>#</th>
 					<th>Név</th>
 					<th>Ár</th>
+					<th>Kiváltás</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -22,6 +28,7 @@
 						<th><?=$i?></th>
 						<td><?=$p['name'] ?></td>
 						<td><?=$p['price'] ?></td>
+						<td><a href="?P=prizes&r=<?=$p['id']?>">X</a></td>
 					</tr>
 				<?php endforeach;?>
 			</tbody>
