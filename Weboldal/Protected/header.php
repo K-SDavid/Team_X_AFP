@@ -26,6 +26,7 @@
     			<a href="index.php?P=profile">Profil</a>
     			<a href="index.php?P=deposit">Befizetés</a>
        			<a href="index.php?P=withdraw">Kifizetés</a>
+       			<a href="index.php?P=prizes">Nyeremények</a>       			
     			<a href="index.php?P=logout">Kijelentkezés</a>
     		</div>
     	</div>
