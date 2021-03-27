@@ -4,12 +4,21 @@
 		header("Location: index.php?P=denied");
 	else:
 		require_once PRIZE_MANAGER;
+		$prizes = ListPrize();
 		if(array_key_exists('r',$_GET) && !empty($_GET['r']))
 		{
+			$query = "SELECT price FROM prizes WHERE id = :id";
+			$params = [ 'id' => $_GET['r'] ];
+			require_once DATABASE_CONTROLLER;
+			$price = getField($query, $params);
+			if($price <= $_SESSION['xcoin'])
+			{
 			RedeemPrize($_SESSION['uid'],$_GET['r']);
 			header("Location: index.php?P=prizes");			
+			}
+			else echo "Nincs elég X-Coin!";
 		}
-		$prizes = ListPrize();
+		
 		if(count($prizes) > 0): ?>
 			<table>
 			<thead>
