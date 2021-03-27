@@ -80,10 +80,24 @@ function AddXcoin($id, $amount){
 	$query="SELECT xcoin FROM users WHERE id = :id";
 	$params = [ ':id' => $id ];
 	require_once DATABASE_CONTROLLER;
-	$xcoin = getField($query, $params);
+	$xcoin = getField($query, $params) + $percent;
 	$query="UPDATE users SET xcoin = :xcoin WHERE id = :id";
 	$params = [ ':id' => $id ,
 				':xcoin' => $xcoin];
 	executeDML($query,$params);
+	UpdateBalance($id);
 }
+
+function SpendXcoin($id, $amount){
+	$query="SELECT xcoin FROM users WHERE id = :id";
+	$params = [ ':id' => $id ];
+	require_once DATABASE_CONTROLLER;
+	$xcoin = getField($query, $params) - $amount;	
+	$query="UPDATE users SET xcoin = :xcoin WHERE id = :id";
+	$params = [ ':id' => $id ,
+				':xcoin' => $xcoin];
+	executeDML($query,$params);
+	UpdateBalance($id);
+}
+
 ?>
