@@ -74,4 +74,16 @@ function UpdateBalance($id){
 	$params = [ ':id' => $id ];
 	$_SESSION['xcoin'] = getField($query, $params);
 }
+
+function AddXcoin($id, $amount){
+	$percent = floor($amount * 0.1);
+	$query="SELECT xcoin FROM users WHERE id = :id";
+	$params = [ ':id' => $id ];
+	require_once DATABASE_CONTROLLER;
+	$xcoin = getField($query, $params);
+	$query="UPDATE users SET xcoin = :xcoin WHERE id = :id";
+	$params = [ ':id' => $id ,
+				':xcoin' => $xcoin];
+	executeDML($query,$params);
+}
 ?>
