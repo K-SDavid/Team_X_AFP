@@ -40,7 +40,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
 	<input type="text" name="username" placeholder="Felhasználónév">
 	<input type="text" name="email" placeholder="Email">
 	<input type="text" name="age" placeholder="Életkor">
-	<input type="password" name="password" placeholder="Jelszó">
-	<input type="password" name="password1" placeholder="Jelszó megerősítő">
+	<div><div class="pwinput"><input type="password" name="password" placeholder="Jelszó" id="rpassword"><i id="r1" class="fa fa-eye" aria-hidden="true" onclick="showrpw()"></i></div></div>
+	<div><div class="pwinput"><input type="password" name="password1" placeholder="Jelszó megerősítő" id="r2password"><i id="r2" class="fa fa-eye" aria-hidden="true" onclick="showr2pw()"></i></div></div>
 	<input type="submit" name="submit" value="Regisztráció">
 </form>
