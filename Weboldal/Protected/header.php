@@ -41,7 +41,7 @@
 		<input type="submit" name="login" value="Bejelentkezés">
 	</div>
 	<div class="username"><input type="text" name="username" placeholder="Felhasználónév"></div>
-	<div class="password"><input type="password" name="password" placeholder="Jelszó"></div>
+	<div class="password"><input type="password" name="password" placeholder="Jelszó" id="lpassword"><i class="fa fa-eye" aria-hidden="true" onclick="showlpw()"></i></div>
 </form>
 
 <?php endif; ?>
