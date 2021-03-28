@@ -209,3 +209,10 @@ header hr{
 	right: 100px;
 	color: #fff;
 }
+
+.password .fa{
+	position: absolute;
+	color: #fff;
+	right: 160px;
+	top: 42px;
+}
