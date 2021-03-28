@@ -35,7 +35,6 @@ content input{
 	outline: none;
 	border: none;
 	text-align: center;
-	cursor: pointer;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
@@ -80,6 +79,7 @@ content table a{
 }
 .registerform input[type=submit]{
 	width: 100px;
+	cursor: pointer;
 }
 
 .dwform{
@@ -105,4 +105,8 @@ content table a{
 
 .amount-buttons label{
 	padding-right: 25px;
+}
+
+.registerform .pwinput{
+	margin-left: 15px;
 }
