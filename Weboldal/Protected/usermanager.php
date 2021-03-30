@@ -57,7 +57,18 @@ function UserLogout() {
 function UserList() {
 	$query = "SELECT * FROM users";
 	require_once DATABASE_CONTROLLER;
-	return getList($query, $params);
+	return getList($query);
+}
+
+function DeleteUser($id) {
+	$query = "DELETE FROM users WHERE id = :id";
+	$params = [ ':id' => $id ];
+	require_once DATABASE_CONTROLLER;
+    if(executeDML($query, $params))
+		{
+			header('Location: index.php?P=userlist');
+		}
+	return false;
 }
 
 function CheckDeposit($id)
