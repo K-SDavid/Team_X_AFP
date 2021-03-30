@@ -7,7 +7,21 @@
 		{
 			DeleteUser($_GET['d']);
 		}
-		$users = UserList();
+		if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
+			if(empty($_POST['search'])) {
+				echo "Kérem adja meg a keresni kívánt szöveget!";
+				$users = UserList();
+			} else {
+				if(count(SearchUser($_POST['search'])) < 1) {
+					$users = UserList();
+					echo "Nem található ilyen nevű felhasználó!";					
+				} else {
+					$users = SearchUser($_POST['search']);
+				}
+			}
+		} else {
+			$users = UserList();
+		}
 		if(count($users) > 0): ?>
 			<table>
 			<thead>
@@ -41,6 +55,10 @@
 				<?php endforeach;?>
 			</tbody>
 			</table>
+			<form method="POST">
+				<input type="text" name="search" placeholder="Keresendő felhasználó">
+				<input type="submit" name="submit" value="Keresés">
+			</form>
 		<?php else: ?>
 			<h1>Nem található regisztrált felhasználó!</h1>
 		<?php endif; ?>
