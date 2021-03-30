@@ -54,6 +54,12 @@ function UserLogout() {
 	header('Location: index.php');
 }
 
+function UserList() {
+	$query = "SELECT * FROM users";
+	require_once DATABASE_CONTROLLER;
+	return getList($query, $params);
+}
+
 function CheckDeposit($id)
 {
 	$query = "SELECT deposit FROM users WHERE id = :id";
