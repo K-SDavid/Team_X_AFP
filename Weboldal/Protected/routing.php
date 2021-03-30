@@ -15,6 +15,9 @@ switch ($_GET['P']) {
 	case 'withdraw': require_once PROTECTED_DIR.'user/withdraw.php'; break;
 
 	case 'prizes': require_once PROTECTED_DIR.'user/prizes.php'; break;
+	
+
+	case 'userlist': require_once PROTECTED_DIR.'admin/userlist.php'; break;
 
 
 
