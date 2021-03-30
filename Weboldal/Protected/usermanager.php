@@ -71,6 +71,12 @@ function DeleteUser($id) {
 	return false;
 }
 
+function SearchUser($search) {
+	$query = "SELECT * FROM users WHERE username LIKE '%".$search."%'";
+	require_once DATABASE_CONTROLLER;
+	return getList($query);
+}
+
 function CheckDeposit($id)
 {
 	$query = "SELECT deposit FROM users WHERE id = :id";
