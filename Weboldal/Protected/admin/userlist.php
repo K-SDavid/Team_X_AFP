@@ -7,6 +7,7 @@
 		{
 			DeleteUser($_GET['d']);
 		}
+		
 		if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
 			if(empty($_POST['search'])) {
 				echo "Kérem adja meg a keresni kívánt szöveget!";
@@ -35,6 +36,7 @@
 					<th>Befizetett összeg</th>
 					<th>Kiváltott összeg</th>
 					<th>Jogosultság</th>
+					<th>Módosítás</th>
 					<th>Kitiltás</th>
 				</tr>
 			</thead>
@@ -50,8 +52,12 @@
 						<td><?=$u['deposit']?></td>
 						<td><?=$u['withdraw']?></td>
 						<td><?=$u['permission']?></td>
+						<td><a href="?P=userlist&m=<?=$u['id']?>">X</a></td>
 						<td><a href="?P=userlist&d=<?=$u['id']?>">X</a></td>
 					</tr>
+					<?php if(array_key_exists('m',$_GET) && !empty($_GET['m']) && $u['id'] == $_GET['m']): ?>
+						<?php require_once 'modifyuser.php'; ?>
+					<?php endif;?>
 				<?php endforeach;?>
 			</tbody>
 			</table>
