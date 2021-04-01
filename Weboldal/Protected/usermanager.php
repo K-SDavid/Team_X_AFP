@@ -94,14 +94,14 @@ function SearchUser($search) {
 
 function GetBalanceById($id) {
 	$query = "SELECT balance FROM users WHERE id = :id";
-	$params = ':id' => $id;
+	$params = [':id' => $id];
 	require_once DATABASE_CONTROLLER;
 	return getField($query, $params);
 }
 
 function GetXCoinById($id) {
 	$query = "SELECT xcoin FROM users WHERE id = :id";
-	$params = ':id' => $id;
+	$params = [':id' => $id];
 	require_once DATABASE_CONTROLLER;
 	return getField($query, $params);
 }
