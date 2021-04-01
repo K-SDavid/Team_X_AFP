@@ -60,6 +60,21 @@ function UserList() {
 	return getList($query);
 }
 
+function ModifyUser($id, $balance, $xcoin) {
+	$query = "UPDATE users SET balance = :balance, xcoin = :xcoin WHERE id = :id";
+	$params = [
+		':id' => $id,
+		':balance' => $balance,
+		':xcoin' => $xcoin
+	];
+	require_once DATABASE_CONTROLLER;
+	if(executeDML($query, $params))
+		{
+			header('Location: index.php?P=userlist');
+		}
+	return false;
+}
+
 function DeleteUser($id) {
 	$query = "DELETE FROM users WHERE id = :id";
 	$params = [ ':id' => $id ];
