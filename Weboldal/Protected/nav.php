@@ -2,6 +2,12 @@
 
 	<a href="index.php">Kezdőlap</a>
 
+	<?php if(CheckLogin() && $_SESSION['permission'] > 2) : ?>
+	
+	<a href="index.php?P=userlist">Felhasználók</a>
+		
+	<?php endif; ?>
+
 	<?php if(CheckLogin()) : ?>
 		
 	<?php endif; ?>

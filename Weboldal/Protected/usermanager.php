@@ -54,6 +54,29 @@ function UserLogout() {
 	header('Location: index.php');
 }
 
+function UserList() {
+	$query = "SELECT * FROM users";
+	require_once DATABASE_CONTROLLER;
+	return getList($query);
+}
+
+function DeleteUser($id) {
+	$query = "DELETE FROM users WHERE id = :id";
+	$params = [ ':id' => $id ];
+	require_once DATABASE_CONTROLLER;
+    if(executeDML($query, $params))
+		{
+			header('Location: index.php?P=userlist');
+		}
+	return false;
+}
+
+function SearchUser($search) {
+	$query = "SELECT * FROM users WHERE username LIKE '%".$search."%'";
+	require_once DATABASE_CONTROLLER;
+	return getList($query);
+}
+
 function CheckDeposit($id)
 {
 	$query = "SELECT deposit FROM users WHERE id = :id";
