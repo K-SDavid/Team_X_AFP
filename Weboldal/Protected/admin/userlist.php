@@ -58,7 +58,9 @@
 						<td><?=$u['withdraw']?></td>
 						<td><?=$u['permission']?></td>
 						<td><a href="?P=userlist&m=<?=$u['id']?>">X</a></td>
-						<td><a href="?P=userlist&d=<?=$u['id']?>">X</a></td>
+						<?php if($u['permission'] < 3): ?>
+							<td><a href="?P=userlist&d=<?=$u['id']?>">X</a></td>
+						<?php endif; ?>
 					</tr>
 					<?php if(array_key_exists('m',$_GET) && !empty($_GET['m']) && $u['id'] == $_GET['m']): ?>
 						<?php require_once 'modifyuser.php'; ?>
