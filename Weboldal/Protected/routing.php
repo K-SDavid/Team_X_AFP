@@ -10,6 +10,8 @@ switch ($_GET['P']) {
 
 	case 'register': require_once PROTECTED_DIR.'user/register.php'; break;
 
+	case 'profile': require_once PROTECTED_DIR.'user/profile.php'; break;
+
 	case 'deposit': require_once PROTECTED_DIR.'user/deposit.php'; break;
 
 	case 'withdraw': require_once PROTECTED_DIR.'user/withdraw.php'; break;
