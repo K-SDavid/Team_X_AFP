@@ -5,7 +5,12 @@
 	else:
 		if(array_key_exists('d',$_GET) && !empty($_GET['d']))
 		{
-			DeleteUser($_GET['d']);
+			require_once PROTECTED_DIR."normal/submit.php";
+			if(Submit() == 1) {
+				DeleteUser($_GET['d']);
+			} else if(Submit() == 0) {
+				header('Location: index.php?P=userlist');
+			}
 		}
 		
 		if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
