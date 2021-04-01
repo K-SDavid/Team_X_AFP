@@ -92,6 +92,20 @@ function SearchUser($search) {
 	return getList($query);
 }
 
+function GetBalanceById($id) {
+	$query = "SELECT balance FROM users WHERE id = :id";
+	$params = ':id' => $id;
+	require_once DATABASE_CONTROLLER;
+	return getField($query, $params);
+}
+
+function GetXCoinById($id) {
+	$query = "SELECT xcoin FROM users WHERE id = :id";
+	$params = ':id' => $id;
+	require_once DATABASE_CONTROLLER;
+	return getField($query, $params);
+}
+
 function CheckDeposit($id)
 {
 	$query = "SELECT deposit FROM users WHERE id = :id";
