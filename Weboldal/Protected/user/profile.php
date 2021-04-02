@@ -1,3 +1,13 @@
+<div class="listcc">
+  <?php require_once PROTECTED_DIR."creditcard/listcard.php" ?>
+</div>
+<hr width="100%">
+<div class="addcc">
+  <?php require_once PROTECTED_DIR."creditcard/addcard.php" ?>
+</div>
+<input type="submit" name="addcreditcard" value="Bankkártya hozzáadás" onclick="toggleaddcc()">
+<hr width="100%">
+
 <?php 
 require_once USER_MANAGER;
   if(!CheckLogin()):
@@ -10,7 +20,7 @@ require_once USER_MANAGER;
         'npassword1' => $_POST['npassword1']
       ];
       if(empty($postDatapw['npassword']) || empty($postDatapw['npassword1'])) {
-        echo "Kérem adja meg az új jelszavát vagy jelszó megerősítőt!";
+        echo "Hiányzó adat(ok)!";
       } else if(strlen($postDatapw['npassword']) < 6) {
         echo "A jelszó túl rövid! Legalább 6 karakter hosszúnak kell lennie!";
       } else if(1 === preg_match('~[ ]~', $postDatapw['npassword'])) {
@@ -25,14 +35,6 @@ require_once USER_MANAGER;
     }
 ?>
 
-<?php require_once PROTECTED_DIR."creditcard/listcard.php" ?>
-<hr width="100%">
-<div class="addcc">
-  <?php require_once PROTECTED_DIR."creditcard/addcard.php" ?>
-</div>
-<input type="submit" name="addcreditcard" value="Bankkártya hozzáadás" onclick="toggleaddcc()">
-
-<hr width="100%">
 <div class="changepw">
   <form method="POST">
     <input type="password" name="npassword" placeholder="Adja meg az új jelszavát">
