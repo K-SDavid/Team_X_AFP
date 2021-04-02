@@ -130,6 +130,10 @@ input[type=submit]{
 	width: 200px;
 }
 
+.changepw input[type=text]{
+	width: 200px;
+}
+
 .changepwform i{
 	opacity: 0;
 	position: absolute;
