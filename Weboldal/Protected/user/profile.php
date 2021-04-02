@@ -1,4 +1,10 @@
 
+
+<div class="addcc">
+  <?php require_once PROTECTED_DIR."creditcard/addcard.php" ?>
+</div>
+<input type="submit" name="addcreditcard" value="Bankkártya hozzáadás" onclick="toggleaddcc()">
+
 <hr width="100%">
 <div class="changepw">
   <form method="POST">
