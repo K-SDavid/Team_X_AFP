@@ -67,6 +67,10 @@ content table a{
 	color: #fff;
 }
 
+input[type=submit]{
+	cursor: pointer;
+}
+
 .registerform{
 	display: flex;
 	flex-direction: column;
@@ -109,4 +113,22 @@ content table a{
 
 .registerform .pwinput{
 	margin-left: 15px;
+}
+
+.changepw{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 0;
+	overflow: hidden;
+	transition: 0.5s;
+}
+
+.changepw.activepw{
+	height: 50px;
+}
+
+.changepw input[type=password]{
+	width: 200px;
 }
