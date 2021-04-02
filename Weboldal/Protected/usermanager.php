@@ -75,6 +75,20 @@ function ModifyUser($id, $balance, $xcoin) {
 	return false;
 }
 
+function changePassword($id, $password) {
+	$query = "UPDATE users SET password = :password WHERE id = :id";
+	$params = [
+		':id' => $id,
+		':password' => sha1($password)
+	];
+	require_once DATABASE_CONTROLLER;
+	if(executeDML($query, $params))
+		{
+			header('Location: index.php?P=profile');
+		}
+	return false;
+}
+
 function DeleteUser($id) {
 	$query = "DELETE FROM users WHERE id = :id";
 	$params = [ ':id' => $id ];
