@@ -4,21 +4,21 @@ require_once USER_MANAGER;
     header("Location: index.php?P=denied");
   else:
     if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['npwsubmit'])) {
-      $postData = [
+      $postDatapw = [
         'id' => $_SESSION['uid'],
         'npassword' => $_POST['npassword'],
         'npassword1' => $_POST['npassword1']
       ];
-      if(empty($postData['npassword']) || empty($postData['npassword1'])) {
+      if(empty($postDatapw['npassword']) || empty($postDatapw['npassword1'])) {
         echo "Kérem adja meg az új jelszavát vagy jelszó megerősítőt!";
-      } else if(strlen($postData['npassword']) < 6) {
+      } else if(strlen($postDatapw['npassword']) < 6) {
         echo "A jelszó túl rövid! Legalább 6 karakter hosszúnak kell lennie!";
-      } else if(1 === preg_match('~[ ]~', $postData['npassword'])) {
+      } else if(1 === preg_match('~[ ]~', $postDatapw['npassword'])) {
         echo "A jelszó nem tartalmazhat szóközt!";
-      } else if ($postData['npassword'] != $postData['npassword1']) {
+      } else if ($postDatapw['npassword'] != $postDatapw['npassword1']) {
         echo "A jelszavak nem egyeznek!";       
       }else {
-        if(!changePassword($postData['id'], $postData['npassword'])) {
+        if(!changePassword($postDatapw['id'], $postDatapw['npassword'])) {
           echo "Hiba a jelszó módosításnál!";
         }
       }
