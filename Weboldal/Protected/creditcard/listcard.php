@@ -6,7 +6,12 @@
 		require_once CARD_MANAGER;
 		if(array_key_exists('d',$_GET) && !empty($_GET['d']))
 		{
-			DeleteCard($_GET['d']);
+			require_once PROTECTED_DIR."normal/submit.php";
+			if(Submit() == 1) {
+				DeleteCard($_GET['d']);
+			} else if(Submit() == 0) {
+				header('Location: index.php?P=profile');
+			}
 		}
 		$cards = ListCard($_SESSION['uid']);
 		if(count($cards) > 0): ?>
@@ -32,7 +37,7 @@
 							echo "0";
 						} echo $c['cardnumber']; ?></td>
 						<td><?=strlen($c['expiration']) == 3 ? '0'.substr($c['expiration'],0,1).'/'.substr($c['expiration'],1,2) : substr($c['expiration'],0,2).'/'.substr($c['expiration'],2,2) ?></td>
-						<td><a href="?P=listcard&d=<?=$c['id']?>">X</a></td>
+						<td><a href="?P=profile&d=<?=$c['id']?>">X</a></td>
 					</tr>
 				<?php endforeach;?>
 			</tbody>
