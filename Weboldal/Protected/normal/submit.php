@@ -10,10 +10,12 @@
 	}
 	
 ?>
-<form method="POST">
-	<label>Biztosan szeretné folytatni?</label>
-	<div>
-		<input type="submit" name="yes" value="Igen">
-		<input type="submit" name="no" value="Mégse">
-	</div>
-</form>
+<div class="submitpopup">
+	<form method="POST">
+		<label>Biztosan szeretné folytatni?</label>
+		<div>
+			<input type="submit" name="yes" value="Igen">
+			<input type="submit" name="no" value="Mégse">
+		</div>
+	</form>
+</div>
