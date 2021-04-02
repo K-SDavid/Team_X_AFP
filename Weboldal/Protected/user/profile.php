@@ -1,3 +1,14 @@
+
+<hr width="100%">
+<div class="changepw">
+  <form method="POST">
+    <input type="password" name="npassword" placeholder="Adja meg az új jelszavát">
+    <input type="password" name="npassword" placeholder="Erősítse meg a jelszavát">
+    <input type="submit" name="npwsubbmit" value="Jelszó módosítás">
+  </form>
+</div>
+<input type="submit" name="jelszomodositas" value="Jelszó változtatás" onclick="togglePW()">
+
 <div>
   <table>
     <tr>
