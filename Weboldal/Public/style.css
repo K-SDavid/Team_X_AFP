@@ -111,8 +111,10 @@ input[type=submit]{
 	padding-right: 25px;
 }
 
-.registerform .pwinput{
-	margin-left: 15px;
+.registerform .pwinput i{
+	position: absolute;
+	margin-left: -25px;
+	margin-top: 12px;
 }
 
 .changepw{
