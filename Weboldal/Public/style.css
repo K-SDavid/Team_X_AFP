@@ -123,6 +123,7 @@ input[type=submit]{
 	height: 0;
 	overflow: hidden;
 	transition: 0.5s;
+	margin-bottom: 20px;
 }
 
 .changepw.activepw{
@@ -135,6 +136,23 @@ input[type=submit]{
 
 .addcc{
 	display: flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.listcc{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+	width: 100%;
+}
+
+.addcard{
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
@@ -143,7 +161,7 @@ input[type=submit]{
 	transition: 0.5s;
 }
 
-.addcc.activecc{
+.addcard.activecc{
 	height: 50px;
 }
 
