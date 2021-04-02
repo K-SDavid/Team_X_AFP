@@ -132,3 +132,17 @@ input[type=submit]{
 .changepw input[type=password]{
 	width: 200px;
 }
+
+.addcc{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 0;
+	overflow: hidden;
+	transition: 0.5s;
+}
+
+.addcc.activecc{
+	height: 50px;
+}
