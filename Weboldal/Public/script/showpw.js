@@ -39,3 +39,31 @@ function showr2pw(){
 		reg2 = true;
 	}
 }
+
+var npw = false;
+function shownpw(){
+	if(npw){
+		document.getElementById("npassword").setAttribute("type", "password");
+		document.getElementById("npw").className = "fa fa-eye";
+		npw = false;
+
+	} else{
+		document.getElementById("npassword").setAttribute("type", "text");
+		document.getElementById("npw").className = "fa fa-eye-slash";
+		npw = true;
+	}
+}
+
+var npw2 = false;
+function shownpw2(){
+	if(npw2){
+		document.getElementById("npassword2").setAttribute("type", "password");
+		document.getElementById("npw2").className = "fa fa-eye";
+		npw2 = false;
+
+	} else{
+		document.getElementById("npassword2").setAttribute("type", "text");
+		document.getElementById("npw2").className = "fa fa-eye-slash";
+		npw2 = true;
+	}
+}
