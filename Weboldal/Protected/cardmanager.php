@@ -34,7 +34,7 @@ function DeleteCard($id){
 	require_once DATABASE_CONTROLLER;
     if(executeDML($query, $params))
 		{
-			header('Location: index.php?P=listcard');
+			header('Location: index.php?P=profile');
 		}
 	return false;
 }
