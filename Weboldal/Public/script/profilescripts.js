@@ -4,6 +4,6 @@ function togglePW(){
 }
 
 function toggleaddcc(){
-	let navigation = document.querySelector('.addcc')
+	let navigation = document.querySelector('.addcard')
 	navigation.classList.toggle('activecc')
 }
