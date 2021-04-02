@@ -1,5 +1,7 @@
 
 
+<?php require_once PROTECTED_DIR."creditcard/listcard.php" ?>
+<hr width="100%">
 <div class="addcc">
   <?php require_once PROTECTED_DIR."creditcard/addcard.php" ?>
 </div>
