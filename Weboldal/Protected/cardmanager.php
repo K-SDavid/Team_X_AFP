@@ -15,7 +15,7 @@ function AddCard($userid, $name, $number, $expiration, $security) {
                 ];
         if(executeDML($query, $params))
         {
-            header('Location: index.php?P=listcard');
+            header('Location: index.php?P=profile');
         }
     } 
     return false;
