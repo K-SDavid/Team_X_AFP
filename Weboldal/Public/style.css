@@ -111,12 +111,6 @@ input[type=submit]{
 	padding-right: 25px;
 }
 
-.registerform .pwinput i{
-	position: absolute;
-	margin-left: -25px;
-	margin-top: 12px;
-}
-
 .changepw{
 	display: flex;
 	justify-content: center;
@@ -134,6 +128,24 @@ input[type=submit]{
 
 .changepw input[type=password]{
 	width: 200px;
+}
+
+.changepwform i{
+	opacity: 0;
+	position: absolute;
+	margin-left: -20px;
+	margin-top: 14px;
+	transition: 0.5s;
+}
+
+.changepw.activepw .changepwform i{
+	opacity: 1;
+}
+
+.registerform .pwinput i{
+	position: absolute;
+	margin-left: -25px;
+	margin-top: 12px;
 }
 
 .addcc{
