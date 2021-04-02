@@ -36,9 +36,9 @@ require_once USER_MANAGER;
 ?>
 
 <div class="changepw">
-  <form method="POST">
-    <input type="password" name="npassword" placeholder="Adja meg az új jelszavát">
-    <input type="password" name="npassword1" placeholder="Erősítse meg a jelszavát">
+  <form method="POST" class="changepwform">
+    <input type="password" name="npassword" placeholder="Adja meg az új jelszavát"><i id="log" class="fa fa-eye" aria-hidden="true" onclick="showlpw()"></i>
+    <input type="password" name="npassword1" placeholder="Erősítse meg a jelszavát"><i id="log" class="fa fa-eye" aria-hidden="true" onclick="showlpw()"></i>
     <input type="submit" name="npwsubmit" value="Jelszó módosítás">
   </form>
 </div>
