@@ -69,9 +69,12 @@ function ModifyUser($id, $balance, $xcoin) {
 	];
 	require_once DATABASE_CONTROLLER;
 	if(executeDML($query, $params))
-		{
-			header('Location: index.php?P=userlist');
-		}
+	{
+		header('Location: index.php?P=userlist');
+	}
+	if($_SESSION['uid'] == $id) {
+		UpdateBalance($id);
+	}
 	return false;
 }
 

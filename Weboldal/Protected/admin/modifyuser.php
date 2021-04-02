@@ -8,9 +8,7 @@ require_once USER_MANAGER;
 				'balance' => $_POST['balance'],
 				'xcoin' => $_POST['xcoin']
 			];
-			if(empty($postData['balance']) || empty($postData['xcoin'])) {
-				echo "Kérem adja meg a változtatni kívánt egyenleget vagy X-Coin-t!";
-			} else if (!is_numeric($postData['balance']) || !is_numeric($postData['xcoin'])) {
+			if (!is_numeric($postData['balance']) || !is_numeric($postData['xcoin'])) {
 				echo "A megadott adatok csak számok lehetnek!";
 			} else if ($postData['balance'] < 0 || $postData['xcoin'] < 0) {
 				echo "Egyik érték sem lehet kisebb mint 0!";
