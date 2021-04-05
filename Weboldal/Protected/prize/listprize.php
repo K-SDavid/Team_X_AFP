@@ -72,6 +72,7 @@
 		<?php endif;
 		if($_SESSION['permission'] > 2): ?>
 			<hr width="90%">
-			<input type="submit" name="addprize" value="Nyeremény hozzáadása">
+			<?php require_once PROTECTED_DIR."prize/addprize.php" ?>
+			<input type="submit" name="addprize" value="Nyeremény hozzáadása" onclick="toggleaddP()">
 		<?php endif;
 endif; ?>
