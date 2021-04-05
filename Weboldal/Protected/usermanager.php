@@ -161,14 +161,17 @@ function SpendXcoin($id, $amount){
 	$query="SELECT xcoin FROM users WHERE id = :id";
 	$params = [ ':id' => $id ];
 	require_once DATABASE_CONTROLLER;
-	$xcoin = getField($query, $params) - $amount;	
+	$xcoin = getField($query, $params) - $amount;
+	if($xcoin < 0){
+		return false;
+	}	
 	$query="UPDATE users SET xcoin = :xcoin WHERE id = :id";
 	$params = [ ':id' => $id ,
 				':xcoin' => $xcoin];
 	executeDML($query,$params);
 	UpdateBalance($id);
+	return true;
 }
-
 function Win($id, $amount)
 {
 	$query="SELECT balance FROM users WHERE id = :id";
