@@ -22,8 +22,8 @@
 		}
 	}
 ?>
-<form method="POST">
+<form method="POST" class="addPF">
 	<input type="text" name="prizename" placeholder="Nyeremény neve" value="<?=isset($postDataap) ? $postDataap['name'] : ""?>">
 	<input type="text" name="prizeprice" placeholder="Ár" value="<?=isset($postDataap) ? $postDataap['price'] : ""?>">
-	<input type="submit" name="submit">
+	<input type="submit" name="submit" value="Hozzáadás">
 </form>
