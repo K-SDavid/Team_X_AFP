@@ -7,16 +7,24 @@
 		$prizes = ListPrize();
 		if(array_key_exists('r',$_GET) && !empty($_GET['r']))
 		{
-			$query = "SELECT price FROM prizes WHERE id = :id";
-			$params = [ 'id' => $_GET['r'] ];
-			require_once DATABASE_CONTROLLER;
-			$price = getField($query, $params);
-			if($price <= $_SESSION['xcoin'])
-			{
-			RedeemPrize($_SESSION['uid'],$_GET['r']);
-			header("Location: index.php?P=prizes");			
+			require_once PROTECTED_DIR."normal/submit.php";			
+			if(Submit() == 1){
+				$query = "SELECT price FROM prizes WHERE id = :id";
+				$params = [ 'id' => $_GET['r'] ];
+				require_once DATABASE_CONTROLLER;
+				$price = getField($query, $params);
+				if($price <= $_SESSION['xcoin'])
+				{
+				RedeemPrize($_SESSION['uid'],$_GET['r']);
+				header("Location: index.php?P=prizes");			
+				}
+				else echo "Nincs elég X-Coin!";
 			}
-			else echo "Nincs elég X-Coin!";
+			else if(Submit()==0)
+			{
+				header("Location: index.php?P=prizes");			
+
+			}
 		}
 		
 		if(count($prizes) > 0): ?>
