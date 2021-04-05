@@ -1,0 +1,218 @@
+header{
+	position: fixed;
+	height: 85px;
+	width: 100%;
+	background: #161C32;
+	z-index: 5;
+	flex-shrink: 0;
+}
+
+header hr{
+	position: fixed;
+	width: 100%;
+	top: 85px;
+	z-index: -1;
+}
+
+.details{
+	position: fixed;
+	display: flex;
+	top: 0;
+	right: 0;
+	width: 300px;
+	height: 80px;
+}
+
+.details .money input{
+	position: absolute;
+	background: #2F323A;
+	color: #fff;
+	width: 150px;
+	left: 60px;
+	top: 20px;
+	border-radius: 0 5px 5px 0;
+	text-align: right;
+	outline: none;
+	padding-right: 10px;
+	border: none;
+	user-select: none;
+}
+
+.details .moneybefore input{
+	position: absolute;
+	background: #2F323A;
+	color: #fff;
+	width: 50px;
+	left: 10px;
+	top: 20px;
+	border-radius: 5px 0 0 5px;
+	outline: none;
+	padding-left: 10px;
+	border: none;
+}
+
+.details .xcoin input{
+	position: absolute;
+	background: #2F323A;
+	color: #fff;
+	width: 150px;
+	left: 60px;
+	top: 45px;
+	border-radius: 0 5px 5px 0;
+	text-align: right;
+	outline: none;
+	padding-right: 10px;
+	border: none;
+}
+
+.details .xcoinbefore input{
+	position: absolute;
+	background: #2F323A;
+	color: #fff;
+	width: 50px;
+	left: 10px;
+	top: 45px;
+	border-radius: 5px 0 0 5px;
+	outline: none;
+	padding-left: 10px;
+	border: none;
+}
+
+.profile {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 10px;
+	right: 10px;
+	width: 60px;
+	height: 60px;
+	background: #2F323A;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+.profile .fa{
+	font-size: 54px;
+	color: #fff;
+}
+
+.profile:hover .fa{
+	text-shadow: 0 0 5px #fff,
+				0 0 15px #fff
+}
+.username input{
+	position: absolute;
+	background: #2F323A;
+	color: #fff;
+	width: 200px;
+	right: 150px;
+	top: 20px;
+	border-radius: 5px;
+	outline: none;
+	padding-left: 10px;
+	border: none;
+}
+
+.password input{
+	position: absolute;
+	background: #2F323A;
+	color: #fff;
+	width: 200px;
+	right: 150px;
+	top: 45px;
+	border-radius: 5px;
+	outline: none;
+	padding-left: 10px;
+	border: none;
+}
+.login input{
+	position: absolute;
+	display: flex;
+	background: #2F323A;
+	color: #fff;
+	width: 100px;
+	right: 30px;
+	top: 45px;
+	border-radius: 5px;
+	outline: none;
+	padding-left: 10px;
+	border: none;
+	text-align: center;
+	cursor: pointer;
+}
+.register{
+	position: absolute;
+	display: flex;
+	background: #2F323A;
+	color: #fff;
+	width: 100px;
+	right: 30px;
+	top: 20px;
+	border-radius: 5px;
+	outline: none;
+	padding-left: 10px;
+	border: none;
+	text-align: center;
+}
+.register a{
+	color: #fff;
+	width: 90%;
+	font-size: 14px;
+	text-decoration: none;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.profile .drop{
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	width: 130px;
+	height: 130px;
+	top: 70px;
+	right: -300px;
+	transition: 0.5s;
+	background: #2F323A;
+	color: #fff;
+	border-radius: 2px;
+}
+.profile .drop a{
+	color: #fff;
+	display: block;
+	width: 100%;
+	line-height: 25px;
+	text-decoration: none;
+	text-align: center;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.profile:hover .drop{
+	right: -10px;
+}
+.profile .drop a:hover{
+	color: #fff;
+	text-shadow: 0 0 5px #fff,
+				0 0 25px #fff,
+				0 0 50px #fff,
+				0 0 200px #fff;
+}
+.loginerror{
+	position: absolute;
+	width: 250px;
+	top: 65px;
+	right: 100px;
+	color: #fff;
+}
+
+.password .fa{
+	position: absolute;
+	color: #fff;
+	right: 160px;
+	top: 42px;
+}
