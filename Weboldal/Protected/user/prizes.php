@@ -69,3 +69,28 @@ require_once USER_MANAGER;
 		<h1>Kiváltható nyeremények</h1>
 	<?php endif; endif;?>
 
+<?php 
+function XcoinChestRoll(){
+	$number = rand(0,100000);
+	switch ($number) {
+		case ($number<10):
+			return 7;
+		case ($number<50):
+			return 6;
+		case ($number<200):
+			return 5;
+		case ($number<800):
+			return 4;
+		case ($number<2000):
+			return 3;
+		case ($number<20000):
+			return 2;
+		case ($number<45000):
+			return 1;
+		default:
+			return 0;
+			break;
+	}
+	
+}
+ ?>
