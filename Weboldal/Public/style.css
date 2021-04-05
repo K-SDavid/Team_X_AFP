@@ -212,3 +212,12 @@ input[type=submit]{
 		height: 200px;
 	}
 }
+
+.addPF{
+	height: 0;
+	overflow: hidden;
+	transition: 0.5s;
+}
+.addPF.activeAddP{
+	height: 50px;
+}
