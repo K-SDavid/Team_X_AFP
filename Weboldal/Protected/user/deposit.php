@@ -3,13 +3,13 @@ if(!CheckLogin()):
 	header("Location: index.php?P=denied");
 else:
 	require_once CARD_MANAGER;
-	if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {		
-			if(!empty($_POST['amount'])){
-				Deposit($_SESSION['uid'],$_POST['amount']);
-			}
-			else{
-				echo "Válassza ki a feltölteni kívánt összeget!";
-			}
+	if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
+		if(!empty($_POST['amount'])){
+			Deposit($_SESSION['uid'], $_POST['amount']);
+		}
+		else{
+			echo "Válassza ki a feltölteni kívánt összeget!";
+		}
 	}
 	$cards = ListCard($_SESSION['uid']);
 	if(	!CheckCard($_SESSION['uid'])):
@@ -26,7 +26,7 @@ else:
 			<?php endforeach; ?>
 		</select>
 		<br>
-		<form method="POST" class="depositradio"> 
+		<form method="POST" class="depositradio">
 			<div class = "amount-buttons">
 				<input type="radio" id="10" name="amount" value="10">
 				<label for="10">10€</label>
