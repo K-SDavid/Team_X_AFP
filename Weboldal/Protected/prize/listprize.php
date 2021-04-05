@@ -7,8 +7,6 @@
 		$prizes = ListPrize();
 		if(array_key_exists('r',$_GET) && !empty($_GET['r']))
 		{
-			
-			
 			$query = "SELECT price FROM prizes WHERE id = :id";
 			$params = [ 'id' => $_GET['r'] ];
 			require_once DATABASE_CONTROLLER;
@@ -20,17 +18,14 @@
 					RedeemPrize($_SESSION['uid'],$_GET['r']);
 					header("Location: index.php?P=prizes");	
 				}
-				else if(Submit()==0)
+				else if(Submit() == 0)
 				{
 					header("Location: index.php?P=prizes");	
 				}		
 			}
 			else echo "Nincs elég X-Coin!";
-			
-			
 		}
-		
-		if(count($prizes) > 0): ?>
+		if(count($prizes) > 0): ?> 
 			<table>
 			<thead>
 				<tr>
@@ -55,5 +50,9 @@
 		</table>
 		<?php else: ?>
 			<h1>Jelenleg nincs kiváltható nyeremény!</h1>
-		<?php endif; ?>
-<?php endif; ?>
+		<?php endif;
+		if($_SESSION['permission'] > 2): ?>
+			<hr width="90%">
+			<input type="submit" name="addprize" value="Nyeremény hozzáadása">
+		<?php endif;
+endif; ?>
