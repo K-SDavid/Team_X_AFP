@@ -10,7 +10,6 @@ function AddPrize($name, $price) {
         {
             header('Location: index.php?P=prizes');
         }
-    } 
     return false;
 }
 
