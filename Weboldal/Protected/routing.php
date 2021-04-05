@@ -22,7 +22,6 @@ switch ($_GET['P']) {
 	case 'userlist': require_once PROTECTED_DIR.'admin/userlist.php'; break;
 
 
-
 	case 'addcard': require_once PROTECTED_DIR.'creditcard/addcard.php'; break;
 
 	case 'listcard': require_once PROTECTED_DIR.'creditcard/listcard.php'; break;
