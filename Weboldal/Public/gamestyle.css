@@ -1,0 +1,31 @@
+.xcoin-chests{
+	display: flex;
+	flex-direction: row;
+	margin: 15px;
+
+}
+.xcoin-chest{
+	margin:20px;
+	padding:15px;
+	background: #161C32;
+	border: 2px solid #FFFFFF;
+	display: flex;
+	letter-spacing: 2px;
+	flex-direction: column;
+	text-align: center;
+	border-radius: 15px;
+}
+
+.xcoin-chest img{
+	width: 180px;
+	height: 150px;
+	margin:  10px 0px 10px 0px;
+}
+
+
+@media (max-width: 900px){
+	.xcoin-chests{
+		flex-direction: column;
+	}
+
+}
