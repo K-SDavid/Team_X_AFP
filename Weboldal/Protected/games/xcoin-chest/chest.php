@@ -9,7 +9,7 @@
 		<a href="index.php?P=prizes&c=gold"><img src="<?=PUBLIC_DIR."Pictures/xcoin-chest/gold-chest.png"?>"></a>1000 X-Coin
 	</div>	
 	<div class="xcoin-chest"> Gyémánt láda
-		<a href=""><img src="<?=PUBLIC_DIR."Pictures/xcoin-chest/diamond-chest.png"?>"></a>4500 X-Coin
+		<a href="index.php?P=prizes&c=diamond"><img src="<?=PUBLIC_DIR."Pictures/xcoin-chest/diamond-chest.png"?>"></a>4500 X-Coin
 	</div>	
 </div>
 
