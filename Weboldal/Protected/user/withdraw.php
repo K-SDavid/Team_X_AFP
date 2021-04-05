@@ -8,8 +8,8 @@ else:
 				echo "Kérjük adja meg a kiváltani kívant összeget!";
 			} else if(!is_numeric($_POST['amount'])){
 				echo "Kérjük csak számot adjon meg!";
-			} else if($_POST['amount'] <= 2){
-				echo "A megadott érték nem lehet 2 vagy kisebb!";
+			} else if($_POST['amount'] < 2){
+				echo "A megadott érték nem lehet 2€-nál!";
 			} else if($_POST['amount'] > $_SESSION['balance']){
 				echo "A beírt összeg meghaladja az ön egyenlegét!";
 			}
