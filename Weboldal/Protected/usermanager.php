@@ -169,4 +169,16 @@ function SpendXcoin($id, $amount){
 	UpdateBalance($id);
 }
 
+function Win($id, $amount)
+{
+	$query="SELECT balance FROM users WHERE id = :id";
+	$params = [ ':id' => $id ];
+	require_once DATABASE_CONTROLLER;
+	$balance = getField($query, $params) + $amount;
+	$query="UPDATE users SET balance = :balance WHERE id = :id";
+	$params = [ ':id' => $id ,
+				':balance' => $balance];
+	executeDML($query,$params);
+	UpdateBalance($id);
+}
 ?>
