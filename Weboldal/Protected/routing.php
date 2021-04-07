@@ -30,6 +30,8 @@ switch ($_GET['P']) {
 	case 'lotto': require_once PROTECTED_DIR.'games/lotto/lotto.php'; break;
 
 	case 'addlotto': require_once PROTECTED_DIR.'games/lotto/addlotto.php'; break;
+	case 'scraper': require_once PROTECTED_DIR.'games/lotto/simplescraper.php'; break;
+
 
 
 	case 'logout': UserLogout(); break;
