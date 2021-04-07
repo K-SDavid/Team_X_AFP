@@ -8,9 +8,7 @@
 		
 	<?php endif; ?>
 
-	<?php if(CheckLogin()) : ?>
-		
-	<?php endif; ?>
+	<a href="index.php?P=lotto">Ötöslottó</a>
 
 </div>
 
