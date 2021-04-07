@@ -5,8 +5,15 @@ if (!CheckLogin()):
 else:
 	//Bet($_SESSION['uid'], 5);
 	if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['bet'])) {
-		foreach ($_POST['check'] as $c) {
-			echo $c.' ';
+		if (empty($_POST['check'])) {
+			echo "Kérjük jelöljön ki 5 db lottószámot!";
+		} else if (count($_POST['check']) != 5) {
+			echo "Csak öt szám megjelölésével lehet játszani!";
+		} else {
+			require_once 'lottomanager.php';
+			if(!AddLotto($_SESSION['uid'], $_POST['check']['0'], $_POST['check']['1'], $_POST['check']['2'], $_POST['check']['3'], $_POST['check']['4'])) {
+				echo "Az ötöslottó leadása sikertelen!";
+			}
 		}
 	}
 ?>
