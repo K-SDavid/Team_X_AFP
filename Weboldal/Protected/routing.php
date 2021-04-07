@@ -27,6 +27,11 @@ switch ($_GET['P']) {
 	case 'listcard': require_once PROTECTED_DIR.'creditcard/listcard.php'; break;
 
 
+	case 'lotto': require_once PROTECTED_DIR.'games/lotto/lotto.php'; break;
+
+	case 'addlotto': require_once PROTECTED_DIR.'games/lotto/addlotto.php'; break;
+
+
 	case 'logout': UserLogout(); break;
 	
 
