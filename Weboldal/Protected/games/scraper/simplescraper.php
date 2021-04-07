@@ -36,7 +36,7 @@ else:
 			<h3>Egyszerű kaparós sorsjegy <br> Ár: 2€ <br> Nyeremény: 10€</h3> <br> <h1>Játékleírás: </h1>
 		<?php endif; ?>
 	<?php else: ?>
-		</script>
+		<script type="text/javascript" src="<?=PUBLIC_DIR.'script/refreshblock.js'?>"></script>
 		<div class="scratch">	
 			<?php Bet($_SESSION['uid'], 2);
 				$cv = $_POST['cV'];
