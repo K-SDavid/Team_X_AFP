@@ -29,3 +29,49 @@
 	}
 
 }
+
+.scratch{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 300px;
+	height: 500px;
+	background: #161C32;
+	border-radius: 10px;
+	border: 2px solid #fff;
+}
+
+.scratch h2{
+	user-select: none;
+	position: relative;
+}
+.scratch section {
+	user-select: none;
+	position: relative;
+	width: 200px;
+	height: 100px;
+	background: grey;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 0;
+	overflow: hidden;
+	margin-top: 50%;
+	margin-bottom: 50%;
+}
+
+.scratch main{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.scratch canvas{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	background: #fff;
+	z-index: 2;
+	mix-blend-mode: screen;
+}
