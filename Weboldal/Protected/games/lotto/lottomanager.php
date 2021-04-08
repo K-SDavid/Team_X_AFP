@@ -12,8 +12,15 @@ function AddLotto($userid, $first, $second, $third, $fourth, $fifth){
 	require_once DATABASE_CONTROLLER;
 	if(executeDML($query, $params))
     {
+        Bet($_SESSION['uid'], 5);
         header('Location: index.php?P=lotto');
     }
     return false;
+}
+
+function ListLotto() {
+	$query = "SELECT * FROM lotto";
+	require_once DATABASE_CONTROLLER;
+	return getList($query);
 }
 ?>
