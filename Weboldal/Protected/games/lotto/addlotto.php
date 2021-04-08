@@ -3,7 +3,6 @@ require_once USER_MANAGER;
 if (!CheckLogin()):
 	header("Location: index.php?P=denied");
 else:
-	//Bet($_SESSION['uid'], 5);
 	if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['bet'])) {
 		if (empty($_POST['check'])) {
 			echo "Kérjük jelöljön ki 5 db lottószámot!";
@@ -16,7 +15,13 @@ else:
 			}
 		}
 	}
+	if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['back'])) {
+		header("Location: index.php?P=lotto");
+	}
 ?>
+	<form method="POST">
+		<input type="submit" name="back" value="Vissza">
+	</form>
 	<form method="POST">
 		<table border="2px">
 	        <tr>
