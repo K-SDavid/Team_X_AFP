@@ -55,7 +55,7 @@ function UserLogout() {
 }
 
 function UserList() {
-	$query = "SELECT * FROM users";
+	$query = "SELECT * FROM users ORDER BY username ASC";
 	require_once DATABASE_CONTROLLER;
 	return getList($query);
 }
@@ -118,6 +118,13 @@ function GetBalanceById($id) {
 
 function GetXCoinById($id) {
 	$query = "SELECT xcoin FROM users WHERE id = :id";
+	$params = [':id' => $id];
+	require_once DATABASE_CONTROLLER;
+	return getField($query, $params);
+}
+
+function GetUsernameById($id) {
+	$query = "SELECT username FROM users WHERE id = :id";
 	$params = [':id' => $id];
 	require_once DATABASE_CONTROLLER;
 	return getField($query, $params);
