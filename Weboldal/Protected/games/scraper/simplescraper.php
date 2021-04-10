@@ -1,3 +1,4 @@
+<script src="https://cdn.jsdelivr.net/npm/p5@1.3.0/lib/p5.js"></script>
 <?php
 require_once USER_MANAGER;
 
