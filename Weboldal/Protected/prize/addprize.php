@@ -1,5 +1,5 @@
-<?php 
-	if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
+<?php
+	if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['aprize'])) {
 		$postDataap = [
 			'name' => $_POST['prizename'],
 			'price' => $_POST['prizeprice']
@@ -25,5 +25,5 @@
 <form method="POST" class="addPF">
 	<input type="text" name="prizename" placeholder="Nyeremény neve" value="<?=isset($postDataap) ? $postDataap['name'] : ""?>">
 	<input type="text" name="prizeprice" placeholder="Ár" value="<?=isset($postDataap) ? $postDataap['price'] : ""?>">
-	<input type="submit" name="submit" value="Hozzáadás">
+	<input type="submit" name="aprize" value="Hozzáadás">
 </form>
