@@ -1,7 +1,7 @@
 <?php 
 	require_once PRIZE_MANAGER;
 	$prize = GetPrizeById($_GET['m']);
-	if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
+	if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['modify'])) {
 		$postDatamp = [
 			'name' => $_POST['prizename'],
 			'price' => $_POST['prizeprice']
@@ -29,6 +29,6 @@
 		<td><input type="text" name="prizename" placeholder="Nyeremény neve" value="<?=$prize['name']?>"></td>
 		<td><input type="text" name="prizeprice" placeholder="Ár" value="<?=$prize['price']?>"></td>
 		<td></td>
-		<td><input type="submit" name="submit"></td>
+		<td><input type="submit" name="modify" value="Módosítás"></td>
 	</div>
 </form>
