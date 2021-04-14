@@ -5,7 +5,7 @@
 	else:
 		require_once PRIZE_MANAGER;
 		$prizes = ListPrize();
-		if(array_key_exists('d',$_GET) && !empty($_GET['d'])) {
+		if(array_key_exists('d',$_GET) && !empty($_GET['d']) && $_SESSION['permission'] > 2) {
 			require_once PROTECTED_DIR."normal/submit.php";
 			if(Submit() == 1) {
 				DeletePrize($_GET['d']);
@@ -61,7 +61,7 @@
 							<td><a href="?P=prizes&d=<?=$p['id']?>">X</a></td>
 					<?php endif;?>
 					</tr>
-				<?php if(array_key_exists('m',$_GET) && !empty($_GET['m']) && $p['id'] == $_GET['m']): ?>
+				<?php if(array_key_exists('m',$_GET) && !empty($_GET['m']) && $p['id'] == $_GET['m'] && $_SESSION['permission'] > 2): ?>
 					<?php require_once 'modifyprize.php'; ?>
 				<?php endif;?>
 				<?php endforeach;?>
