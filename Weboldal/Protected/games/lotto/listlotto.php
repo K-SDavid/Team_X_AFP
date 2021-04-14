@@ -4,7 +4,7 @@ if (!CheckLogin()):
 	header("Location: index.php?P=denied");
 else:
 	require_once 'lottomanager.php';
-	if(array_key_exists('d',$_GET) && !empty($_GET['d']))
+	if(array_key_exists('d',$_GET) && !empty($_GET['d'] && $_SESSION['permission'] > 2))
 	{
 		require_once PROTECTED_DIR."normal/submit.php";
 		if(Submit() == 1) {
