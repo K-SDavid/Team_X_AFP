@@ -93,9 +93,15 @@ function changePassword($id, $password) {
 }
 
 function DeleteUser($id) {
+	require_once DATABASE_CONTROLLER;
+	$query = "DELETE FROM lotto WHERE userid = :id";
+	$params = [ ':id' => $id ];
+	executeDML($query, $params);
+	$query = "DELETE FROM creditcards WHERE userid = :id";
+	$params = [ ':id' => $id ];
+	executeDML($query, $params);
 	$query = "DELETE FROM users WHERE id = :id";
 	$params = [ ':id' => $id ];
-	require_once DATABASE_CONTROLLER;
     if(executeDML($query, $params))
 		{
 			header('Location: index.php?P=userlist');
