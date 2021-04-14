@@ -22,8 +22,8 @@ else:
 	<form method="POST">
 		<input type="submit" name="back" value="Vissza">
 	</form>
-	<form method="POST">
-		<table border="2px">
+	<form method="POST" class="lottoform">
+		<table border="2px" class="lottotable">
 	        <tr>
 	        <?php for ($i=1; $i < 91; $i++): ?>
                 <td><?=$i?><input type="checkbox" name="check[]" value="<?=$i?>"></td>
