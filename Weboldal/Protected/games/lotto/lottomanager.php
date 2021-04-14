@@ -77,7 +77,6 @@ function Reward($s = [], $hit1, $hit2, $hit3, $hit4, $hit5) {
 	}
 	UpdateBalance($_SESSION['uid']);
 	DeleteAllLotto();
-	header('Location: index.php?P=lottoroll');
 }
 
 function DeleteAllLotto() {
