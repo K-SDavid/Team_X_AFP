@@ -34,7 +34,7 @@
 }
 
 .bronze-chest:hover{
-	height: 450px;
+	height: 470px;
 }
 
 .silver-chest{
@@ -42,7 +42,7 @@
 }
 
 .silver-chest:hover{
-	height: 450px;
+	height: 470px;
 }
 
 .gold-chest{
@@ -50,14 +50,14 @@
 }
 
 .gold-chest:hover{
-	height: 450px;
+	height: 470px;
 }
 .diamond-chest{
 	height: 250px;
 }
 
 .diamond-chest:hover{
-	height: 450px;
+	height: 470px;
 }
 
 @media (max-width: 900px){

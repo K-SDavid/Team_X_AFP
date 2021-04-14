@@ -1,6 +1,6 @@
 <div class="xcoin-chests">
 	<div class="xcoin-chest bronze-chest">Bronz láda
-		<a href="index.php?P=prizes&c=bronze"><img src="<?=PUBLIC_DIR."Pictures/xcoin-chest/bronze-chest.png"?>"></a>50 X-Coin	<br><br>
+		<a href="index.php?P=prizes&c=bronze"><img src="<?=PUBLIC_DIR."Pictures/xcoin-chest/bronze-chest.png"?>"></a>50 X-Coin	<br><br><br>
 		<table><hr>
 			<tr><th>%</th><th>€</th></tr>
 			<tr><td>55</td><td>0,5</td></tr>
@@ -14,7 +14,7 @@
 		</table>					
 	</div>	
 	<div class="xcoin-chest silver-chest">Ezüst láda
-		<a href="index.php?P=prizes&c=silver"><img src="<?=PUBLIC_DIR."Pictures/xcoin-chest/silver-chest.png"?>"></a>250 X-Coin <br><br>	
+		<a href="index.php?P=prizes&c=silver"><img src="<?=PUBLIC_DIR."Pictures/xcoin-chest/silver-chest.png"?>"></a>250 X-Coin <br><br><br>	
 		<table><hr>
 			<tr><th>%</th><th>€</th></tr>
 			<tr><td>55</td><td>3</td></tr>
@@ -28,7 +28,7 @@
 		</table>
 	</div>	
 	<div class="xcoin-chest gold-chest">Arany láda
-		<a href="index.php?P=prizes&c=gold"><img src="<?=PUBLIC_DIR."Pictures/xcoin-chest/gold-chest.png"?>"></a>1000 X-Coin <br><br>
+		<a href="index.php?P=prizes&c=gold"><img src="<?=PUBLIC_DIR."Pictures/xcoin-chest/gold-chest.png"?>"></a>1000 X-Coin <br><br><br>
 		<table><hr>
 			<tr><th>%</th><th>€</th></tr>
 			<tr><td>55</td><td>10</td></tr>
@@ -42,7 +42,7 @@
 		</table>
 	</div>	
 	<div class="xcoin-chest diamond-chest"> Gyémánt láda
-		<a href="index.php?P=prizes&c=diamond"><img src="<?=PUBLIC_DIR."Pictures/xcoin-chest/diamond-chest.png"?>"></a>4500 X-Coin <br><br>
+		<a href="index.php?P=prizes&c=diamond"><img src="<?=PUBLIC_DIR."Pictures/xcoin-chest/diamond-chest.png"?>"></a>4500 X-Coin <br><br><br>
 		<table><hr>
 			<tr><th>%</th><th>€</th></tr>
 			<tr><td>55</td><td>100</td></tr>
