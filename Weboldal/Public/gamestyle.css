@@ -112,3 +112,31 @@
 	z-index: 2;
 	mix-blend-mode: screen;
 }
+
+.lottoform{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.lottotable{
+	margin: auto;
+}
+
+.lottotable input[type=checkbox]{
+	width: 15px;
+	margin: 10px;
+	-webkit-transform: scale(2);
+}
+
+.lottoroll{
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+	justify-content: center;
+	width: 80%;
+}
+
+.lottoroll table{
+	margin: 50px 0 50px 0;
+}
