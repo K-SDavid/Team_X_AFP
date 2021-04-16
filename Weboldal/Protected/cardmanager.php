@@ -56,15 +56,15 @@ function Deposit($id, $amount){
 		require_once USER_MANAGER;
 		
 
-		$query="SELECT deposit FROM users WHERE id = :id";
+		$query2="SELECT deposit FROM users WHERE id = :id";
 		if(!CheckDeposit($id)){
 			UpgradeToPremium($id);
-			$deposit = getField($query,$params) + ($amount*1.2);
+			$deposit = getField($query2,$params) + ($amount*1.2);
 			$balance = getField($query,$params)+ ($amount*1.2);
 		}
 		else
 		{
-			$deposit = getField($query,$params) + $amount;
+			$deposit = getField($query2,$params) + $amount;
 			$balance = getField($query,$params)+$amount;
 		}
 
