@@ -29,6 +29,15 @@ if (CheckLogin()):
 	<input type="submit" name="listlotto" value="Számok megtekintése">
 </form>
 <?php endif;?>
-<p>Ár: 5€</p>
+<ul style="margin-bottom: 20px;">
+	<li>5 találat: 10000000€</li>
+	<li>4 találat: 5000€</li>
+	<li>3 találat: 300€</li>
+	<li>2 találat: 25€</li>
+	<li>1 találat: 0€</li>
+</ul>
+<h3>Nyeremény:</h3>
+<hr style="width: 85%; margin: 20px 0 30px 0;">
+<p style="margin-top: 5px;"><b>Ár: 5€</b></p>
 <p>A játék lényege 5 szám kiválasztása 0 és 90 között, majd sorsoláskor 5 számot kihúznak, és a megegyező számok függvényében nyerhető jutalom.</p>
 <h1>Játékleírás:</h1>
