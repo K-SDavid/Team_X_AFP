@@ -193,6 +193,7 @@ input[type=submit]{
 	width: 350px;
 	height: 200px;
 	position: absolute;
+	top: 30%;
 	z-index: 100;
 	border: 2px solid #fff;
 	background: #161C32;
