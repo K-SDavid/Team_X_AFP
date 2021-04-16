@@ -200,6 +200,13 @@ function SpendXcoin($id, $amount){
 	UpdateBalance($id);
 	return true;
 }
+
+function UpgradeToPremium($id)
+{
+	$query ="UPDATE users SET permission = 2 WHERE id = :id";
+	executeDML($query);
+}
+
 function Win($id, $amount)
 {
 	$query="SELECT balance FROM users WHERE id = :id";
