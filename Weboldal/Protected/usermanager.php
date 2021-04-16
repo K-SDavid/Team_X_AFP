@@ -204,7 +204,9 @@ function SpendXcoin($id, $amount){
 function UpgradeToPremium($id)
 {
 	$query ="UPDATE users SET permission = 2 WHERE id = :id";
-	executeDML($query);
+	$params = [':id' => $id ];
+	executeDML($query,$params);
+	$_SESSION['permission'] = 2;
 }
 
 function Win($id, $amount)

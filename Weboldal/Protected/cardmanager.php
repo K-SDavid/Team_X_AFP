@@ -53,11 +53,20 @@ function Deposit($id, $amount){
 		$query="SELECT balance FROM users WHERE id = :id";
 		$params = [ ':id' => $id ];
 		require_once DATABASE_CONTROLLER;
-
-		$balance = getField($query,$params)+$amount;
+		require_once USER_MANAGER;
+		
 
 		$query="SELECT deposit FROM users WHERE id = :id";
-		$deposit = getField($query,$params) + $amount;
+		if(!CheckDeposit($id)){
+			UpgradeToPremium($id);
+			$deposit = getField($query,$params) + ($amount*1.2);
+			$balance = getField($query,$params)+ ($amount*1.2);
+		}
+		else
+		{
+			$deposit = getField($query,$params) + $amount;
+			$balance = getField($query,$params)+$amount;
+		}
 
 		$query="UPDATE users SET balance = :balance, deposit = :deposit WHERE id=:id";
 		$params = [ ':id' => $id,
@@ -66,7 +75,7 @@ function Deposit($id, $amount){
 		
 		if(executeDML($query, $params))
 		{
-			require_once USER_MANAGER;
+			
 			UpdateBalance($id);
 			header('Location: index.php?P=profile');
 		}
