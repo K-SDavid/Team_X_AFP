@@ -136,6 +136,21 @@ function GetUsernameById($id) {
 	return getField($query, $params);
 }
 
+function GetDepositById($id) {
+	$query = "SELECT deposit FROM users WHERE id = :id";
+	$params = [':id' => $id];
+	require_once DATABASE_CONTROLLER;
+	return getField($query, $params);
+}
+
+function GetWithdrawById($id) {
+	$query = "SELECT withdraw FROM users WHERE id = :id";
+	$params = [':id' => $id];
+	require_once DATABASE_CONTROLLER;
+	return getField($query, $params);
+}
+
+
 function CheckDeposit($id)
 {
 	$query = "SELECT deposit FROM users WHERE id = :id";
