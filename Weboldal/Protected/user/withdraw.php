@@ -1,5 +1,5 @@
 <?php 
-if(!CheckLogin()):
+if(!CheckLogin() || $_SESSION['permission'] > 2):
 	header("Location: index.php?P=denied");
 else:
 	require_once CARD_MANAGER;
