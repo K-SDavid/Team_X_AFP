@@ -67,7 +67,31 @@ content table{
 content table tr{
 	height: 25px;
 	padding: 5px 0 5px 0;
+	transition: 0.5s;
 }
+
+.nicetable tr:hover{
+	color: #00b4d8;
+	height: 50px;
+	padding: 5px 0 5px 0;
+}
+
+.nicetable tr:hover a{
+	color: #00b4d8;
+}
+
+.nicetable tr a:hover{
+	color: red;
+}
+
+.nicetable tr a:hover span{
+	color: yellow;
+}
+
+.nicetable tr a:hover section{
+	color: #39FF14;
+}
+
 a{
 	text-decoration: none;
 	color: #fff;
@@ -203,6 +227,7 @@ input[type=submit]{
 	justify-content: center;
 	animation: popup 0.25s linear;
 	overflow: hidden;
+	white-space: nowrap;
 }
 
 @keyframes popup{
