@@ -87,3 +87,11 @@ else:
     <span class="dot"></span>
   </div>
 </div>
+
+<?php 
+
+function DiceRoll(){
+  return rand(1,6);
+}
+
+?>
