@@ -94,4 +94,60 @@ function DiceRoll(){
   return rand(1,6);
 }
 
+function DiceDecide($dice1, $dice2, $bettype, $amount, $id)
+{
+  if($amount > $_SESSION['balance']){
+    return -1;
+  }
+  else{
+    Bet($_SESSION['uid'],$amount);
+    $sum = $dice1+$dice2;
+    switch ($bettype) {
+      case '27':
+        if($sum < 8){
+          Win($id, $amount*2);
+          return $amount*2;
+        }    
+        return 0;
+        break;
+      case '712':
+        if($sum > 6){
+          Win($id, $amount*2);
+          return $amount*2;
+        }    
+        return 0;
+        break;
+      case 'double':
+        if($dice1 == $dice2){
+          Win($id, $amount*6);
+          return $amount*6;
+        }    
+        return 0;
+        break;
+      case 'even':
+        if($sum % 2 == 0){
+          Win($id, $amount*2);
+          return $amount*2;
+        }    
+        return 0;
+        break;
+      case 'odd':
+        if($sum % 2 == 1){
+          Win($id, $amount*2);
+          return $amount*2;
+        }    
+        return 0;
+        break;
+      case 'exact':
+        if($sum == $_POST['exactsum']){
+          Win($id, $amount*11);
+          return $amount*11;
+        }    
+        return 0;
+        break;
+          default:
+        break;
+    }
+  }
+}
 ?>
