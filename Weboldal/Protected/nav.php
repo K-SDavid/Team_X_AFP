@@ -10,6 +10,7 @@
 
 	<a href="index.php?P=lotto">Ötöslottó</a>
 	<a href="index.php?P=scraper">Kaparós sorsjegy</a>
+	<a href="index.php?P=dice">Dobókocka</a>
 
 
 </div>

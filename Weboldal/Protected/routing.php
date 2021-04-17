@@ -38,6 +38,8 @@ switch ($_GET['P']) {
 
 	case 'scraper': require_once PROTECTED_DIR.'games/scraper/simplescraper.php'; break;
 
+	case 'dice': require_once PROTECTED_DIR.'games/dice/dice.php'; break;
+
 
 	case 'logout': UserLogout(); break;
 	
