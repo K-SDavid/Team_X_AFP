@@ -23,9 +23,20 @@ else:
         <td><input type="radio" name="dicebet" id="even" value="even"></td>
         <td><input type="radio" name="dicebet" id="exact" value="exact"></td>
       </tr>
-     </table>
-     <hr class="nicehr">
-     <input type="text" name="diceamount" autocomplete="off" placeholder="0.01">
+    </table>
+    <hr class="nicehr">
+    <input type="text" name="diceamount" autocomplete="off" placeholder="0.01">
+    <hr class="nicehr">
+    <?php require_once GAME_MANAGER;
+      $maxbet = 0;
+      $minbet = GetMinBetAmount("dice");
+      if($_SESSION['permission'] == 1)
+      {
+        $maxbet = GetMaxBetAmount("dice")/10000;
+      }
+      else $maxbet = GetMaxBetAmount("dice");?>
+      <h3>Minimum összeg:<?=$minbet?>€ &nbsp;&nbsp;&nbsp;&nbsp; Maximum összeg:<?=$maxbet?>€</h3>
+      
      <hr class="nicehr">
      <input type="submit" name="dicesubmit" value="Dobás!"> 
    </form>
