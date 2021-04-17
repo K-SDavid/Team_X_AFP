@@ -1,7 +1,7 @@
 <?php
 require_once USER_MANAGER;
 if(!CheckLogin()): 
-  header("Location: index.php?P=denied");
+  require_once PROTECTED_DIR."games/dice/dicerule.php";
 else:
   ?>
   <form method="POST" class="dicebet">
@@ -39,6 +39,7 @@ else:
 
      <hr class="nicehr">
      <input type="submit" name="dicesubmit" value="Dobás!"> 
+     <p style="margin-top:50px;"><a href="index.php?P=dicerules">Ide kattintva megtekintheti a szabályzatot!</a></p>
    </form>
 <?php 
   if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['dicesubmit']) && isset($_POST['dicebet'])):
@@ -146,7 +147,7 @@ else:
 </div>
 <?php 
   else:
-    echo "Válasszon fogadási típust és adjon meg egy valós tétet!"; ?>
+    echo "Válasszon fogadási típust és adjon meg egy valós tétet!"; ?>    
     <hr class="nicehr">
     <?php 
     require_once PROTECTED_DIR."games/dice/defaultdice.php"; 

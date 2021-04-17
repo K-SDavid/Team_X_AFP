@@ -209,3 +209,11 @@ width:100%;
   justify-content: center;
 }
 
+.dicerule{
+	margin: 20px auto 20px auto;
+	width:250px;
+}
+
+.dicerule td{
+	width:60px;
+}

@@ -40,6 +40,8 @@ switch ($_GET['P']) {
 
 	case 'dice': require_once PROTECTED_DIR.'games/dice/dice.php'; break;
 
+	case 'dicerules': require_once PROTECTED_DIR.'games/dice/dicerule.php'; break;
+
 
 	case 'logout': UserLogout(); break;
 	

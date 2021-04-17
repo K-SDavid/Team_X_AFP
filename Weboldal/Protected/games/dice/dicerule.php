@@ -1,3 +1,7 @@
+<?php if(CheckLogin()): ?>
+	<a href="index.php?P=dice" style="margin-top:50px;">Vissza a játékra!</a>
+<?php endif; ?>
+
 <p>Alap felhasználóknak a maximum tét 1€, prémium felhasználóknak pedig 10000€</p>
 <hr class="nicehr" style="width:70%;">
 <table class="dicerule">
