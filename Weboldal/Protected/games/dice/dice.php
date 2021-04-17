@@ -25,6 +25,9 @@ else:
       </tr>
      </table>
      <hr class="nicehr">
+     <input type="text" name="diceamount" autocomplete="off" placeholder="0.01">
+     <hr class="nicehr">
+     <input type="submit" name="dicesubmit" value="Dobás!"> 
    </form>
 <?php endif; ?>
 
