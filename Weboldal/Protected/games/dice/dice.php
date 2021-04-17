@@ -36,71 +36,128 @@ else:
       }
       else $maxbet = GetMaxBetAmount("dice");?>
       <h3>Minimum összeg:<?=$minbet?>€ &nbsp;&nbsp;&nbsp;&nbsp; Maximum összeg:<?=$maxbet?>€</h3>
-      
+
      <hr class="nicehr">
      <input type="submit" name="dicesubmit" value="Dobás!"> 
    </form>
-<?php endif; ?>
-
-
-<div class="dice first-face">
-  <span class="dot">
-  </span>
-</div>  
-
-<div class="dice second-face">
-  <span class="dot">
-  </span>
-  <span class="dot">
-  </span>
-</div>
-
-<div class="dice third-face">
-  <span class="dot"></span>
-  <span class="dot"></span>
-  <span class="dot"></span>
-</div>
-
-<div class="fourth-face dice">
-  <div class="column">
-    <span class="dot"></span>
-    <span class="dot"></span>
-  </div>
-  <div class="column">
-    <span class="dot"></span>
-    <span class="dot"></span>
-  </div>
-</div>
-
-<div class="fifth-face dice">  
-  <div class="column">
-    <span class="dot"></span>
-    <span class="dot"></span>
-  </div>              
-  <div class="column">
-    <span class="dot"></span>
-  </div>              
-  <div class="column">
-    <span class="dot"></span>
-    <span class="dot"></span>
-  </div>
-</div>
-
-<div class="sixth-face dice">
-  <div class="column">
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-  </div>
-  <div class="column">
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-  </div>
-</div>
-
 <?php 
+  if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['dicesubmit']) && isset($_POST['dicebet'])):
+    if($_POST['diceamount'] > $maxbet || $_POST['diceamount'] < $minbet || !is_numeric($_POST['diceamount'])):
+      echo "Nem megfelelő tét!"; ?>
+      <hr class="nicehr">
+      <?php require_once PROTECTED_DIR."games/dice/defaultdice.php";
+    else:
+      $result1 = DiceRoll(); 
+      $result2 = DiceRoll();
+      $results = [ $result1, $result2];
+      $winamount = DiceDecide($result1,$result2,$_POST['dicebet'],$_POST['diceamount'],$_SESSION['uid']);
 
+      if($winamount == -1):    
+        echo "Nincs elég egyenlege!"; ?>
+        <hr class="nicehr">
+        <?php require_once PROTECTED_DIR."games/dice/defaultdice.php";
+      else:
+        if($winamount == 0){    
+          echo "Sajnáljuk! Nem nyertél semmit."; 
+        }
+        else{
+          echo "Gratulálunk! Nyereményed ".$winamount."€"; 
+        }?>
+
+        <hr class="nicehr">
+        <div style="display: flex; flex-direction: row;">
+          <?php
+          for ($i=0; $i < 2; $i++):
+           switch ($results[$i]):
+            case 1: ?>
+              <div class="dice first-face">
+                <span class="dot">
+                </span>
+              </div>          
+              <?php break;
+
+              case 2: ?>
+                <div class="dice second-face">
+                  <span class="dot">
+                  </span>
+                  <span class="dot">
+                  </span>
+                </div>
+                <?php break;
+
+              case 3: ?>
+                <div class="dice third-face">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+                <?php break;
+
+              case 4: ?>
+                <div class="fourth-face dice">
+                  <div class="column">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </div>
+                  <div class="column">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </div>
+                </div>
+                <?php break;
+
+              case 5: ?>
+                <div class="fifth-face dice">  
+                  <div class="column">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </div>              
+                  <div class="column">
+                    <span class="dot"></span>
+                  </div>              
+                  <div class="column">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </div>
+                </div>
+                <?php break;
+
+              case 6: ?>
+                <div class="sixth-face dice">
+                  <div class="column">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </div>
+                  <div class="column">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </div>
+                </div>
+                <?php break;
+            default:
+              break;
+           endswitch;
+         endfor;
+      endif; // ha nyert
+    endif; // ha nem megfelelő a tét
+?>
+</div>
+<?php 
+  else:
+    echo "Válasszon fogadási típust és adjon meg egy valós tétet!"; ?>
+    <hr class="nicehr">
+    <?php 
+    require_once PROTECTED_DIR."games/dice/defaultdice.php"; 
+  endif; // POST-os if 
+endif; //checkloginos if
+?>
+
+
+
+
+<?php
 function DiceRoll(){
   return rand(1,6);
 }
