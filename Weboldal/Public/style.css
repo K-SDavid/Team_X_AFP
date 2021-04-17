@@ -228,3 +228,7 @@ input[type=submit]{
 .addPF.activeAddP{
 	height: 50px;
 }
+.nicehr{
+	width:95%; 
+	margin: 20px auto 20px auto;
+}
