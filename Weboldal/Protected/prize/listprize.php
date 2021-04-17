@@ -34,7 +34,7 @@
 			else echo "Nincs elég X-Coin!";
 		}
 		if(count($prizes) > 0): ?> 
-			<table>
+			<table class="nicetable">
 			<thead>
 				<tr>
 					<th>#</th>
@@ -55,9 +55,9 @@
 						<th><?=$i?></th>
 						<td><?=$p['name'] ?></td>
 						<td><?=$p['price'] ?></td>
-						<td><a href="?P=prizes&r=<?=$p['id']?>">X</a></td>
+						<td><a href="?P=prizes&r=<?=$p['id']?>"><section>X</section></a></td>
 						<?php if ($_SESSION['permission'] > 2): ?>
-							<td><a href="?P=prizes&m=<?=$p['id']?>">X</a></td>
+							<td><a href="?P=prizes&m=<?=$p['id']?>"><span>X</span></a></td>
 							<td><a href="?P=prizes&d=<?=$p['id']?>">X</a></td>
 					<?php endif;?>
 					</tr>

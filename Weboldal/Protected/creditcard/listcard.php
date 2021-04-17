@@ -15,7 +15,7 @@
 		}
 		$cards = ListCard($_SESSION['uid']);
 		if(count($cards) > 0): ?>
-			<table>
+			<table class="nicetable">
 			<thead>
 				<tr>
 					<th>#</th>
