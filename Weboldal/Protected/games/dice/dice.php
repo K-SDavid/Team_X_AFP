@@ -5,26 +5,31 @@ if(!CheckLogin()):
 else:
   ?>
   <form method="POST" class="dicebet">
-    <hr class="nicehr">
-     <table>
-      <tr>
-        <td><label for="27">2-7</label></td>
-        <td><label for="712">7-12</label></td>
-        <td><label for="double">DUPLA</label></td>
-        <td><label for="odd">PÁRATLAN</label></td>
-        <td><label for="even">PÁROS</label></td>
-        <td><label for="exact"><input style="width:60px;"type="number" value="2" name="exactsum" placeholder="Pontos összeg" min="2" max="12"></label></td>
-      </tr>
-      <tr>
-        <td><input type="radio" name="dicebet" id="27" value="27"> </td>
-        <td><input type="radio" name="dicebet" id="712" value="712"> </td>
-        <td><input type="radio" name="dicebet" id="double" value="double"></td>
-        <td><input type="radio" name="dicebet" id="odd" value="odd"></td>
-        <td><input type="radio" name="dicebet" id="even" value="even"></td>
-        <td><input type="radio" name="dicebet" id="exact" value="exact"></td>
-      </tr>
-    </table>
-    <hr class="nicehr">
+    <div class="z-bigger">
+        <input class="checkbox-dicebettype" type="radio" name="dicebet" id="dice-1" value="27">
+        <label class="for-checkbox-dicebettype" for="dice-1">
+          <span data-hover="2-7">2-7</span>
+        </label>
+          <input class="checkbox-dicebettype" type="radio" name="dicebet" id="dice-2" value="712">
+        <label class="for-checkbox-dicebettype" for="dice-2">              
+          <span data-hover="7-12">7-12</span>
+        </label>
+          <input class="checkbox-dicebettype" type="radio" name="dicebet" id="dice-3" value="even">
+        <label class="for-checkbox-dicebettype" for="dice-3">              
+          <span data-hover="PÁROS">PÁROS</span>
+        </label>
+          <input class="checkbox-dicebettype" type="radio" name="dicebet" id="dice-4" value="odd">
+        <label class="for-checkbox-dicebettype" for="dice-4">              
+          <span data-hover="PÁRATLAN">PÁRATLAN</span>
+        </label>
+          <input class="checkbox-dicebettype" type="radio" name="dicebet" id="dice-5" value="double">
+        <label class="for-checkbox-dicebettype" for="dice-5">              
+          <span data-hover="DUPLA">DUPLA</span>
+        </label>
+          <input class="checkbox-dicebettype" type="radio" name="dicebet" id="dice-6" value="exact">
+        <label class="for-checkbox-dicebettype" for="dice-6">              
+          <span><input type="number" value="2" name="exactsum" style="width:50px;" min="2" max="12" name=""></span></label>
+      </div>
     <input type="text" name="diceamount" autocomplete="off" placeholder="0.01">
     <hr class="nicehr">
     <?php require_once GAME_MANAGER;
