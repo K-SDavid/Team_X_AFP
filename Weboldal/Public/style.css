@@ -257,3 +257,11 @@ input[type=submit]{
 	width:95%; 
 	margin: 20px auto 20px auto;
 }
+
+.piros{
+	color: red;
+}
+
+.zold{
+	color: green;
+}
