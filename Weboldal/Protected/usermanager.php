@@ -23,7 +23,7 @@ function UserRegister($username, $password, $age, $email) {
 }
 
 function UserLogin($username, $password) {
-	$query = "SELECT id, username, password, age, email, permission, balance, xcoin FROM users WHERE username = :username AND password = :password";
+	$query = "SELECT id, username, password, age, email, permission, balance, xcoin, deposit, withdraw FROM users WHERE username = :username AND password = :password";
 	$params = [
 		':username' => $username,
 		':password' => sha1($password)
@@ -39,6 +39,8 @@ function UserLogin($username, $password) {
 		$_SESSION['permission'] = $record['permission'];
 		$_SESSION['balance'] = $record['balance'];
 		$_SESSION['xcoin'] = $record['xcoin'];
+		$_SESSION['deposit'] = $record['deposit'];
+		$_SESSION['withdraw'] = $record['withdraw'];
 		header('Location: index.php?P=home');
 	}
 	return false;
