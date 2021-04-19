@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1:3306
--- Létrehozás ideje: 2021. Ápr 10. 11:21
+-- Létrehozás ideje: 2021. Ápr 19. 13:42
 -- Kiszolgáló verziója: 10.4.10-MariaDB
 -- PHP verzió: 7.3.12
 
@@ -39,18 +39,15 @@ CREATE TABLE IF NOT EXISTS `creditcards` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `cardnumber` (`cardnumber`),
   KEY `userid` (`userid`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- A tábla adatainak kiíratása `creditcards`
 --
 
 INSERT INTO `creditcards` (`id`, `userid`, `name`, `cardnumber`, `expiration`, `security_code`) VALUES
-(3, 1, 'asdasdasd', 3726891746128374, 122, 221),
-(5, 1, 'asdadasdasda', 2314135624526346, 122, 214),
-(6, 1, 'dasdaés', 1231241241241241, 122, 222),
-(10, 10, 'fdsgdsgsdhdsfhgsd', 2323143231251421, 123, 234),
-(16, 8, 'sagfasd', 2132141241241421, 123, 321);
+(3, 30, 'Dávid', 3523623521344212, 324, 124),
+(4, 31, 'kartya', 1241252463463563, 422, 123);
 
 -- --------------------------------------------------------
 
@@ -65,7 +62,14 @@ CREATE TABLE IF NOT EXISTS `games` (
   `min` double NOT NULL,
   `max` double NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- A tábla adatainak kiíratása `games`
+--
+
+INSERT INTO `games` (`id`, `name`, `min`, `max`) VALUES
+(1, 'dice', 0.01, 10000);
 
 -- --------------------------------------------------------
 
@@ -84,7 +88,15 @@ CREATE TABLE IF NOT EXISTS `lotto` (
   `fifth` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `userid` (`userid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+
+--
+-- A tábla adatainak kiíratása `lotto`
+--
+
+INSERT INTO `lotto` (`id`, `userid`, `first`, `second`, `third`, `fourth`, `fifth`) VALUES
+(1, 30, 37, 47, 55, 65, 85),
+(2, 30, 12, 23, 33, 55, 66);
 
 -- --------------------------------------------------------
 
@@ -98,16 +110,17 @@ CREATE TABLE IF NOT EXISTS `prizes` (
   `name` varchar(250) CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
   `price` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- A tábla adatainak kiíratása `prizes`
 --
 
 INSERT INTO `prizes` (`id`, `name`, `price`) VALUES
-(1, 'valami1', 10),
-(2, 'valami3', 10000),
-(6, 'valami4', 100000);
+(1, 'Nyeremény 1', 100),
+(2, 'Nyeremény 2', 10),
+(3, 'Nyeremény 3', 500),
+(5, 'Nyeremény 5', 5000);
 
 -- --------------------------------------------------------
 
@@ -131,17 +144,17 @@ CREATE TABLE IF NOT EXISTS `users` (
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `email` (`email`),
   KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=latin1;
 
 --
 -- A tábla adatainak kiíratása `users`
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `age`, `email`, `permission`, `balance`, `xcoin`, `deposit`, `withdraw`) VALUES
-(1, 'asdasd', '00ea1da4192a2030f9ae023de3b3143ed647bbab', 188, 'asdsa@asd.vom', 3, 199995, 12, 26585, 6602),
-(8, 'user', '12dea96fec20593566ab75692c9949596833adc9', 20, 'user@user.com', 1, 20260, 200000, 0, 20),
-(9, 'premium', '5c0a4fc7c32f26dec6ff80e80471b4a93152d252', 20, 'premium@premium.com', 2, 20230, 2000000, 0, 0),
-(10, 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 20, 'admin@admin.com', 3, 502687, 169550, 250, 32);
+(28, 'admin', '85136c79cbf9fe36bb9d05d0639c70c265c18d37', 20, 'admin@gmail.com', 3, 199998, 199900, 0, 0),
+(29, 'alapuser', '85136c79cbf9fe36bb9d05d0639c70c265c18d37', 20, 'user@gmail.com', 1, 2, 0, 0, 0),
+(30, 'premium', '85136c79cbf9fe36bb9d05d0639c70c265c18d37', 30, 'premium@gmail.com', 2, 295, 0, 300, 2),
+(31, 'premium2', '85136c79cbf9fe36bb9d05d0639c70c265c18d37', 22, 'prem2@gmail.com', 2, 6022, 1000, 6010, 0);
 
 --
 -- Megkötések a kiírt táblákhoz
