@@ -174,6 +174,17 @@ function UpdateBalance($id){
 	$_SESSION['xcoin'] = getField($query, $params);
 }
 
+function UpdateStats($id){
+	$query="SELECT deposit FROM users WHERE id = :id";
+	$params = [ ':id' => $id ];
+	require_once DATABASE_CONTROLLER;
+	$_SESSION['deposit'] = getField($query, $params);
+	
+	$query="SELECT withdraw FROM users WHERE id = :id";
+	$params = [ ':id' => $id ];
+	$_SESSION['withdraw'] = getField($query, $params);
+}
+
 function AddXcoin($id, $amount){
 	$percent = floor($amount * 0.1);
 	$query="SELECT xcoin FROM users WHERE id = :id";

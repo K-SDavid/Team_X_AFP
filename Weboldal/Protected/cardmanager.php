@@ -75,7 +75,7 @@ function Deposit($id, $amount){
 		
 		if(executeDML($query, $params))
 		{
-			
+			UpdateStats($id);	
 			UpdateBalance($id);
 			header('Location: index.php?P=profile');
 		}
@@ -106,6 +106,7 @@ function Withdraw($id, $amount){
 			if(executeDML($query, $params))
 			{	
 				require_once USER_MANAGER;
+				UpdateStats($id);
 				UpdateBalance($id);
 				header('Location: index.php?P=profile');
 			}
