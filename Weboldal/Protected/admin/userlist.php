@@ -29,7 +29,7 @@
 			$users = UserList();
 		}
 		if(count($users) > 0): ?>
-			<table>
+			<table class="nicetable">
 			<thead>
 				<tr>
 					<th>#</th>
@@ -57,7 +57,7 @@
 						<td><?=$u['deposit']?></td>
 						<td><?=$u['withdraw']?></td>
 						<td><?=$u['permission']?></td>
-						<td><a href="?P=userlist&m=<?=$u['id']?>">X</a></td>
+						<td><a href="?P=userlist&m=<?=$u['id']?>"><span>X</span></a></td>
 						<?php if($u['permission'] < 3): ?>
 							<td><a href="?P=userlist&d=<?=$u['id']?>">X</a></td>
 						<?php endif; ?>

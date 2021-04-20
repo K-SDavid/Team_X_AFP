@@ -23,7 +23,7 @@ function UserRegister($username, $password, $age, $email) {
 }
 
 function UserLogin($username, $password) {
-	$query = "SELECT id, username, password, age, email, permission, balance, xcoin FROM users WHERE username = :username AND password = :password";
+	$query = "SELECT id, username, password, age, email, permission, balance, xcoin, deposit, withdraw FROM users WHERE username = :username AND password = :password";
 	$params = [
 		':username' => $username,
 		':password' => sha1($password)
@@ -39,6 +39,8 @@ function UserLogin($username, $password) {
 		$_SESSION['permission'] = $record['permission'];
 		$_SESSION['balance'] = $record['balance'];
 		$_SESSION['xcoin'] = $record['xcoin'];
+		$_SESSION['deposit'] = $record['deposit'];
+		$_SESSION['withdraw'] = $record['withdraw'];
 		header('Location: index.php?P=home');
 	}
 	return false;
@@ -55,7 +57,7 @@ function UserLogout() {
 }
 
 function UserList() {
-	$query = "SELECT * FROM users";
+	$query = "SELECT * FROM users ORDER BY username ASC";
 	require_once DATABASE_CONTROLLER;
 	return getList($query);
 }
@@ -93,9 +95,15 @@ function changePassword($id, $password) {
 }
 
 function DeleteUser($id) {
+	require_once DATABASE_CONTROLLER;
+	$query = "DELETE FROM lotto WHERE userid = :id";
+	$params = [ ':id' => $id ];
+	executeDML($query, $params);
+	$query = "DELETE FROM creditcards WHERE userid = :id";
+	$params = [ ':id' => $id ];
+	executeDML($query, $params);
 	$query = "DELETE FROM users WHERE id = :id";
 	$params = [ ':id' => $id ];
-	require_once DATABASE_CONTROLLER;
     if(executeDML($query, $params))
 		{
 			header('Location: index.php?P=userlist');
@@ -123,6 +131,28 @@ function GetXCoinById($id) {
 	return getField($query, $params);
 }
 
+function GetUsernameById($id) {
+	$query = "SELECT username FROM users WHERE id = :id";
+	$params = [':id' => $id];
+	require_once DATABASE_CONTROLLER;
+	return getField($query, $params);
+}
+
+function GetDepositById($id) {
+	$query = "SELECT deposit FROM users WHERE id = :id";
+	$params = [':id' => $id];
+	require_once DATABASE_CONTROLLER;
+	return getField($query, $params);
+}
+
+function GetWithdrawById($id) {
+	$query = "SELECT withdraw FROM users WHERE id = :id";
+	$params = [':id' => $id];
+	require_once DATABASE_CONTROLLER;
+	return getField($query, $params);
+}
+
+
 function CheckDeposit($id)
 {
 	$query = "SELECT deposit FROM users WHERE id = :id";
@@ -144,6 +174,17 @@ function UpdateBalance($id){
 	$_SESSION['xcoin'] = getField($query, $params);
 }
 
+function UpdateStats($id){
+	$query="SELECT deposit FROM users WHERE id = :id";
+	$params = [ ':id' => $id ];
+	require_once DATABASE_CONTROLLER;
+	$_SESSION['deposit'] = getField($query, $params);
+	
+	$query="SELECT withdraw FROM users WHERE id = :id";
+	$params = [ ':id' => $id ];
+	$_SESSION['withdraw'] = getField($query, $params);
+}
+
 function AddXcoin($id, $amount){
 	$percent = floor($amount * 0.1);
 	$query="SELECT xcoin FROM users WHERE id = :id";
@@ -161,12 +202,50 @@ function SpendXcoin($id, $amount){
 	$query="SELECT xcoin FROM users WHERE id = :id";
 	$params = [ ':id' => $id ];
 	require_once DATABASE_CONTROLLER;
-	$xcoin = getField($query, $params) - $amount;	
+	$xcoin = getField($query, $params) - $amount;
+	if($xcoin < 0){
+		return false;
+	}	
 	$query="UPDATE users SET xcoin = :xcoin WHERE id = :id";
 	$params = [ ':id' => $id ,
 				':xcoin' => $xcoin];
 	executeDML($query,$params);
 	UpdateBalance($id);
+	return true;
 }
 
+function UpgradeToPremium($id)
+{
+	$query ="UPDATE users SET permission = 2 WHERE id = :id";
+	$params = [':id' => $id ];
+	executeDML($query,$params);
+	$_SESSION['permission'] = 2;
+}
+
+function Win($id, $amount)
+{
+	$query="SELECT balance FROM users WHERE id = :id";
+	$params = [ ':id' => $id ];
+	require_once DATABASE_CONTROLLER;
+	$balance = getField($query, $params) + $amount;
+	$query="UPDATE users SET balance = :balance WHERE id = :id";
+	$params = [ ':id' => $id ,
+				':balance' => $balance];
+	executeDML($query,$params);
+	UpdateBalance($id);
+}
+
+function Bet($id, $amount)
+{
+	$query="SELECT balance FROM users WHERE id = :id";
+	$params = [ ':id' => $id ];
+	require_once DATABASE_CONTROLLER;
+	$balance = getField($query, $params) - $amount;
+	$query="UPDATE users SET balance = :balance WHERE id = :id";
+	$params = [ ':id' => $id ,
+				':balance' => $balance];
+	executeDML($query,$params);
+	AddXcoin($id, $amount);
+	UpdateBalance($id);
+}
 ?>

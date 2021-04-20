@@ -3,6 +3,7 @@ if(!CheckLogin()):
 	header("Location: index.php?P=denied");
 else:
 	require_once CARD_MANAGER;
+	require_once USER_MANAGER;
 	if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
 		if(!empty($_POST['amount'])){
 			Deposit($_SESSION['uid'], $_POST['amount']);
@@ -15,10 +16,12 @@ else:
 	if(	!CheckCard($_SESSION['uid'])):
 		echo "<h1>Nincs kártya hozzáadva!</h1>";
 	else:
-
 	?>
 
 	<div class="dwform">
+		<?php if(!CheckDeposit($_SESSION['uid'])): ?>
+			<h2 style="color:green;">Első feltöltés után +20%-ot írunk jóvá!</h2><br>
+		<?php endif; ?>
 		Válassza ki melyik kártyával szeretne fizetni:	
 		<select name="amount">
 			<?php foreach($cards as $c): ?>

@@ -22,10 +22,25 @@ switch ($_GET['P']) {
 	case 'userlist': require_once PROTECTED_DIR.'admin/userlist.php'; break;
 
 
-
 	case 'addcard': require_once PROTECTED_DIR.'creditcard/addcard.php'; break;
 
 	case 'listcard': require_once PROTECTED_DIR.'creditcard/listcard.php'; break;
+
+
+	case 'lotto': require_once PROTECTED_DIR.'games/lotto/lotto.php'; break;
+
+	case 'addlotto': require_once PROTECTED_DIR.'games/lotto/addlotto.php'; break;
+
+	case 'listlotto': require_once PROTECTED_DIR.'games/lotto/listlotto.php'; break;
+
+	case 'lottoroll': require_once PROTECTED_DIR.'games/lotto/lottoroll.php'; break;
+
+
+	case 'scraper': require_once PROTECTED_DIR.'games/scraper/simplescraper.php'; break;
+
+	case 'dice': require_once PROTECTED_DIR.'games/dice/dice.php'; break;
+
+	case 'dicerules': require_once PROTECTED_DIR.'games/dice/dicerule.php'; break;
 
 
 	case 'logout': UserLogout(); break;

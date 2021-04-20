@@ -45,6 +45,7 @@
 	transition: 0.5s;
 	transition-property: background;
 	overflow: hidden;
+	white-space: nowrap;
 }
 
 .sidebar a:hover{

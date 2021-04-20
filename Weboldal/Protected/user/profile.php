@@ -1,3 +1,14 @@
+<?php
+  $kulonbseg = $_SESSION['withdraw'] - $_SESSION['deposit'];
+  if($kulonbseg < 0)
+  {
+    $kul = "piros";
+  }
+  else
+  {
+    $kul = "zold";
+  }
+?>
 <div class="listcc">
   <?php require_once PROTECTED_DIR."creditcard/listcard.php" ?>
 </div>
@@ -62,6 +73,20 @@ require_once USER_MANAGER;
       <td>Jogosultság: </td>
       <td><?=$_SESSION['permission'] == 3 ? 'Admin' : ($_SESSION['permission'] == 2 ? 'Prémium felhasználó' : 'Felhasználó'); ?></td>
     </tr>
+    <?php if($_SESSION['permission'] < 3) : ?>
+      <tr>
+        <td>Befizetett: </td>
+        <td><?=$_SESSION['deposit'] ?></td>
+      </tr>
+      <tr>
+        <td>Kifizetett: </td>
+        <td><?=$_SESSION['withdraw'] ?></td>
+      </tr>
+      <tr>
+        <td>Különbség: </td>
+        <td><div class="<?=$kul?>"><?=$kulonbseg ?></div></td>
+      </tr>
+    <?php endif; ?>
   </table>
 </div>
 <?php endif; ?>

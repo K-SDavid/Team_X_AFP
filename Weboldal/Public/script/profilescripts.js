@@ -7,3 +7,8 @@ function toggleaddcc(){
 	let navigation = document.querySelector('.addcard')
 	navigation.classList.toggle('activecc')
 }
+
+function toggleaddP(){
+	let navigation = document.querySelector('.addPF')
+	navigation.classList.toggle('activeAddP')
+}
