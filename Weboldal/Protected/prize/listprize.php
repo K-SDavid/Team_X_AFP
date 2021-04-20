@@ -55,7 +55,7 @@
 						<th><?=$i?></th>
 						<td><?=$p['name'] ?></td>
 						<td><?=$p['price'] ?></td>
-						<td><a href="?P=prizes&r=<?=$p['id']?>"><section>X</section></a></td>
+						<td><a href="?P=prizes&r=<?=$p['id']?>"><span class="zoldspan">X</span></a></td>
 						<?php if ($_SESSION['permission'] > 2): ?>
 							<td><a href="?P=prizes&m=<?=$p['id']?>"><span>X</span></a></td>
 							<td><a href="?P=prizes&d=<?=$p['id']?>">X</a></td>
