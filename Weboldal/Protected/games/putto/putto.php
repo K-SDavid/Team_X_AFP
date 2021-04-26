@@ -1,4 +1,15 @@
+
 <input type="number" name="puttobetamount" placeholder="1€">
+<hr class="nicehr">
+<?php require_once GAME_MANAGER;
+      $maxbet = 0;
+      $minbet = GetMinBetAmount("putto");
+      if($_SESSION['permission'] == 1)
+      {
+        $maxbet = GetMaxBetAmount("putto")/100;
+      }
+      else $maxbet = GetMaxBetAmount("putto");?>
+      <h3>Minimum összeg:<?=$minbet?>€ &nbsp;&nbsp;&nbsp;&nbsp; Maximum összeg:<?=$maxbet?>€</h3>      
 <hr class="nicehr">
 <div class="b-mezo">
 	<?php for ($i=1; $i < 5; $i++): ?> 
