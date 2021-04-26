@@ -1,3 +1,5 @@
+<input type="number" name="puttobetamount" placeholder="1€">
+<hr class="nicehr">
 <div class="b-mezo">
 	<?php for ($i=1; $i < 5; $i++): ?> 
 		<input type="radio" name="bmezo"><?=$i?>		
