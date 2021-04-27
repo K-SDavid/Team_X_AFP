@@ -48,6 +48,15 @@
 				</div>	
 			<?php endfor; ?>
 			<h3 style="margin-bottom: 10px;">A mező:</h3>
+			<div class="sugoh"><i class="fa fa-question-circle-o">
+				<div class="sugo">
+					Színek a kiértékelésnél: <br>
+					-zöld: A számot megjátszotta a felhasználó és talált <br>
+					-piros: A számot megjátszotta a felhasználó és nem talált <br>
+					-sárga: A számot nem játszotta meg a felhasználó, viszont kihúzták
+				</div>
+				</i>
+			</div>
 	<?php else: ?>
 	</div>
 	<form method="POST" style="text-align: center; width: 90%;">
