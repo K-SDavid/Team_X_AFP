@@ -367,3 +367,26 @@ position: absolute;
 	overflow: hidden; 
 	margin:2px;
 }
+
+.sugoh{
+	position: relative;
+	margin-left: 400px;
+}
+
+.sugoh i{
+	-webkit-transform: scale(1.5);
+ 	cursor: pointer;
+}
+.sugo{
+	position: absolute;
+	margin-bottom: 350px;
+	width: 250px;
+	transition: 0.5s;
+	overflow: hidden;
+	font-size: 10px;
+	opacity: 0;
+}
+
+.sugoh:hover .sugo{
+	opacity: 1;
+}
