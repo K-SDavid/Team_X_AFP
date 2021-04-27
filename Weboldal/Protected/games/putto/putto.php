@@ -10,73 +10,76 @@
       }
       else $maxbet = GetMaxBetAmount("putto");
 
-	if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['puttosubmit'])  && isset($_POST['bmezo']) && count($_POST['amezo']) == 8 && isset($_POST['puttobetamount']) && $_POST['puttobetamount'] >= $minbet && $_POST['puttobetamount'] <= $minbet):
-		
+	if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['puttosubmit'])  && isset($_POST['bmezo']) && count($_POST['amezo']) == 8 && isset($_POST['puttobetamount']) && $_POST['puttobetamount'] >= $minbet && $_POST['puttobetamount'] <= $maxbet && $_SESSION['balance'] >= $_POST['puttobetamount']):
+		Bet($_SESSION['uid'],$_POST['puttobetamount'] );
 		$data = PuttoRoll(); ?>
 		<a href="index.php?P=putto">Vissza</a>
+		<br>
 		<?php
-
 		if($data[9] == 0)
 		{
 			echo "Sajnáljuk nem nyert!";
-			}
-			else
-			{
-				echo "Gratulálunk, nyereménye: ".$data[9]."€";
-			}
-			?>
-			 <hr class = "nicehr">
-		<div class="a-mezo">
-		<table>
-			<?php 
-			$counter = 1;
-			for ($i=0; $i < 4; $i++): ?>
-				<tr>
-				<?php 
-				for ($j=0; $j < 5; $j++): ?>
-					<td><label style="color: <?=CheckWin($counter,'a',$data)?>" value="<?=$counter?>"><?=$counter?></td>
-					<?php $counter++; 
-				endfor;?>
-				</tr>
-			<?php endfor; ?>
-		</table>
-	</div>
-	<hr class="nicehr">
-	<div class="b-mezo">
+		}
+		else
+		{
+			Win($_SESSION['uid'],$data[9]);			
+			echo "Gratulálunk, nyereménye: ".$data[9]."€";
+		}?>
+		<br><br>
+		<hr class = "nicehr"><div>
 		<?php for ($i=1; $i < 5; $i++): ?> 
+			<div class="mezo"> 
 			<label style="color: <?=CheckWin($i,'b',$data)?>" value="<?=$i?>"><?=$i?>				
+			</div>
 		<?php endfor; ?> 
+		</div>						
+		<h3 style="margin-bottom: 10px;">B mező:</h3>	
+		<hr class="nicehr">		
+		<?php $counter = 20; 			
+			for ($i=0; $i < 4; $i++): ?>				
+				<div style="display:flex; flex-direction: row-reverse;">
+				<?php
+				for ($j=0; $j < 5; $j++): ?>
+					<div class="mezo">
+					<label style="color: <?=CheckWin($counter,'a',$data)?>" value="<?=$counter?>"><?=$counter?>
+					</div>
+					<?php $counter--; 
+				endfor;?>
+				</div>	
+			<?php endfor; ?>
+			<h3 style="margin-bottom: 10px;">A mező:</h3>
+	<?php else: ?>
 	</div>
-<?php else: ?>
-</div>
-<form method="POST" style="text-align: center;">
-<div class="a-mezo">
-	<table>
-		<?php 
-		$counter = 1;
-		for ($i=0; $i < 4; $i++): ?>
-			<tr>
-			<?php 
-			for ($j=0; $j < 5; $j++): ?>
-				<td><input type="checkbox" name="amezo[]" value="<?=$counter?>"><?=$counter?></td>
-				<?php $counter++; 
-			endfor;?>
-			</tr>
-		<?php endfor; ?>
-	</table>
-</div>
-<hr class="nicehr">
-<div class="b-mezo">
-	<?php for ($i=1; $i < 5; $i++): ?> 
-		<input type="radio" name="bmezo" value="<?=$i?>"><?=$i?>		
-	<?php endfor;?>
-</div>
-<hr class="nicehr">	
-      <h3>Minimum összeg:<?=$minbet?>€ &nbsp;&nbsp;&nbsp;&nbsp; Maximum összeg:<?=$maxbet?>€</h3>      
-<hr class="nicehr">
-<input type="number" name="puttobetamount" placeholder="1€">
-<input type="submit" name="puttosubmit">
-</form>
+	<form method="POST" style="text-align: center; width: 90%;">
+		<div class="z-bigger">		
+			<h3 style="margin-bottom: 10px;">A mező:</h3>
+				<?php 
+				$counter = 1;
+				for ($i=0; $i < 4; $i++): ?>					
+					<?php 
+					for ($j=0; $j < 5; $j++): ?>
+						<input class="checkbox-putto" type="checkbox" id="putto-<?=$counter?>" name="amezo[]" value="<?=$counter?>">
+						<label class="for-checkbox-putto" for="putto-<?=$counter?>">
+							<span data-hover="<?=$counter?>"><?=$counter?></span>
+						</label>
+						<?php $counter++; 
+					endfor;?><br>
+				<?php endfor; ?>			
+			<hr class="nicehr">
+			<h3 style="margin-bottom: 10px;">B mező:</h3>
+				<?php for ($i=1; $i < 5; $i++): ?> 
+					<input class="checkbox-putto" type="radio" id="puttob-<?=$i?>" name="bmezo" value="<?=$i?>">
+							<label class="for-checkbox-putto" for="puttob-<?=$i?>">
+								<span data-hover="<?=$i?>"><?=$i?></span>
+							</label>		
+				<?php endfor;?>
+		</div>
+		<hr class="nicehr">	
+	    <h3>Minimum összeg:<?=$minbet?>€ &nbsp;&nbsp;&nbsp;&nbsp; Maximum összeg:<?=$maxbet?>€</h3>      
+		<hr class="nicehr">
+		<input type="number" name="puttobetamount" placeholder="1€">
+		<input type="submit" name="puttosubmit">
+	</form>
 <?php endif; endif; ?>
 
 
