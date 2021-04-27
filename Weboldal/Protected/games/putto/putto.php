@@ -1,5 +1,5 @@
 <?php if(!CheckLogin()): 
-		header("Location: index.php?P=denied");
+		require_once PROTECTED_DIR."games/putto/puttorule.php";
 	else:
 	require_once GAME_MANAGER;
       $maxbet = 0;
@@ -88,6 +88,7 @@
 		<hr class="nicehr">
 		<input type="number" name="puttobetamount" placeholder="1€">
 		<input type="submit" name="puttosubmit">
+		<p style="margin-top:50px;"><a href="index.php?P=puttorules">Ide kattintva megtekintheti a szabályzatot!</a></p>
 	</form>
 <?php endif; endif; ?>
 

@@ -38,7 +38,7 @@ switch ($_GET['P']) {
 
 	case 'putto': require_once PROTECTED_DIR.'games/putto/putto.php'; break;
 
-	case 'puttowin': require_once PROTECTED_DIR.'games/putto/puttowin.php'; break;
+	case 'puttorules': require_once PROTECTED_DIR.'games/putto/puttorule.php'; break;
 
 
 
