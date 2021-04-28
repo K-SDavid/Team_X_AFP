@@ -375,18 +375,19 @@ position: absolute;
 
 .sugoh i{
 	-webkit-transform: scale(1.5);
- 	cursor: pointer;
 }
 .sugo{
 	position: absolute;
 	margin-bottom: 350px;
-	width: 250px;
+	width: 0;
 	transition: 0.5s;
 	overflow: hidden;
 	font-size: 10px;
 	opacity: 0;
+	white-space: nowrap;
 }
 
 .sugoh:hover .sugo{
+	width: 300px;
 	opacity: 1;
 }
