@@ -13,7 +13,7 @@
 | T09 | Koós Dávid | | | Nyereménykiváltás | | | 
 | T10 | Kis-Simon Dávid | 2021.05.06 20:45 | Admin | Nyeremény hozzáadása | A formon megadott adatokkal hozzáadok egy elemet a nyereményekhez. | A formon megadott adatokkal megjelenik egy rekord az adatbázisban, és a nyeremények kilistázásánál is megjelenik. | A megfelelő adatokkal megjelennek az adatbázisban, és a kilistázott elemek között is.
 | T11 | Kis-Simon Dávid | 2021.05.06 21:37 | Admin | Nyeremény módosítása | Egy adott nyeremény adatait változtatom. | A nyeremény adatai megváltoznak az adatbázisban és a kilistázott elemek között is a kívánt értékekre. | A módosított nyeremény adatai megváltoztak az adatbázisban és a listázott elemek között is.
-| T12 | Kis-Simon Dávid | | | Nyeremény törlése | | | 
+| T12 | Kis-Simon Dávid | 2021.05.06 21:45 | Admin | Nyeremény törlése | Egy adott nyereményt törlök. | A kiválaszott nyeremény eltűnik az adatbázisból és a kilistázott elemek közül is. | A megfelelő elem törlődött mind az adatbázisből mind a kilistázott elemek közül.
 | T13 | Mészáros Martin | | | Felhasználó módosítása | | | 
 | T14 | Mészáros Martin | | | Felhasználó törlése | | | 
 | T15 | Kis-Simon Dávid | | | Ötöslottó | | | 
