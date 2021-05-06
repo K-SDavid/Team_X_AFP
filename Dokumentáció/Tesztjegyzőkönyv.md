@@ -39,3 +39,8 @@
 | T16 | Koós Dávid | 2021.05.07 01:06 | Tét (alap felhasználó, 5€ egyenleg) | 1-10 közötti egész szám, egyenleget nem haladhatja meg | 0,1,3,5,6,10,11,5.5 | 1,3,5 | 0,6,10,11,5.5
 | T16 | Koós Dávid | 2021.05.07 01:12 | Tét (alap felhasználó, 15€ egyenleg) | 1-10 közötti egész szám, egyenleget nem haladhatja meg | 0,1,3,5,6,10,11,5.5 | 1,3,5,10 | 0,6,11,5.5
 | T16 | Koós Dávid | 2021.05.07 01:14 | Tét (prémium felhasználó) | 1-1000 közötti egész szám, egyenleget nem haladhatja meg | 0,1,500,1000,1001 | 1,500,1000 | 0,1001
+| T18 | Koós Dávid | 2021.05.07 01:22 | Fogadási típus | 1 kiválasztott típus | 0-,1 kiválasztott típus | 1 kiválasztott típus | 0 kiválasztott típus
+| T18 | Koós Dávid | 2021.05.07 01:24 | Pontos összeg | 2-12 közti egész szám | 1,2,6,12,13,5.5 | 2,6,12 | 1,13,5.5
+| T18 | Koós Dávid | 2021.05.07 01:26 | Tét (alap felhasználó, 0.5€ egyenleg) | 0.01-1 közötti szám, egyenleget nem haladhatja meg | 0,0.01,0.5,0.51,1,11 | 0.01,0.5 | 0,0.51,1,11
+| T18 | Koós Dávid | 2021.05.07 01:28 | Tét (alap felhasználó, 1.5€ egyenleg) | 0.01-1 közötti szám, egyenleget nem haladhatja meg | 0,0.01,0.5,1,1.01 | 0.01,0.5,1 | 0,1.01
+| T18 | Koós Dávid | 2021.05.07 01:31 | Tét (prémium felhasználó) | 0.01-10000 közötti szám, egyenleget nem haladhatja meg | 0,0.01,32,55.55,10000,10001 | 0.01,32,55.55,10000 | 0,10001 
