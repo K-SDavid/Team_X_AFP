@@ -27,10 +27,16 @@ else:
 
 	<?php if(!array_key_exists('ss', $_GET) || empty($_GET['ss'])) :
 		if($_SESSION['balance'] < 2) : ?>
-			<h2>Jelenleg nincs elég pénzed ehhez a játékhoz!</h2>
+			<form method="POST" action="index.php?P=scraper">
+				<input type="submit" name="back" value="Vissza">
+			</form>
+			<h2>Jelenleg nincs elég pénzed ehhez a játékhoz!</h2><br>
 			<h3>Egyszerű kaparós sorsjegy <br> Ár: 2€ <br> Nyeremény: 10€</h3> <br> <h1>Játékleírás: </h1>
 		<?php else: ?>
-			<form method="POST" action="index.php?P=scraper&ss=true">
+			<form method="POST" action="index.php?P=scraper">
+				<input type="submit" name="back" value="Vissza">
+			</form>
+			<form method="POST" action="index.php?P=simplescraper&ss=true">
 				<input type="hidden" name="cV" value="<?=$result = chance(); ?>">
 				<input type="submit" name="scratchsubmit" value="Kaparok egyet">
 			</form>

@@ -45,8 +45,12 @@ switch ($_GET['P']) {
 	case 'wheelrules': require_once PROTECTED_DIR.'games/wheel/wheelrule.php'; break;
 
 
+	case 'scraper': require_once PROTECTED_DIR.'games/scraper/scrapers.php'; break;
 
-	case 'scraper': require_once PROTECTED_DIR.'games/scraper/simplescraper.php'; break;
+	case 'simplescraper': require_once PROTECTED_DIR.'games/scraper/simplescraper.php'; break;
+	
+	case 'blackjackscraper': require_once PROTECTED_DIR.'games/scraper/blackjackscraper.php'; break;
+
 
 	case 'dice': require_once PROTECTED_DIR.'games/dice/dice.php'; break;
 

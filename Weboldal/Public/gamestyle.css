@@ -391,3 +391,70 @@ position: absolute;
 	width: 300px;
 	opacity: 1;
 }
+
+.bjscratch{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 300px;
+	height: 400px;
+	background: #161C32;
+	border-radius: 10px;
+	border: 2px solid #fff;
+}
+
+.bjscratch h2{
+	user-select: none;
+	position: relative;
+}
+
+.bjscratch section {
+	user-select: none;
+	position: relative;
+	width: 300px;
+	height: 200px;
+	background: grey;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 0;
+	overflow: hidden;
+	margin-top: 20%;
+	margin-bottom: 20%;
+	border-radius: 50%;
+}
+
+.bjscratch main{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.bjscratch canvas{
+	position: absolute;
+	margin-left: 20%;
+	width: 100px;
+	height: 100px;
+	background: #fff;
+	z-index: 2;
+	mix-blend-mode: screen;
+}
+
+.bjscratch .numbers{
+	text-align: center;
+}
+
+.bjscratch .playernumbers{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.bjscratch .firstnumber{
+	margin-right: 40px;
+}
+
+.bjscratch .secondnumber{
+	margin-left: 40px;
+}
