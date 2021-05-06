@@ -24,8 +24,10 @@ if (CheckLogin()):
 </form>
 <?php endif ?>
 <form method="POST">
-	<input type="submit" name="addlotto" value="Ötöslottó vásárlása">
-	<br>
+	<?php if($_SESSION['balance'] > 5): ?>
+		<input type="submit" name="addlotto" value="Ötöslottó vásárlása">
+		<br>
+	<?php endif; ?>
 	<input type="submit" name="listlotto" value="Számok megtekintése">
 </form>
 <?php endif;?>
