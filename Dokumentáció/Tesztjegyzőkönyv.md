@@ -10,7 +10,7 @@
 | T06 | Pelle Marcell | | | Bankkártya törlése | | | 
 | T07 | Pelle Marcell | | | Befizetés | | | 
 | T08 | Pelle Marcell | | | Kifizetés | | | 
-| T09 | Koós Dávid | | | Nyereménykiváltás | | | 
+| T09 | Koós Dávid | 2021.05.07 00:40 | Felhasználó, Prémium felhasználó | Nyereménykiváltás | Megpróbálok kiváltani egy adott nyereményt, illetve egy x-coin ládát | A nyeremény/láda ára levonásra kerül, láda esetén a nyeremény jóváírásra kerül, ha van elég mennyiségű x-coinja a felhasználónak | Nyeremény esetén a megadott ár levonásra kerül, de csak ha van elég x-coinja a felhasználónak. A láda esetén a megadott ár levonásra kerül, majd a leírt százalékok alapján jóváírásra kerül a nyeremény.
 | T10 | Kis-Simon Dávid | 2021.05.06 20:45 | Admin | Nyeremény hozzáadása | A formon megadott adatokkal hozzáadok egy elemet a nyereményekhez. | A formon megadott adatokkal megjelenik egy rekord az adatbázisban, és a nyeremények kilistázásánál is megjelenik. | A megfelelő adatokkal megjelennek az adatbázisban, és a kilistázott elemek között is.
 | T11 | Kis-Simon Dávid | 2021.05.06 21:37 | Admin | Nyeremény módosítása | Egy adott nyeremény adatait változtatom. | A nyeremény adatai megváltoznak az adatbázisban és a kilistázott elemek között is a kívánt értékekre. | A módosított nyeremény adatai megváltoztak az adatbázisban és a listázott elemek között is.
 | T12 | Kis-Simon Dávid | 2021.05.06 21:45 | Admin | Nyeremény törlése | Egy adott nyereményt törlök. | A kiválaszott nyeremény eltűnik az adatbázisból és a kilistázott elemek közül is. | A megfelelő elem törlődött mind az adatbázisből mind a kilistázott elemek közül.
