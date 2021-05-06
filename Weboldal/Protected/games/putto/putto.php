@@ -10,7 +10,7 @@
       }
       else $maxbet = GetMaxBetAmount("putto");
 
-	if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['puttosubmit'])  && isset($_POST['bmezo']) && count($_POST['amezo']) == 8 && isset($_POST['puttobetamount']) && $_POST['puttobetamount'] >= $minbet && $_POST['puttobetamount'] <= $maxbet && $_SESSION['balance'] >= $_POST['puttobetamount']):
+	if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['puttosubmit'])  && isset($_POST['bmezo']) && isset($_POST['amezo']) && count($_POST['amezo']) == 8 && isset($_POST['puttobetamount']) && $_POST['puttobetamount'] >= $minbet && $_POST['puttobetamount'] <= $maxbet && $_SESSION['balance'] >= $_POST['puttobetamount']):
 		Bet($_SESSION['uid'],$_POST['puttobetamount'] );
 		$data = PuttoRoll(); ?>
 		<a href="index.php?P=putto">Vissza</a>
