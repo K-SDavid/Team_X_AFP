@@ -34,3 +34,8 @@
 | T01 | Koós Dávid | 2021.05.06 18:52 | Jelszó | Legalább 5 karakter, nem tartalmazhat szóközt | 12345, jel szo, jelszo | jelszo | 12345, jel szo
 | T10, T11 | Kis-Simon Dávid | 2021.05.06 21:09 | Nyeremény neve | 2 és 30 karakter hossz között kell lennie, nem lehet benne kettő szókoz egymás mellett | a, as, asd, nyere meny, nyere  meny(2 szóköz), 012345678901234567890123456789, 0123456789012345678901234567890 | as, asd, nyere meny, 012345678901234567890123456789 | a, nyere  meny(2 szóköz), 0123456789012345678901234567890
 | T10, T11 | Kis-Simon Dávid | 2021.05.06 21:24 | Nyeremény ára | 0-nál nagyobb számnak kell lennie | asd, -10, 0, 3 10, 20 | 20 | asd, -10, 0, 3 10
+| T16 | Koós Dávid | 2021.05.07 00:56 | 'A' mező | 8 szám van kijelölve | 0-,7-,8-,9 szám van kijelölve | 8 szám van kijelölve | 0-,7-,9 szám van kijelölve
+| T16 | Koós Dávid | 2021.05.07 01:03 | 'B' mező | 1 szám van kijelölve | 0-,1 szám van kijelölve | 1 szám van kijelölve | 0 szám van kijelölve 
+| T16 | Koós Dávid | 2021.05.07 01:06 | Tét (alap felhasználó, 5€ egyenleg) | 1-10 közötti egész szám, egyenleget nem haladhatja meg | 0,1,3,5,6,10,11,5.5 | 1,3,5 | 0,6,10,11,5.5
+| T16 | Koós Dávid | 2021.05.07 01:12 | Tét (alap felhasználó, 15€ egyenleg) | 1-10 közötti egész szám, egyenleget nem haladhatja meg | 0,1,3,5,6,10,11,5.5 | 1,3,5,10 | 0,6,11,5.5
+| T16 | Koós Dávid | 2021.05.07 01:14 | Tét (prémium felhasználó) | 1-1000 közötti egész szám, egyenleget nem haladhatja meg | 0,1,500,1000,1001 | 1,500,1000 | 0,1001
