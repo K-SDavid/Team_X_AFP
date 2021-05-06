@@ -5,6 +5,23 @@
 | T01 | Koós Dávid | 2021.05.06 18:16 | Vendég | Regisztráció | A regisztrációs formba felveszem az adatokat, majd az adatbázisban ellenőrzöm, hogy bekerültek-e az adatok | Megjelennek az adatbázisban a formban megadott adatok | Minden megadott adat bekerül az adatbázisba, automatikusan generált azonosítókkal és titkosított jelszóval.
 | T02 | Koós Dávid | 2021.05.06 18:57 | Vendég | Bejelentkezés | A bejelentkező formba felveszem az adatokat, megpróbálok bejelentkezni, amennyiben sikerült ellenőrzöm az adatbázisban, hogy valóban létezik ilyen felhasználó | Csak olyan adatokkal tudunk belépni, amik benne vannak az adatbázisban | Csak akkor sikeres a belépés, ha az adatbázis tartalmazza a megadott adatokat.
 | T03 | Kis-Simon Dávid | 2021.05.06 19:10 | Mindenki | Játékok megtekintése | Navbar-on lévő játékok megtekintése | Mindenki számára megjelennek, de a vendég a rákattintásnál csak a játékszabályokat látja. | A vendég is megtekintheti a játékokat, de csak a szabályokat látja, mindenki más játszani is tud.
+| T04 | Mészáros Martin | | | Jelszó változtatás | | | 
+| T05 | Pelle Marcell | | | Bankkártya hozzáadása | | | 
+| T06 | Pelle Marcell | | | Bankkártya törlése | | | 
+| T07 | Pelle Marcell | | | Befizetés | | | 
+| T08 | Pelle Marcell | | | Kifizetés | | | 
+| T09 | Koós Dávid | | | Nyereménykiváltás | | | 
+| T10 | Kis-Simon Dávid | | | Nyeremény hozzáadása | | | 
+| T11 | Kis-Simon Dávid | | | Nyeremény módosítása | | | 
+| T12 | Kis-Simon Dávid | | | Nyeremény törlése | | | 
+| T13 | Mészáros Martin | | | Felhasználó módosítása | | | 
+| T14 | Mészáros Martin | | | Felhasználó törlése | | | 
+| T15 | Kis-Simon Dávid | | | Ötöslottó | | | 
+| T16 | Koós Dávid | | | Puttó | | | 
+| T17 | Mészáros Martin | | | Kaparós sorsjegyek | | | 
+| T18 | Koós Dávid | | | Dobókocka | | | 
+| T19 | Pelle Marcell | | | Szerencsekerék | | | 
+| T20 | Mészáros Martin | | | Kijelentkezés | | | 
 
 
 ## Hibakezelés:
