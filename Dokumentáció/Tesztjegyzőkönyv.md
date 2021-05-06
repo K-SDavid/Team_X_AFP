@@ -4,6 +4,7 @@
 |----------|----------|-------|-------------|-----------------|-----------------------------|-----------------|---------
 | T01 | Koós Dávid | 2021.05.06 18:16 | Vendég | Regisztráció | A regisztrációs formba felveszem az adatokat, majd az adatbázisban ellenőrzöm, hogy bekerültek-e az adatok | Megjelennek az adatbázisban a formban megadott adatok | Minden megadott adat bekerül az adatbázisba, automatikusan generált azonosítókkal és titkosított jelszóval.
 | T02 | Koós Dávid | 2021.05.06 18:57 | Vendég | Bejelentkezés | A bejelentkező formba felveszem az adatokat, megpróbálok bejelentkezni, amennyiben sikerült ellenőrzöm az adatbázisban, hogy valóban létezik ilyen felhasználó | Csak olyan adatokkal tudunk belépni, amik benne vannak az adatbázisban | Csak akkor sikeres a belépés, ha az adatbázis tartalmazza a megadott adatokat.
+| T03 | Kis-Simon Dávid | 2021.05.06 19:10 | Mindenki | Játékok megtekintése | Navbar-on lévő játékok megtekintése | Mindenki számára megjelennek, de a vendég a rákattintásnál csak a játékszabályokat látja. | A vendég is megtekintheti a játékokat, de csak a szabályokat látja, mindenki más játszani is tud.
 
 
 ## Hibakezelés:
