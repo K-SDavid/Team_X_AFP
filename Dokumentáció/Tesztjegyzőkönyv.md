@@ -1,3 +1,3 @@
 
-|  Sorszám | Tesztelő | Dátum | Funkció leírása | Vizsgálat részletes leírása | Elvárt eredmény | Eredmény  
-|----------|----------|-------|-----------------|-----------------------------|-----------------|---------
+|  Sorszám | Tesztelő | Dátum | Jogosultság | Funkció leírása | Vizsgálat részletes leírása | Elvárt eredmény | Eredmény  
+|----------|----------|-------|-------------|-----------------|-----------------------------|-----------------|---------
