@@ -11,7 +11,7 @@
 | T07 | Pelle Marcell | | | Befizetés | | | 
 | T08 | Pelle Marcell | | | Kifizetés | | | 
 | T09 | Koós Dávid | | | Nyereménykiváltás | | | 
-| T10 | Kis-Simon Dávid | | | Nyeremény hozzáadása | | | 
+| T10 | Kis-Simon Dávid | 2021.05.06 20:45 | Admin | Nyeremény hozzáadása | A formon megadott adatokkal hozzáadok egy elemet a nyereményekhez. | A formon megadott adatokkal megjelenik egy rekord az adatbázisban, és a nyeremények kilistázásánál is megjelenik. | A megfelelő adatokkal megjelennek az adatbázisban, és a kilistázott elemek között is.
 | T11 | Kis-Simon Dávid | | | Nyeremény módosítása | | | 
 | T12 | Kis-Simon Dávid | | | Nyeremény törlése | | | 
 | T13 | Mészáros Martin | | | Felhasználó módosítása | | | 
@@ -32,3 +32,5 @@
 | T01 | Koós Dávid | 2021.05.06 18:45 | E-mail | Helyes formátum | email, email@email, email.com, email@email., @email.com, email@email.com | email@email.com | email, email@email, email.com, email@email., @email.com 
 | T01 | Koós Dávid | 2021.05.06 18:49 | Életkor | 18-100 közötti szám | húsz, 17, 18, 100, 101 | 18,100 | húsz, 17, 101
 | T01 | Koós Dávid | 2021.05.06 18:52 | Jelszó | Legalább 5 karakter, nem tartalmazhat szóközt | 12345, jel szo, jelszo | jelszo | 12345, jel szo
+| T10 | Kis-Simon Dávid | 2021.05.06 21:09 | Nyeremény neve | 2 és 30 karakter hossz között kell lennie, nem lehet benne kettő szókoz egymás mellett | a, as, asd, nyere meny, nyere  meny(2 szóköz), 012345678901234567890123456789, 0123456789012345678901234567890 | as, asd, nyere meny, 012345678901234567890123456789 | a, nyere  meny(2 szóköz), 0123456789012345678901234567890
+| T10 | Kis-Simon Dávid | 2021.05.06 21:24 | Nyeremény ára | 0-nál nagyobb számnak kell lennie | asd, -10, 0, 3 10, 20 | 20 | asd, -10, 0, 3 10
