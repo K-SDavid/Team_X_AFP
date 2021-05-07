@@ -8,8 +8,8 @@
 | T04 | Mészáros Martin | | | Jelszó változtatás | | |
 | T05 | Pelle Marcell | | | Bankkártya hozzáadása | | |
 | T06 | Pelle Marcell | | | Bankkártya törlése | | |
-| T07 | Pelle Marcell |2021.05.07 20:00 | Felhasználó, Prémium Felhasználó, Admin| Befizetés | A hozzáadott bankkártya segítégével megnézem, hogy sikeresen a számlára került az összeg | A számlán rajta van az összeg,adatbázisban megjelenik| sikeres
-| T08 | Pelle Marcell | | | Kifizetés | | |
+| T07 | Pelle Marcell |2021.05.07 20:00 | Felhasználó, Prémium Felhasználó, Admin| Befizetés | A hozzáadott bankkártya segítégével megnézem, hogy sikeresen a számlára került az összeg | A számlán rajta van az összeg,adatbázisban megjelenik| Sikeres
+| T08 | Pelle Marcell |2021.05.07 | Felhasználó, Prémium Felhasználó | Kifizetés | Egyenleg ellenőrzés és kártya ellenőrés után a felhasználó kitudja venni a kívánt összeget | Az összeg levonásra kerül a számláról ,illetve az adatbázisból | Sikeres
 | T09 | Koós Dávid | 2021.05.07 00:40 | Felhasználó, Prémium felhasználó | Nyereménykiváltás | Megpróbálok kiváltani egy adott nyereményt, illetve egy x-coin ládát | A nyeremény/láda ára levonásra kerül, láda esetén a nyeremény jóváírásra kerül, ha van elég mennyiségű x-coinja a felhasználónak | Nyeremény esetén a megadott ár levonásra kerül, de csak ha van elég x-coinja a felhasználónak. A láda esetén a megadott ár levonásra kerül, majd a leírt százalékok alapján jóváírásra kerül a nyeremény.
 | T10 | Kis-Simon Dávid | 2021.05.06 20:45 | Admin | Nyeremény hozzáadása | A formon megadott adatokkal hozzáadok egy elemet a nyereményekhez. | A formon megadott adatokkal megjelenik egy rekord az adatbázisban, és a nyeremények kilistázásánál is megjelenik. | A megfelelő adatokkal megjelennek az adatbázisban, és a kilistázott elemek között is.
 | T11 | Kis-Simon Dávid | 2021.05.06 21:37 | Admin | Nyeremény módosítása | Egy adott nyeremény adatait változtatom. | A nyeremény adatai megváltoznak az adatbázisban és a kilistázott elemek között is a kívánt értékekre. | A módosított nyeremény adatai megváltoztak az adatbázisban és a listázott elemek között is.
