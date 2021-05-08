@@ -21,7 +21,7 @@
 | T17 | Mészáros Martin | 2021.05.08 9:27 | Felhasználó, Prémium Felhasználó, Admin | Kaparós sorsjegyek | Sorsjegyet lehet venni, amit lekaparva nyer vagy veszít az illető, oldal frissítése esetén a sorsjegy nem változik, ha nincs elég pénze a felhasználónak akkor nem tud játszani. | Az adatok ne módosuljanak frissítésnél, ne lehessen játszani , ha nincs elég pénze a felhasználónak, nyerés esetén a felhasználó megkapja a nyeremény összegét. | A sorsjegy nem módosult frissítésnél, ha kevés pénze van a felhasználónak akkor nem tud játszani, nyerő sorsjegynél a nyereménít megkapta.
 | T18 | Koós Dávid | 2021.05.07 01:16 | Felhasználó, Prémium felhasználó, Admin | Dobókocka | Választok egy fogadási típust és egy valós tétet majd fogadok | Csak akkor enged játszani, ha a szabályokat, tét korlátot betartotta a felhasználó | Minden felhasználó a helyes tét korlátokat kapja meg, csak a szabályok betartásával lehet fogadni. Amennyiben nincs elegendő egyenlege a felhasználónak nem fogadhat, ellenkező esetben az egyenlegből a megfelelő összeg kerül levonásra. A játék a megadott nyereménytábla alapján írja jóvá a nyereményt.  |
 | T19 | Pelle Marcell | | | Szerencsekerék | | |
-| T20 | Mészáros Martin | | | Kijelentkezés | | |
+| T20 | Mészáros Martin | 2021.05.08 9:46 | Felhasználó, Prémium Felhasználó, Admin | Kijelentkezés | Kijelentkezés gombra kattintva, a felhasználó kilép a saját profiljából. | A session megszűnik, a felhasználó már csak vendégként fér hozzá az oldalhoz. | Sikeres kijelentkezés, a felhasználó már nem fér hozzá a profiljához.
 
 
 ## Hibakezelés:
