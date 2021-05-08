@@ -5,7 +5,7 @@
 | T01 | Koós Dávid | 2021.05.06 18:16 | Vendég | Regisztráció | A regisztrációs formba felveszem az adatokat, majd az adatbázisban ellenőrzöm, hogy bekerültek-e az adatok | Megjelennek az adatbázisban a formban megadott adatok | Minden megadott adat bekerül az adatbázisba, automatikusan generált azonosítókkal és titkosított jelszóval.
 | T02 | Koós Dávid | 2021.05.06 18:57 | Vendég | Bejelentkezés | A bejelentkező formba felveszem az adatokat, megpróbálok bejelentkezni, amennyiben sikerült ellenőrzöm az adatbázisban, hogy valóban létezik ilyen felhasználó | Csak olyan adatokkal tudunk belépni, amik benne vannak az adatbázisban | Csak akkor sikeres a belépés, ha az adatbázis tartalmazza a megadott adatokat.
 | T03 | Kis-Simon Dávid | 2021.05.06 19:10 | Mindenki | Játékok megtekintése | Navbar-on lévő játékok megtekintése | Mindenki számára megjelennek, de a vendég a rákattintásnál csak a játékszabályokat látja. | A vendég is megtekintheti a játékokat, de csak a szabályokat látja, mindenki más játszani is tud.
-| T04 | Mészáros Martin | | | Jelszó változtatás | | |
+| T04 | Mészáros Martin | 2021.05.08 8:51 | Felhasználó, Prémium Felhasználó, Admin | Jelszó változtatás | Jelszót változtok | Új jelszó megadása esetén frissíti az adatbázist, és már csak azzal a jelszóval lehet bejelentkezni | A jelszó módosult.
 | T05 | Pelle Marcell | | | Bankkártya hozzáadása | | |
 | T06 | Pelle Marcell | | | Bankkártya törlése | | |
 | T07 | Pelle Marcell |2021.05.07 20:00 | Felhasználó, Prémium Felhasználó, Admin| Befizetés | A hozzáadott bankkártya segítégével megnézem, hogy sikeresen a számlára került az összeg | A számlán rajta van az összeg,adatbázisban megjelenik| Sikeres
@@ -44,3 +44,4 @@
 | T18 | Koós Dávid | 2021.05.07 01:26 | Tét (alap felhasználó, 0.5€ egyenleg) | 0.01-1 közötti szám, egyenleget nem haladhatja meg | 0,0.01,0.5,0.51,1,11 | 0.01,0.5 | 0,0.51,1,11
 | T18 | Koós Dávid | 2021.05.07 01:28 | Tét (alap felhasználó, 1.5€ egyenleg) | 0.01-1 közötti szám, egyenleget nem haladhatja meg | 0,0.01,0.5,1,1.01 | 0.01,0.5,1 | 0,1.01
 | T18 | Koós Dávid | 2021.05.07 01:31 | Tét (prémium felhasználó) | 0.01-10000 közötti szám, egyenleget nem haladhatja meg | 0,0.01,32,55.55,10000,10001 | 0.01,32,55.55,10000 | 0,10001
+| T04 | Mészáros Martin | 2021.05.08 8:57 | Jelszó | Legalább 5 karakter, nem tartalmazhat szóközt | asdas, asd as, asdasd | asdasd | asdas, asd as
