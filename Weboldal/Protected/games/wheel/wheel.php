@@ -56,6 +56,7 @@ else:
       border-radius: 50%;
       border: 10px solid #fff;
       overflow:  hidden;
+      transition: all ease 2s;
     }
     span{
       width: 50%;
@@ -137,12 +138,20 @@ else:
         font-size: 20px;
 
       }
+      .mainbox.animate::after{
+        animation: animateArrow 0.7s ease infinite;
+      }
+      @keyframes animateArrow {
+        50% {
+        right: -40px;
+      }
+}
 
     </style>
   </head>
   <body>
-    <div class="mainbox">
-      <div class="box">
+    <div  id="mainbox" class="mainbox">
+      <div id="box" class="box">
         <div class="box1">
           <span class="span1"><b>50</b></span>
           <span class="span2"><b>150</b></span>
@@ -159,10 +168,23 @@ else:
         </div>
 
       </div>
-      <button  class="spin " onclick="Spin">SPIN</button>
+      <button  class="spin " onclick="mySpin()">SPIN</button>
     </div>
-  <script>
-    function spin(){}
+  <script type="text/javascript">
+    function mySpin(){
+
+      var x=1024;
+      var y= 9999;
+      var deg=Math.floor(Math.random()*(x-y))+y;
+
+      document.getElementById('box').style.transform= "rotate("+deg+"deg)";
+      var element=document.getElementById('mainbox');
+      element.classList.remove('animate');
+      setTimeout(function(){
+        element.classList.add('animate');
+      },2000);
+
+    }
   </script>
 
   </body>
