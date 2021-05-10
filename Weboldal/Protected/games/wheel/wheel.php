@@ -79,6 +79,52 @@ else:
          left:120px;
 
        }
+      .box2{
+        width: 100%;
+        height: 100%;
+        transform: rotate(-135deg);
+
+      }
+      span b {
+        width: 65px;
+        height: 65px;
+        line-height: 65px;
+        border-radius: 50%;
+        font-size: 26px;
+        text-align: center;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        box-shadow: inset 0 3px 3px 0 #717171;
+        font-family: sans-serif;
+        color: black;
+
+
+      }
+      .spin{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 75px;
+        height:75px;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        background-color: #ff5722;
+        color: #fff;
+        box-shadow: 0 5px 20px #000;
+        font-weight: bold;
+        font-size: 22px;
+        cursor: pointer;
+      }
+      .spin:active{
+        width: 70px;
+        height: 70px;
+        font-size: 20px;
+        
+      }
 
     </style>
   </head>
@@ -86,14 +132,22 @@ else:
     <div class="mainbox">
       <div class="box">
         <div class="box1">
-          <span class="span1"></span>
-          <span class="span2"></span>
-          <span class="span3"></span>
-          <span class="span4"></span>
+          <span class="span1"><b>50</b></span>
+          <span class="span2"><b>150</b></span>
+          <span class="span3"><b>250</b></span>
+          <span class="span4"><b>350</b></span>
+
+        </div>
+        <div class="box2">
+          <span class="span1"><b>10</b></span>
+          <span class="span2"><b>110</b></span>
+          <span class="span3"><b>210</b></span>
+          <span class="span4"><b>310</b></span>
 
         </div>
 
       </div>
+      <button  class="spin ">SPIN</button>
     </div>
 
   </body>
