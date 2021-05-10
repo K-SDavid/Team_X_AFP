@@ -1,3 +1,10 @@
+## Tesztkörülmény:
+
+| Név | Operációs rendszer | Böngésző verzió
+|-----|--------------------|----------------
+| Koós Dávid | Windows 10 Pro 64-bit | Google Chrome v90.0.4430.93
+
+
 ## Tesztek:
 
 |  Sorszám | Tesztelő | Dátum | Jogosultság | Funkció leírása | Vizsgálat részletes leírása | Elvárt eredmény | Eredmény  
@@ -47,3 +54,5 @@
 | T04 | Mészáros Martin | 2021.05.08 8:57 | Jelszó | Legalább 5 karakter, nem tartalmazhat szóközt | asdas, asd as, asdasd | asdasd | asdas, asd as
 | T13 | Mészáros Martin | 2021.05.08 9:12 | Egyenleg | Csak szám lehet, nem lehet negatív szám | asd, -1, 0 , 100 | 0, 100 | asd, -1
 | T13 | Mészáros Martin | 2021.05.08 9:14 | X-coin | Csak szám lehet, nem lehet negatív szám | asd, -1, 0 , 100 | 0, 100 | asd, -1
+
+
