@@ -1,4 +1,4 @@
-<?php 
+<?php
 if(!array_key_exists('P', $_GET) || empty($_GET['P']))
 	$_GET['P'] = 'home';
 
@@ -17,7 +17,7 @@ switch ($_GET['P']) {
 	case 'withdraw': require_once PROTECTED_DIR.'user/withdraw.php'; break;
 
 	case 'prizes': require_once PROTECTED_DIR.'user/prizes.php'; break;
-	
+
 
 	case 'userlist': require_once PROTECTED_DIR.'admin/userlist.php'; break;
 
@@ -42,9 +42,13 @@ switch ($_GET['P']) {
 
 	case 'dicerules': require_once PROTECTED_DIR.'games/dice/dicerule.php'; break;
 
+	case 'wheel': require_once PROTECTED_DIR.'games/wheel/wheel.php'; break;
+	case 'wheelrules': require_once PROTECTED_DIR.'games/wheel/wheelrules.php'; break;
+
+
 
 	case 'logout': UserLogout(); break;
-	
+
 
 	default: require_once PROTECTED_DIR.'normal/404.php'; break;
 }
