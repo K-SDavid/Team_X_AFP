@@ -37,6 +37,18 @@ else:
       width: 500px;
       height: 500px;
     }
+    .mainbox::after{
+      position: absolute;
+      content: '';
+      width: 32px;
+      height: 32px;
+      background: url('Public/Pictures/left-arrow.png') no-repeat;
+      background-size: 32px;
+      right: -30px;
+      top: 50%;
+      transform: translateY(-50%);
+
+    }
     .box{
       width: 100%;
       height: 100%;
@@ -123,7 +135,7 @@ else:
         width: 70px;
         height: 70px;
         font-size: 20px;
-        
+
       }
 
     </style>
@@ -147,8 +159,11 @@ else:
         </div>
 
       </div>
-      <button  class="spin ">SPIN</button>
+      <button  class="spin " onclick="Spin">SPIN</button>
     </div>
+  <script>
+    function spin(){}
+  </script>
 
   </body>
 </html>
