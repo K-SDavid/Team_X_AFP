@@ -56,3 +56,4 @@
 | T04 | Mészáros Martin | 2021.05.08 8:57 | Jelszó | Legalább 5 karakter, nem tartalmazhat szóközt | asdas, asd as, asdasd | asdasd | asdas, asd as
 | T13 | Mészáros Martin | 2021.05.08 9:12 | Egyenleg | Csak szám lehet, nem lehet negatív szám | asd, -1, 0 , 100 | 0, 100 | asd, -1
 | T13 | Mészáros Martin | 2021.05.08 9:14 | X-coin | Csak szám lehet, nem lehet negatív szám | asd, -1, 0 , 100 | 0, 100 | asd, -1
+| T14 | Pelle Marcell | 2021.05.11 11:04 | Kártyaszám | Csak szám lehet, nem lehet negatív szám | valami, -1, 0 ,2,8,11 | 0, 2,8 | valami, -1
