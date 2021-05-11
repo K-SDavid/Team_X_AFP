@@ -15,7 +15,7 @@
 | T02 | Koós Dávid | 2021.05.06 18:57 | Vendég | Bejelentkezés | A bejelentkező formba felveszem az adatokat, megpróbálok bejelentkezni, amennyiben sikerült ellenőrzöm az adatbázisban, hogy valóban létezik ilyen felhasználó | Csak olyan adatokkal tudunk belépni, amik benne vannak az adatbázisban | Csak akkor sikeres a belépés, ha az adatbázis tartalmazza a megadott adatokat.
 | T03 | Kis-Simon Dávid | 2021.05.06 19:10 | Mindenki | Játékok megtekintése | Navbar-on lévő játékok megtekintése | Mindenki számára megjelennek, de a vendég a rákattintásnál csak a játékszabályokat látja. | A vendég is megtekintheti a játékokat, de csak a szabályokat látja, mindenki más játszani is tud.
 | T04 | Mészáros Martin | 2021.05.08 8:51 | Felhasználó, Prémium Felhasználó, Admin | Jelszó változtatás | Jelszót változtok | Új jelszó megadása esetén frissíti az adatbázist, és már csak azzal a jelszóval lehet bejelentkezni | A jelszó módosult.
-| T05 | Pelle Marcell | | | Bankkártya hozzáadása | | |
+| T05 | Pelle Marcell |2021.05.11 11:00 |Felhasználó,Prémium Felhasználó,Admin | Bankkártya hozzáadása |A felhasználó képes bankkártya adatokat megadni, a rendszer eltárolj az adatbázisban | A rendszer eltárolja és megjeleníti a profilban a kártyadatokat| A bankkártya hozzáadva a profilhoz és az adatbázishoz
 | T06 | Pelle Marcell | | | Bankkártya törlése | | |
 | T07 | Pelle Marcell |2021.05.07 20:00 | Felhasználó, Prémium Felhasználó, Admin| Befizetés | A hozzáadott bankkártya segítégével megnézem, hogy sikeresen a számlára került az összeg | A számlán rajta van az összeg,adatbázisban megjelenik| Sikeres
 | T08 | Pelle Marcell |2021.05.07 | Felhasználó, Prémium Felhasználó | Kifizetés | Egyenleg ellenőrzés és kártya ellenőrés után a felhasználó kitudja venni a kívánt összeget | Az összeg levonásra kerül a számláról ,illetve az adatbázisból | Sikeres
@@ -56,5 +56,3 @@
 | T04 | Mészáros Martin | 2021.05.08 8:57 | Jelszó | Legalább 5 karakter, nem tartalmazhat szóközt | asdas, asd as, asdasd | asdasd | asdas, asd as
 | T13 | Mészáros Martin | 2021.05.08 9:12 | Egyenleg | Csak szám lehet, nem lehet negatív szám | asd, -1, 0 , 100 | 0, 100 | asd, -1
 | T13 | Mészáros Martin | 2021.05.08 9:14 | X-coin | Csak szám lehet, nem lehet negatív szám | asd, -1, 0 , 100 | 0, 100 | asd, -1
-
-
