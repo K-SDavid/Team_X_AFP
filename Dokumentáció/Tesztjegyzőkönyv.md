@@ -57,4 +57,5 @@
 | T13 | Mészáros Martin | 2021.05.08 9:12 | Egyenleg | Csak szám lehet, nem lehet negatív szám | asd, -1, 0 , 100 | 0, 100 | asd, -1
 | T13 | Mészáros Martin | 2021.05.08 9:14 | X-coin | Csak szám lehet, nem lehet negatív szám | asd, -1, 0 , 100 | 0, 100 | asd, -1
 | T14 | Pelle Marcell | 2021.05.11 11:04 | Kártyaszám | Csak szám lehet, nem lehet negatív szám | valami, -1, 0 ,2,8,11 | 0, 2,8 | valami, -1
-| T15 | Pelle Marcell | 2021.05.11 11:04 | Összeg| Csak szám lehet, nem lehet negatív szám, 2euronál több valamint nem több mint az aktuális egyenleg | randomszó, -1, 0 ,4,8,11 | 4,8,11 | randomszó, -1,0
+| T15 | Pelle Marcell | 2021.05.11 11:13 | Összeg| Csak szám lehet, nem lehet negatív szám, 2euronál több valamint nem több mint az aktuális egyenleg | randomszó, -1, 0 ,4,8,11 | 4,8,11 | randomszó, -1,0
+| T16 | Pelle Marcell | 2021.05.11 11:20 | Tulajdonos név| Több mint 6 betűből áll,nem tartlamaz 2 vagy több szóközt egymás után, nem tartalmaz számot | Andor, Kolomp  ár,Valami9, Szabó János | Szabó János| Andor,Kolomp ár, Valami 9
