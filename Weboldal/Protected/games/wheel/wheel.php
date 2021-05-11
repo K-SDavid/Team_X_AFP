@@ -50,6 +50,8 @@ else:
 
       var x=1024;
       var y= 9999;
+      let zone=45;
+
       var deg=Math.floor(Math.random()*(x-y))+y;
 
       document.getElementById('box').style.transform= "rotate("+deg+"deg)";
@@ -59,8 +61,12 @@ else:
         element.classList.add('animate');
       },2000);
 
+
     }
   </script>
+
+  <?php Win($_SESSION['uid'], 10); ?>
+
 
 
     <h3><br> Ár: 10€ <br> A Nyeremény a pörgetett szám</h3> <br> <h1>Szerencsekerék: </h1>
