@@ -60,3 +60,4 @@
 | T15 | Pelle Marcell | 2021.05.11 11:13 | Összeg| Csak szám lehet, nem lehet negatív szám, 2euronál több valamint nem több mint az aktuális egyenleg | randomszó, -1, 0 ,4,8,11 | 4,8,11 | randomszó, -1,0
 | T16 | Pelle Marcell | 2021.05.11 11:20 | Tulajdonos név| Több mint 6 betűből áll,nem tartlamaz 2 vagy több szóközt egymás után, nem tartalmaz számot | Andor, Kolomp  ár,Valami9, Szabó János | Szabó János| Andor,Kolomp ár, Valami 9
 | T16 | Pelle Marcell | 2021.05.11 11:30 | Kártyaszám| Csak számból áll, 16 számból áll | 1234ag56,123,1234567891234567 | 1234567891234567| 1234ag56,123
+| T16 | Pelle Marcell | 2021.05.11 11:34 | Lejárati dátum| csak számlehet, nem lehet lejárt kártyát hozzáadni | 422,12a,417 | 422| 12a,417
