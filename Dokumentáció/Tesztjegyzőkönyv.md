@@ -5,6 +5,8 @@
 | Kis-Simon Dávid | Windows 10 Pro 64-bit | Opera GX v75.0.3969.259
 | Koós Dávid | Windows 10 Pro 64-bit | Google Chrome v90.0.4430.93
 | Mészáros Martin | Windows 10 Pro 64-bit | Google Chrome v90.0.4430.93
+| Pelle Marcell | Windows 10 Pro 64-bit | Google Chrome v90.0.4430.93
+
 
 
 ## Tesztek:
